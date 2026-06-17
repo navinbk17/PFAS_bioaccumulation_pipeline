@@ -1,0 +1,1455 @@
+PFAS_Name,CASRN,PFAS_Class,Chain_Length,MW,LogKow,Species,Species_Group,Trophic_Level,Is_Aquatic,Tissue,Exposure Route,Duration_days,Concentration_ng_g,log_concentration
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,American Bullfrog,Other,2,0,Intestinal tract,Renewal,,1.0,0.0
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,American Bullfrog,Other,2,0,Brain,Renewal,,1.0,0.0
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,American Bullfrog,Other,2,0,Intestinal tract,Renewal,,1.0,0.0
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,American Bullfrog,Other,2,0,Brain,Renewal,,1.0,0.0
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,734000.0,5.86569605991607
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,478000.0,5.679427896612119
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,54200.0,4.733999286538387
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,54200.0,4.733999286538387
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,734000.0,5.86569605991607
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,478000.0,5.679427896612119
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,190000.0,5.278753600952829
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,478000.0,5.679427896612119
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,92400.0,4.9656719712201065
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,54200.0,4.733999286538387
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,190000.0,5.278753600952829
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,54200.0,4.733999286538387
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,92400.0,4.9656719712201065
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,92400.0,4.9656719712201065
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,190000.0,5.278753600952829
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,190000.0,5.278753600952829
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,92400.0,4.9656719712201065
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,478000.0,5.679427896612119
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Indian Medaka,Fish,3,1,Multiple entries,Renewal,,105.39999999999999,2.0228406108765276
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Indian Medaka,Fish,3,1,Multiple entries,Renewal,,103.6,2.0153597554092144
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Indian Medaka,Fish,3,1,Multiple entries,Renewal,,108.8,2.036628895362161
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,1428.4560079999999,3.1548668700060984
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,108.034488,2.0335624180528926
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Static,,28500.0,4.45484486000851
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,80.0,1.9030899869919435
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,4630.0,3.6655809910179533
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,80.0,1.9030899869919435
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,1400.0,3.146128035678238
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,250.0,2.3979400086720375
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,250.0,2.3979400086720375
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Brain,Renewal,,4201.3412,3.6233879529638435
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Brain,Renewal,,4201.3412,3.6233879529638435
+,29420-49-3,,,,,Zebra Danio,Other,2,0,Whole organism,Static,,15942.1227,4.2025461473938375
+,29420-49-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,1522.981509,3.1826946304614427
+,29420-49-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,108.542112,2.0355982677780258
+,29420-49-3,,,,,Zebra Danio,Other,2,0,Whole organism,Static,,50.07,1.699577591398909
+,29420-49-3,,,,,Zebra Danio,Other,2,0,Whole organism,Static,,510.0,2.7075701760979363
+,29420-49-3,,,,,Rainbow Trout,Fish,3,1,Plasma,Flow-through,,5.694,0.7554174628109362
+,29420-49-3,,,,,Mussel,Other,2,0,Gill(s),Static,,33.91941,1.5304482894581197
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,3130.0,3.4955443375464483
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,3130.0,3.4955443375464483
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,5050.0,3.7032913781186614
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,3130.0,3.4955443375464483
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,1160.0,3.0644579892269186
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,1160.0,3.0644579892269186
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,5050.0,3.7032913781186614
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,1160.0,3.0644579892269186
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,610.0,2.785329835010767
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,610.0,2.785329835010767
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,610.0,2.785329835010767
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,5050.0,3.7032913781186614
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,3130.0,3.4955443375464483
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,610.0,2.785329835010767
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,1160.0,3.0644579892269186
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,5050.0,3.7032913781186614
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,9850.0,3.9934362304976116
+,30334-69-1,,,,,Zebra Danio,Other,2,0,Whole organism,Static,,14058.217,4.147930242720485
+PFHpA,375-85-9,Carboxylate,7.0,364.1,4.55,Mussel,Other,2,0,Gill(s),Static,,36.4063,1.561176543497663
+,151772-58-6,,,,,"Hirame, Flounder",Other,2,0,Whole organism,Static,,0.23,-0.638272163982407
+,151772-58-6,,,,,"Hirame, Flounder",Other,2,0,Whole organism,Static,,510.0,2.7075701760979363
+,151772-58-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,1098.3314019999998,3.0407334005367876
+,151772-58-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,97.695246,1.9898734307996295
+,151772-58-6,,,,,Zebra Danio,Other,2,0,Whole organism,Static,,470.0,2.6720978579357175
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Nematode,Other,2,0,Whole organism,Culture medium,,5000.0,3.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Nematode,Other,2,0,Whole organism,Culture medium,,10000.0,4.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Nematode,Other,2,0,Whole organism,Culture medium,,5000.0,3.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Land Snail,Other,2,0,Soft tissue,Multiple routes between application groups,,1.53,0.1846914308175988
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Land Snail,Other,2,0,Soft tissue,Multiple routes between application groups,,0.995,-0.002176919254274547
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Land Snail,Other,2,0,Soft tissue,Multiple routes between application groups,,0.887,-0.0520763801682736
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Land Snail,Other,2,0,Soft tissue,Multiple routes between application groups,,0.951,-0.02181948306258609
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Japanese Quail,Other,2,0,Serum,Food,,162000.0,5.209515014542631
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Japanese Quail,Other,2,0,Liver,Food,,162000.0,5.209515014542631
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Japanese Quail,Other,2,0,Liver,Food,,262000.0,5.418301291319746
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Japanese Quail,Other,2,0,Serum,Food,,162000.0,5.209515014542631
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Japanese Quail,Other,2,0,Liver,Food,,162000.0,5.209515014542631
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Cucumber,Other,2,0,Leafneedle,Direct application,,220.0,2.342422680822206
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Cucumber,Other,2,0,Stem,Direct application,,220.0,2.342422680822206
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Cucumber,Other,2,0,Root,Direct application,,220.0,2.342422680822206
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,6010.0,3.7788744720027396
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,10000.0,4.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,3230.0,3.509202522331103
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,28360.0,4.452706226511029
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,25000.0,4.3979400086720375
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,930.0,2.9684829485539352
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,92430.0,4.965812953036603
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,4260.0,3.629409599102719
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,43040.0,4.633872262658333
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,21100.0,4.324282455297693
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,122.1,2.0867156639448825
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,122.1,2.0867156639448825
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Chicken,Other,2,0,Liver,Air sac injection,,1600.0,3.2041199826559246
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Chicken,Other,2,0,Liver,Air sac injection,,5000.0,3.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Chicken,Other,2,0,Serum,Air sac injection,,2000.0,3.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Chicken,Other,2,0,Liver,Air sac injection,,1500.0,3.1760912590556813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Soybean,Plant,1,0,Root,"Environmental, unspecified",,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Shoot,Hydroponic,,2.0,0.3010299956639812
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Root,Hydroponic,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Whole organism,Hydroponic,,2.0,0.3010299956639812
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Whole organism,Hydroponic,,2.0,0.3010299956639812
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Whole organism,Hydroponic,,2.0,0.3010299956639812
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Shoot,Hydroponic,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Shoot,Hydroponic,,2.0,0.3010299956639812
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Whole organism,Hydroponic,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Root,Hydroponic,,2.0,0.3010299956639812
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Root,Hydroponic,,2.0,0.3010299956639812
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Shoot,Hydroponic,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Root,Hydroponic,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Whole organism,Hydroponic,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Whole organism,Hydroponic,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Shoot,Hydroponic,,2.0,0.3010299956639812
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Root,Hydroponic,,2.0,0.3010299956639812
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Shoot,Hydroponic,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Root,Hydroponic,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Sea Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,Soil slurry,,0.601,-0.22112552799726048
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,Soil slurry,,961.4,2.982904117792628
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,Hydroponic,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,Soil slurry,,4.802,0.6814221557210085
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,Soil slurry,,1070.0,3.0293837776852097
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Lettuce,Plant,1,0,Multiple entries,Hydroponic,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Herring Gulls,Other,2,0,Liver,Air sac injection,,10000.0,4.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Herring Gulls,Other,2,0,Liver,Air sac injection,,10000.0,4.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Stem,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Root,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Stem,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Leafneedle,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Stem,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Stem,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Leafneedle,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Whole organism,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Stem,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Root,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Leafneedle,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Stem,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Root,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Root,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Leafneedle,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Leafneedle,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Root,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Whole organism,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Whole organism,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Whole organism,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Whole organism,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Root,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Whole organism,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Whole organism,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Leafneedle,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Stem,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Leafneedle,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Leafneedle,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Stem,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Stem,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Whole organism,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Leafneedle,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Root,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Stem,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Leafneedle,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Whole organism,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Whole organism,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Root,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Root,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Alfalfa,Other,2,0,Root,"Environmental, unspecified",,4950.0,3.694605198933569
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Great Cormorant,Other,2,0,Liver,Air sac injection,,10000.0,4.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Great Cormorant,Other,2,0,Liver,Air sac injection,,10000.0,4.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Grass,Other,2,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Radish,Other,2,0,Multiple entries,"Environmental, unspecified",,4000.0,3.6020599913279625
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Radish,Other,2,0,Multiple entries,"Environmental, unspecified",,20.0,1.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Root,Hydroponic,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Root,Hydroponic,,0.1,-1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Root,Hydroponic,,1.0,0.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Root,Hydroponic,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Shoot,Hydroponic,,50.0,1.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Multiple entries,Hydroponic,,1.0,0.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Multiple entries,Hydroponic,,1.0,0.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Multiple entries,Hydroponic,,1.0,0.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Shoot,Hydroponic,,50.0,1.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Bread Wheat,Plant,1,0,Multiple entries,Hydroponic,,1.0,0.0
+,335-95-5,,,,,Lettuce,Plant,1,0,Multiple entries,"Environmental, unspecified",,530.0,2.724275869600789
+,335-95-5,,,,,Lettuce,Plant,1,0,Multiple entries,"Environmental, unspecified",,530.0,2.724275869600789
+,335-95-5,,,,,Lettuce,Plant,1,0,Multiple entries,"Environmental, unspecified",,530.0,2.724275869600789
+,335-95-5,,,,,Lettuce,Plant,1,0,Multiple entries,"Environmental, unspecified",,530.0,2.724275869600789
+,335-95-5,,,,,Lettuce,Plant,1,0,Multiple entries,"Environmental, unspecified",,530.0,2.724275869600789
+,335-95-5,,,,,Lettuce,Plant,1,0,Multiple entries,"Environmental, unspecified",,530.0,2.724275869600789
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Zebra Danio,Other,2,0,Whole organism,Renewal,,1693.88689,3.228884406768645
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Zebra Danio,Other,2,0,Whole organism,Renewal,,180.990654,2.2576561493386693
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Fathead Minnow,Fish,3,1,Ovaries,Renewal,,105.6,2.0236639181977933
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Zebra Danio,Other,2,0,Gonad(s),Flow-through,,1000.0,3.0
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,Blood,Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,"Residual, remnant, carcass",Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,Gill(s),Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,Kidney,Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,Muscle,Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,"Skin, epidermis",Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,Liver,Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.6,0.9822712330395684
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.62,0.983175072037813
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.62,0.983175072037813
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.62,0.983175072037813
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.62,0.983175072037813
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.6,0.9822712330395684
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.6,0.9822712330395684
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.6,0.9822712330395684
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Mussel,Other,2,0,Gill(s),Static,,46.40786,1.66659154231217
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Mussel,Other,2,0,Gill(s),Static,,46.40786,1.66659154231217
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,0.44499999999999995,-0.35163998901906846
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,1.183,0.07298474462793039
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,0.44499999999999995,-0.35163998901906846
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,1.183,0.07298474462793039
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,0.44499999999999995,-0.35163998901906846
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Scud,Other,2,0,Tissue,Static,,12.3,1.089905111439398
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Scud,Other,2,0,Tissue,Static,,12.3,1.089905111439398
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Scud,Other,2,0,Tissue,Static,,12.3,1.089905111439398
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Scud,Other,2,0,Tissue,Static,,12.3,1.089905111439398
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Scud,Other,2,0,Tissue,Static,,12.3,1.089905111439398
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Zebra Danio,Other,2,0,Whole organism,Renewal,,400.1114,2.6021809255018704
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,3425.83566,3.5347665256852383
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,263.52582,2.4208231733784014
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,351.36776,2.5457619099867013
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,1919.346389,3.2831533599651794
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,144.939201,2.161185862872645
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,16059.999999999998,4.2057455409426625
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,28040.0,4.447778009294621
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,9070.0,3.957607287060095
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,3425.83566,3.5347665256852383
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,263.52582,2.4208231733784014
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,351.36776,2.5457619099867013
+,3871-99-6,,,,,Fathead Minnow,Fish,3,1,Ovaries,Renewal,,301.0,2.4785664955938436
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,9070.0,3.957607287060095
+,3871-99-6,,,,,Fathead Minnow,Fish,3,1,Ovaries,Renewal,,180.0,2.255272505103306
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,2196.0485,3.3416419273307767
+,3871-99-6,,,,,Rainbow Trout,Fish,3,1,Multiple entries,Food,,308.0,2.4885507165004443
+,3871-99-6,,,,,Mussel,Other,2,0,Gill(s),Static,,43.92097,1.6426719229947577
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Zebra Danio,Other,2,0,Whole organism,Renewal,,1693.88689,3.228884406768645
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Zebra Danio,Other,2,0,Whole organism,Renewal,,180.990654,2.2576561493386693
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Fathead Minnow,Fish,3,1,Ovaries,Renewal,,105.6,2.0236639181977933
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Zebra Danio,Other,2,0,Gonad(s),Flow-through,,1000.0,3.0
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,Blood,Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,"Residual, remnant, carcass",Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,Gill(s),Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,Kidney,Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,Muscle,Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,"Skin, epidermis",Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Rainbow Trout,Fish,3,1,Liver,Food,,347.0,2.5403294747908736
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.6,0.9822712330395684
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.62,0.983175072037813
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.62,0.983175072037813
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.62,0.983175072037813
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.62,0.983175072037813
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.6,0.9822712330395684
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.6,0.9822712330395684
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Midge,Other,2,0,Whole organism,Static,,9.6,0.9822712330395684
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Green Mussel,Other,2,0,Tissue,Renewal,,97.0,1.9867717342662448
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Mussel,Other,2,0,Gill(s),Static,,46.40786,1.66659154231217
+PFNA,375-95-1,Carboxylate,9.0,464.1,6.05,Mussel,Other,2,0,Gill(s),Static,,46.40786,1.66659154231217
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Zebra Danio,Other,2,0,Whole organism,Renewal,,791.693056,2.89855683572649
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Zebra Danio,Other,2,0,Whole organism,Renewal,,71.972096,1.857164150568265
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Zebra Danio,Other,2,0,Whole organism,Renewal,,8.739468800000001,0.9414850362683009
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Midge,Other,2,0,Whole organism,Static,,9.77,0.989894563718773
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Midge,Other,2,0,Whole organism,Static,,9.73,0.9881128402683519
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Midge,Other,2,0,Whole organism,Static,,9.77,0.989894563718773
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Midge,Other,2,0,Whole organism,Static,,9.77,0.989894563718773
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Midge,Other,2,0,Whole organism,Static,,9.73,0.9881128402683519
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Midge,Other,2,0,Whole organism,Static,,9.73,0.9881128402683519
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Midge,Other,2,0,Whole organism,Static,,9.77,0.989894563718773
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Midge,Other,2,0,Whole organism,Static,,9.73,0.9881128402683519
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Green Mussel,Other,2,0,Tissue,Renewal,,99.0,1.99563519459755
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Green Mussel,Other,2,0,Tissue,Renewal,,99.0,1.99563519459755
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Green Mussel,Other,2,0,Tissue,Renewal,,99.0,1.99563519459755
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Green Mussel,Other,2,0,Tissue,Renewal,,99.0,1.99563519459755
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Green Mussel,Other,2,0,Tissue,Renewal,,99.0,1.99563519459755
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Green Mussel,Other,2,0,Tissue,Renewal,,99.0,1.99563519459755
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Green Mussel,Other,2,0,Tissue,Renewal,,99.0,1.99563519459755
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Mussel,Other,2,0,Gill(s),Static,,51.40864,1.7110361148900268
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.2,0.8573324964312685
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.1000000000000005,0.8512583487190754
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.8,0.8325089127062363
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.8999999999999995,0.8388490907372553
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.2,0.8573324964312685
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.8,0.8325089127062363
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.8999999999999995,0.8388490907372553
+PFDA,335-76-2,Carboxylate,10.0,514.1,6.83,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.1000000000000005,0.8512583487190754
+,754-91-6,,,,,Nematode,Other,2,0,Whole organism,Culture medium,,5000.0,3.6989700043360187
+,754-91-6,,,,,Nematode,Other,2,0,Whole organism,Culture medium,,10000.0,4.0
+,754-91-6,,,,,Nematode,Other,2,0,Whole organism,Culture medium,,5000.0,3.6989700043360187
+,754-91-6,,,,,Carrot,Other,2,0,Multiple entries,"Environmental, unspecified",,555.0,2.7442929831226763
+,754-91-6,,,,,Carrot,Other,2,0,Multiple entries,"Environmental, unspecified",,565.0,2.7520484478194387
+,754-91-6,,,,,Carrot,Other,2,0,Multiple entries,"Environmental, unspecified",,547.0,2.737987326333431
+,754-91-6,,,,,Carrot,Other,2,0,Multiple entries,"Environmental, unspecified",,551.0,2.741151598851785
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Butter Print,Other,2,0,Root,"Environmental, unspecified",,24500.0,4.389166084364533
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Butter Print,Other,2,0,Shoot,"Environmental, unspecified",,24500.0,4.389166084364533
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Mouse-Ear Cress,Mammal,4,0,Leafneedle,Culture medium,,10.0,1.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Nematode,Other,2,0,Whole organism,Culture medium,,5000.0,3.6989700043360187
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Nematode,Other,2,0,Whole organism,Culture medium,,5000.0,3.6989700043360187
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Nematode,Other,2,0,Whole organism,Culture medium,,10000.0,4.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Nematode,Other,2,0,Whole organism,Culture medium,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Nematode,Other,2,0,Whole organism,Culture medium,,5000.0,3.6989700043360187
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Nematode,Other,2,0,Whole organism,Culture medium,,5000.0,3.6989700043360187
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Nematode,Other,2,0,Whole organism,Culture medium,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Land Snail,Other,2,0,Soft tissue,Multiple routes between application groups,,13.7,1.1367205671564067
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Land Snail,Other,2,0,Soft tissue,Multiple routes between application groups,,6.77,0.8305886686851442
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Land Snail,Other,2,0,Soft tissue,Multiple routes between application groups,,3.95,0.5965970956264602
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Land Snail,Other,2,0,Soft tissue,Multiple routes between application groups,,8.91,0.9498777040368748
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Carrot,Other,2,0,Shoot,"Environmental, unspecified",,232.0,2.3654879848909
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Carrot,Other,2,0,Shoot,"Environmental, unspecified",,41947.0,4.622700906045888
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Carrot,Other,2,0,Root,"Environmental, unspecified",,41947.0,4.622700906045888
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Carrot,Other,2,0,Root,"Environmental, unspecified",,232.0,2.3654879848909
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Carrot,Other,2,0,Root,"Environmental, unspecified",,3817.0,3.581722159949099
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Carrot,Other,2,0,Shoot,"Environmental, unspecified",,3817.0,3.581722159949099
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,10000.0,4.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,121.5,2.084576277934331
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Earthworm,Other,2,0,Whole organism,"Environmental, unspecified",,121.5,2.084576277934331
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Chicken,Other,2,0,Liver,Air sac injection,,100.0,2.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,3817.0,3.581722159949099
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,3817.0,3.581722159949099
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,232.0,2.3654879848909
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,Soil slurry,,0.343,-0.46470587995722945
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,Soil slurry,,1093.0,3.038620161949703
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,232.0,2.3654879848909
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,Soil slurry,,859.2,2.9340942683554805
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,Soil slurry,,3.701,0.5683190850951118
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,41947.0,4.622700906045888
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,41947.0,4.622700906045888
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,975.0,2.989004615698537
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,191.0,2.2810333672477277
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,189.0,2.2764618041732443
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,987.0,2.9943171526696366
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,189.0,2.2764618041732443
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,191.0,2.2810333672477277
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,987.0,2.9943171526696366
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,975.0,2.989004615698537
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,987.0,2.9943171526696366
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,192.0,2.2833012287035497
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,192.0,2.2833012287035497
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,987.0,2.9943171526696366
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,192.0,2.2833012287035497
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,987.0,2.9943171526696366
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,192.0,2.2833012287035497
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,189.0,2.2764618041732443
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,987.0,2.9943171526696366
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,189.0,2.2764618041732443
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Root,"Environmental, unspecified",,988.0,2.9947569445876283
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,988.0,2.9947569445876283
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,187.0,2.271841606536499
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,995.0,2.9978230807457256
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,984.0,2.9929950984313414
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,985.0,2.9934362304976116
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,985.0,2.9934362304976116
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,994.0,2.997386384397313
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,982.0,2.9921114877869495
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,192.0,2.2833012287035497
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,192.0,2.2833012287035497
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,194.0,2.287801729930226
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,994.0,2.997386384397313
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,194.0,2.287801729930226
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,191.0,2.2810333672477277
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,982.0,2.9921114877869495
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,191.0,2.2810333672477277
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,193.0,2.285557309007774
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,193.0,2.285557309007774
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,995.0,2.9978230807457256
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,187.0,2.271841606536499
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,194.0,2.287801729930226
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,984.0,2.9929950984313414
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,984.0,2.9929950984313414
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,194.0,2.287801729930226
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,984.0,2.9929950984313414
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,992.0,2.9965116721541785
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,992.0,2.9965116721541785
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Root,"Environmental, unspecified",,192.0,2.2833012287035497
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leaf Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,192.0,2.2833012287035497
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,191.0,2.2810333672477277
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,994.0,2.997386384397313
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,191.0,2.2810333672477277
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,997.0,2.998695158311656
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,189.0,2.2764618041732443
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,189.0,2.2764618041732443
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,997.0,2.998695158311656
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,191.0,2.2810333672477277
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,978.0,2.9903388547876015
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,978.0,2.9903388547876015
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,191.0,2.2810333672477277
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,194.0,2.287801729930226
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,982.0,2.9921114877869495
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,194.0,2.287801729930226
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,982.0,2.9921114877869495
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,987.0,2.9943171526696366
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,987.0,2.9943171526696366
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,981.0,2.9916690073799486
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,191.0,2.2810333672477277
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,190.0,2.278753600952829
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,990.0,2.99563519459755
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,190.0,2.278753600952829
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,990.0,2.99563519459755
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,192.0,2.2833012287035497
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,984.0,2.9929950984313414
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,984.0,2.9929950984313414
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,192.0,2.2833012287035497
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,194.0,2.287801729930226
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,194.0,2.287801729930226
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,985.0,2.9934362304976116
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,985.0,2.9934362304976116
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,988.0,2.9947569445876283
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,988.0,2.9947569445876283
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,188.0,2.27415784926368
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,188.0,2.27415784926368
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,994.0,2.997386384397313
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,993.0,2.996949248495381
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,191.0,2.2810333672477277
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,191.0,2.2810333672477277
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,993.0,2.996949248495381
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,191.0,2.2810333672477277
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,981.0,2.9916690073799486
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,981.0,2.9916690073799486
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,188.0,2.27415784926368
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,981.0,2.9916690073799486
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,188.0,2.27415784926368
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,988.0,2.9947569445876283
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,988.0,2.9947569445876283
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,189.0,2.2764618041732443
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,189.0,2.2764618041732443
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,972.0,2.9876662649262746
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,972.0,2.9876662649262746
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Root,"Environmental, unspecified",,192.0,2.2833012287035497
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Romaine Lettuce,Plant,1,0,Shoot,"Environmental, unspecified",,192.0,2.2833012287035497
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Garden Tomato ,Other,2,0,Root,"Environmental, unspecified",,232.0,2.3654879848909
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Garden Tomato ,Other,2,0,Shoot,"Environmental, unspecified",,3817.0,3.581722159949099
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Garden Tomato ,Other,2,0,Root,"Environmental, unspecified",,3817.0,3.581722159949099
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Garden Tomato ,Other,2,0,Shoot,"Environmental, unspecified",,41947.0,4.622700906045888
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Garden Tomato ,Other,2,0,Shoot,"Environmental, unspecified",,232.0,2.3654879848909
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Garden Tomato ,Other,2,0,Root,"Environmental, unspecified",,41947.0,4.622700906045888
+,2795-39-3,,,,,Mallard Duck,Other,2,0,Yolk,"Diet, unspecified",,10200.0,4.008600171761918
+,2795-39-3,,,,,Mallard Duck,Other,2,0,Multiple entries,"Diet, unspecified",,10200.0,4.008600171761918
+,2795-39-3,,,,,Mallard Duck,Other,2,0,Liver,"Diet, unspecified",,10200.0,4.008600171761918
+,2795-39-3,,,,,Mallard Duck,Other,2,0,Multiple entries,"Diet, unspecified",,10200.0,4.008600171761918
+,2795-39-3,,,,,Mallard Duck,Other,2,0,Liver,"Diet, unspecified",,10200.0,4.008600171761918
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Jointed Twig-Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Nematode,Other,2,0,Whole organism,"Aerial, granular ",,0.0329,-1.4828041020500258
+,2795-39-3,,,,,Nematode,Other,2,0,Whole organism,"Aerial, granular ",,0.00013,-3.886056647693163
+,2795-39-3,,,,,Nematode,Other,2,0,Whole organism,"Aerial, granular ",,0.529,-0.2765443279648142
+,2795-39-3,,,,,Northern Bobwhite Quail,Other,2,0,Liver,"Diet, unspecified",,10200.0,4.008600171761918
+,2795-39-3,,,,,Northern Bobwhite Quail,Other,2,0,Yolk,"Diet, unspecified",,10200.0,4.008600171761918
+,2795-39-3,,,,,Northern Bobwhite Quail,Other,2,0,Multiple entries,"Diet, unspecified",,10200.0,4.008600171761918
+,2795-39-3,,,,,Northern Bobwhite Quail,Other,2,0,Multiple entries,"Diet, unspecified",,10200.0,4.008600171761918
+,2795-39-3,,,,,Northern Bobwhite Quail,Other,2,0,Liver,"Diet, unspecified",,10200.0,4.008600171761918
+,2795-39-3,,,,,Japanese Quail,Other,2,0,Liver,Food,,62000.0,4.7923916894982534
+,2795-39-3,,,,,Japanese Quail,Other,2,0,Serum,Food,,62000.0,4.7923916894982534
+,2795-39-3,,,,,Japanese Quail,Other,2,0,Serum,Food,,62000.0,4.7923916894982534
+,2795-39-3,,,,,Japanese Quail,Other,2,0,Liver,Food,,62000.0,4.7923916894982534
+,2795-39-3,,,,,Chicken,Other,2,0,Liver,Air sac injection,,3000.0,3.4771212547196626
+,2795-39-3,,,,,Chicken,Other,2,0,Liver,Air sac injection,,10000.0,4.0
+,2795-39-3,,,,,Soybean,Plant,1,0,Root,"Environmental, unspecified",,70.0,1.845098040014257
+,2795-39-3,,,,,Soybean,Plant,1,0,Multiple entries,"Environmental, unspecified",,20.0,1.3010299956639813
+,2795-39-3,,,,,Sea Rush,Other,2,0,Root,Hydroponic,,0.2,-0.6989700043360187
+,2795-39-3,,,,,Sea Rush,Other,2,0,Shoot,Hydroponic,,0.2,-0.6989700043360187
+,2795-39-3,,,,,Sea Rush,Other,2,0,Root,Hydroponic,,0.2,-0.6989700043360187
+,2795-39-3,,,,,Sea Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Sea Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Sea Rush,Other,2,0,Whole organism,Hydroponic,,2.0,0.3010299956639812
+,2795-39-3,,,,,Sea Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Sea Rush,Other,2,0,Whole organism,Hydroponic,,2.0,0.3010299956639812
+,2795-39-3,,,,,Sea Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Sea Rush,Other,2,0,Root,Hydroponic,,2.0,0.3010299956639812
+,2795-39-3,,,,,Sea Rush,Other,2,0,Shoot,Hydroponic,,2.0,0.3010299956639812
+,2795-39-3,,,,,Sea Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Sea Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Sea Rush,Other,2,0,Root,Hydroponic,,0.2,-0.6989700043360187
+,2795-39-3,,,,,Sea Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Sea Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Sea Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Sea Rush,Other,2,0,Whole organism,Hydroponic,,0.2,-0.6989700043360187
+,2795-39-3,,,,,Sea Rush,Other,2,0,Shoot,Hydroponic,,0.2,-0.6989700043360187
+,2795-39-3,,,,,Sea Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Sea Rush,Other,2,0,Whole organism,Hydroponic,,0.2,-0.6989700043360187
+,2795-39-3,,,,,Sea Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Sea Rush,Other,2,0,Shoot,Hydroponic,,0.2,-0.6989700043360187
+,2795-39-3,,,,,Sea Rush,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Sea Rush,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Sea Rush,Other,2,0,Whole organism,Hydroponic,,0.2,-0.6989700043360187
+,2795-39-3,,,,,Sea Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Sea Rush,Other,2,0,Shoot,Hydroponic,,2.0,0.3010299956639812
+,2795-39-3,,,,,Sea Rush,Other,2,0,Shoot,Hydroponic,,2.0,0.3010299956639812
+,2795-39-3,,,,,Sea Rush,Other,2,0,Root,Hydroponic,,2.0,0.3010299956639812
+,2795-39-3,,,,,Sea Rush,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Sea Rush,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Sea Rush,Other,2,0,Root,Hydroponic,,2.0,0.3010299956639812
+,2795-39-3,,,,,Sea Rush,Other,2,0,Whole organism,Hydroponic,,2.0,0.3010299956639812
+,2795-39-3,,,,,Sea Rush,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Sea Rush,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Herring Gulls,Other,2,0,Liver,Air sac injection,,10000.0,4.0
+,2795-39-3,,,,,Herring Gulls,Other,2,0,Liver,Air sac injection,,10000.0,4.0
+,2795-39-3,,,,,Great Cormorant,Other,2,0,Liver,Air sac injection,,10000.0,4.0
+,2795-39-3,,,,,Great Cormorant,Other,2,0,Liver,Air sac injection,,10000.0,4.0
+,2795-39-3,,,,,Grass,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Root,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Root,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Whole organism,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Shoot,Hydroponic,,10.0,1.0
+,2795-39-3,,,,,Grass,Other,2,0,Whole organism,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Grass,Other,2,0,Shoot,Hydroponic,,30.0,1.4771212547196624
+,2795-39-3,,,,,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+,2795-39-3,,,,,Bread Wheat,Plant,1,0,Shoot,Hydroponic,,100.0,2.0
+,2795-39-3,,,,,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+,2795-39-3,,,,,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+,2795-39-3,,,,,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+,2795-39-3,,,,,Bread Wheat,Plant,1,0,Shoot,Hydroponic,,50.0,1.6989700043360187
+,2795-39-3,,,,,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+,2795-39-3,,,,,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+,2795-39-3,,,,,Bread Wheat,Plant,1,0,Root,Hydroponic,,100.0,2.0
+,2795-39-3,,,,,Bread Wheat,Plant,1,0,Root,Hydroponic,,50.0,1.6989700043360187
+,2795-39-3,,,,,Bread Wheat,Plant,1,0,Shoot,Hydroponic,,50.0,1.6989700043360187
+,2795-39-3,,,,,Bread Wheat,Plant,1,0,Shoot,Hydroponic,,50.0,1.6989700043360187
+,27619-97-2,,,,,Mouse-Ear Cress,Mammal,4,0,Whole organism,"Environmental, unspecified",,1500.0,3.1760912590556813
+,27619-97-2,,,,,Mouse-Ear Cress,Mammal,4,0,Whole organism,"Environmental, unspecified",,1500.0,3.1760912590556813
+,27619-97-2,,,,,Mouse-Ear Cress,Mammal,4,0,Whole organism,"Environmental, unspecified",,1500.0,3.1760912590556813
+,27619-97-2,,,,,Mouse-Ear Cress,Mammal,4,0,Whole organism,"Environmental, unspecified",,1500.0,3.1760912590556813
+,27619-97-2,,,,,Mouse-Ear Cress,Mammal,4,0,Whole organism,"Environmental, unspecified",,1500.0,3.1760912590556813
+,27619-97-2,,,,,Mouse-Ear Cress,Mammal,4,0,Whole organism,"Environmental, unspecified",,1500.0,3.1760912590556813
+,27619-97-2,,,,,Nematode,Other,2,0,Whole organism,Culture medium,,5000.0,3.6989700043360187
+,27619-97-2,,,,,Nematode,Other,2,0,Whole organism,Culture medium,,10000.0,4.0
+,27619-97-2,,,,,Nematode,Other,2,0,Whole organism,Culture medium,,5000.0,3.6989700043360187
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,American Bullfrog,Other,2,0,Intestinal tract,Renewal,,1.0,0.0
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,American Bullfrog,Other,2,0,Brain,Renewal,,1.0,0.0
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,American Bullfrog,Other,2,0,Intestinal tract,Renewal,,1.0,0.0
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,American Bullfrog,Other,2,0,Brain,Renewal,,1.0,0.0
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,734000.0,5.86569605991607
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,478000.0,5.679427896612119
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,54200.0,4.733999286538387
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,54200.0,4.733999286538387
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,734000.0,5.86569605991607
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,478000.0,5.679427896612119
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,190000.0,5.278753600952829
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,478000.0,5.679427896612119
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,92400.0,4.9656719712201065
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,54200.0,4.733999286538387
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,190000.0,5.278753600952829
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,54200.0,4.733999286538387
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,92400.0,4.9656719712201065
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,92400.0,4.9656719712201065
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,190000.0,5.278753600952829
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,190000.0,5.278753600952829
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,92400.0,4.9656719712201065
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Water Flea,Other,2,0,Whole organism,Renewal,,478000.0,5.679427896612119
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Indian Medaka,Fish,3,1,Multiple entries,Renewal,,105.39999999999999,2.0228406108765276
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Indian Medaka,Fish,3,1,Multiple entries,Renewal,,103.6,2.0153597554092144
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Indian Medaka,Fish,3,1,Multiple entries,Renewal,,108.8,2.036628895362161
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,1428.4560079999999,3.1548668700060984
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,108.034488,2.0335624180528926
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Static,,28500.0,4.45484486000851
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,80.0,1.9030899869919435
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,4630.0,3.6655809910179533
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,80.0,1.9030899869919435
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,1400.0,3.146128035678238
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,250.0,2.3979400086720375
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Whole organism,Renewal,,250.0,2.3979400086720375
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Brain,Renewal,,4201.3412,3.6233879529638435
+PFBS,375-73-5,Sulfonate,4.0,300.1,1.82,Zebra Danio,Other,2,0,Brain,Renewal,,4201.3412,3.6233879529638435
+,29420-49-3,,,,,Zebra Danio,Other,2,0,Whole organism,Static,,15942.1227,4.2025461473938375
+,29420-49-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,1522.981509,3.1826946304614427
+,29420-49-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,108.542112,2.0355982677780258
+,29420-49-3,,,,,Zebra Danio,Other,2,0,Whole organism,Static,,50.07,1.699577591398909
+,29420-49-3,,,,,Zebra Danio,Other,2,0,Whole organism,Static,,510.0,2.7075701760979363
+,29420-49-3,,,,,Rainbow Trout,Fish,3,1,Plasma,Flow-through,,5.694,0.7554174628109362
+,29420-49-3,,,,,Mussel,Other,2,0,Gill(s),Static,,33.91941,1.5304482894581197
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,3130.0,3.4955443375464483
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,3130.0,3.4955443375464483
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,5050.0,3.7032913781186614
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,3130.0,3.4955443375464483
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,1160.0,3.0644579892269186
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,1160.0,3.0644579892269186
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,5050.0,3.7032913781186614
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,1160.0,3.0644579892269186
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,610.0,2.785329835010767
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,610.0,2.785329835010767
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,610.0,2.785329835010767
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,5050.0,3.7032913781186614
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,3130.0,3.4955443375464483
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,610.0,2.785329835010767
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,1160.0,3.0644579892269186
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,5050.0,3.7032913781186614
+,30334-69-1,,,,,Water Flea,Other,2,0,Whole organism,Renewal,,9850.0,3.9934362304976116
+,30334-69-1,,,,,Zebra Danio,Other,2,0,Whole organism,Static,,14058.217,4.147930242720485
+,754-91-6,,,,,Common Carp,Fish,3,1,Whole organism,Flow-through,,15.5,1.1903316981702914
+,754-91-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,199.65688,2.3002842801930354
+,754-91-6,,,,,Common Carp,Fish,3,1,Blood,Renewal,,1.15,0.06069784035361165
+,754-91-6,,,,,Common Carp,Fish,3,1,Multiple entries,Flow-through,,15.5,1.1903316981702914
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Green Algae,Other,2,0,,Static,,40000.0,4.6020599913279625
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Green Algae,Other,2,0,,Static,,20000.0,4.301029995663981
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Green Algae,Other,2,0,,Static,,10000.0,4.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Green Algae,Other,2,0,,Static,,5000.0,3.6989700043360187
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Lentic ,,16.0,1.2041199826559248
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Lentic ,,1.0,0.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Lentic ,,0.060000000000000005,-1.2218487496163564
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,0.5569999999999999,-0.25414480482627116
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,0.934,-0.029653123769906618
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Brain,Lentic ,,12.8,1.1072099696478683
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,0.934,-0.029653123769906618
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Brain,Lentic ,,12.8,1.1072099696478683
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,0.5569999999999999,-0.25414480482627116
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Leopard Frog,Other,2,0,Whole organism,Renewal,,0.5569999999999999,-0.25414480482627116
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Scud,Other,2,0,Tissue,Static,,0.11,-0.958607314841775
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Scud,Other,2,0,Tissue,Static,,0.11,-0.958607314841775
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Scud,Other,2,0,Tissue,Static,,0.11,-0.958607314841775
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Scud,Other,2,0,Tissue,Static,,0.11,-0.958607314841775
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Scud,Other,2,0,Tissue,Static,,0.11,-0.958607314841775
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Indian Medaka,Fish,3,1,Whole organism,Renewal,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Indian Medaka,Fish,3,1,Whole organism,Renewal,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Indian Medaka,Fish,3,1,Whole organism,Renewal,,16000.0,4.204119982655925
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Indian Medaka,Fish,3,1,Multiple entries,Renewal,,100.2,2.0008677215312267
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Indian Medaka,Fish,3,1,Multiple entries,Renewal,,99.6,1.9982593384236986
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Nile Tilapia,Other,2,0,Multiple entries,Food,,5000000.0,6.698970004336019
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Indian Medaka,Fish,3,1,Multiple entries,Renewal,,97.69999999999999,1.989894563718773
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Indian Medaka,Fish,3,1,Whole organism,Renewal,,16000.0,4.204119982655925
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Indian Medaka,Fish,3,1,Whole organism,Renewal,,16000.0,4.204119982655925
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,Renewal,,1730.43942,3.2381563999200993
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,Renewal,,125.03175,2.09702030979936
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Common Carp,Fish,3,1,Blood,Renewal,,0.82,-0.08618614761628333
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,Renewal,,990.0,2.99563519459755
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,Renewal,,310.0,2.4913616938342726
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,Renewal,,160.0,2.2041199826559246
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,,Renewal,,50.0,1.6989700043360187
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,Static,,8000.0,3.9030899869919438
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Liver,Renewal,,250.0635,2.3980503054633413
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Liver,Renewal,,250.0635,2.3980503054633413
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,Renewal,,160.0,2.2041199826559246
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,Static,,8000.0,3.9030899869919438
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,Static,,8000.0,3.9030899869919438
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,,Renewal,,250.0,2.3979400086720375
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,Static,,8000.0,3.9030899869919438
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,Static,,8000.0,3.9030899869919438
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,,Renewal,,250.0,2.3979400086720375
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,,Renewal,,5.0,0.6989700043360189
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,Static,,2000.0,3.3010299956639813
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Zebra Danio,Other,2,0,Whole organism,"Aquatic, unspecified",,250.0,2.3979400086720375
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Kidney,Food,,7250.0,3.8603380065709936
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Liver,Food,,7250.0,3.8603380065709936
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Blood,Food,,7250.0,3.8603380065709936
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Yolk,Static,,870.0,2.9395192526186187
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Yolk,Static,,5760.0,3.760422483423212
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Yolk,Static,,7470.0,3.873320601815399
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Yolk,Static,,1200.0,3.0791812460476247
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Yolk,Static,,70.0,1.845098040014257
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Yolk,Static,,60.0,1.7781512503836436
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Yolk,Static,,10.0,1.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Yolk,Static,,70.0,1.845098040014257
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Yolk,Static,,7470.0,3.873320601815399
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Rainbow Trout,Fish,3,1,Yolk,Static,,870.0,2.9395192526186187
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Asian Water Plantain,Other,2,0,Root,Static,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Asian Water Plantain,Other,2,0,Root,Static,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Asian Water Plantain,Other,2,0,Root,Static,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Asian Water Plantain,Other,2,0,Root,Static,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Asian Water Plantain,Other,2,0,Multiple entries,Renewal,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Asian Water Plantain,Other,2,0,Multiple entries,Static,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Midge,Other,2,0,Whole organism,Static,,9.870000000000001,0.9943171526696368
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Midge,Other,2,0,Whole organism,Static,,9.870000000000001,0.9943171526696368
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Midge,Other,2,0,Whole organism,Static,,9.85,0.9934362304976118
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Midge,Other,2,0,Whole organism,Static,,9.85,0.9934362304976118
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Midge,Other,2,0,Whole organism,Static,,9.870000000000001,0.9943171526696368
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Midge,Other,2,0,Whole organism,Static,,9.870000000000001,0.9943171526696368
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Midge,Other,2,0,Whole organism,Static,,9.85,0.9934362304976118
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Midge,Other,2,0,Whole organism,Static,,9.85,0.9934362304976118
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lamp-Mussel,Other,2,0,Soft tissue,Renewal,,4.52,0.6551384348113821
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Lamp-Mussel,Other,2,0,Soft tissue,Renewal,,69.5,1.841984804590114
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Green Mussel,Other,2,0,Gonad(s),Renewal,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Green Mussel,Other,2,0,Gill(s),Renewal,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Green Mussel,Other,2,0,Viscera,Renewal,,1000.0,3.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Green Mussel,Other,2,0,Viscera,Renewal,,100.0,2.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Green Mussel,Other,2,0,Gonad(s),Renewal,,100.0,2.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Green Mussel,Other,2,0,Gill(s),Renewal,,100.0,2.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,0.1,-1.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,0.1,-1.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,1.0,0.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,0.1,-1.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,1.0,0.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,4.0,0.6020599913279624
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,4.0,0.6020599913279624
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,0.01,-2.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,4.0,0.6020599913279624
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,0.01,-2.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,1.0,0.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,0.01,-2.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,0.1,-1.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,Smooth Cauliflower Coral,Other,2,0,Whole organism,Renewal,,0.1,-1.0
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,567.0,2.7535830588929064
+PFOS,1763-23-1,Sulfonate,8.0,500.1,5.26,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,567.0,2.7535830588929064
+,2795-39-3,,,,,Diatom,Other,2,0,Whole organism,Static,,120.2,2.079904467666721
+,2795-39-3,,,,,Diatom,Other,2,0,Whole organism,Static,,10.63,1.0265332645232967
+,2795-39-3,,,,,Diatom,Other,2,0,Whole organism,Static,,0.85,-0.07058107428570728
+,2795-39-3,,,,,Diatom,Other,2,0,Whole organism,Static,,0.046,-1.337242168318426
+,2795-39-3,,,,,Diatom,Other,2,0,Whole organism,Static,,0.01,-2.0
+,2795-39-3,,,,,Diatom,Other,2,0,,Static,,0.07100000000000001,-1.1487416512809248
+,2795-39-3,,,,,Australian Redclaw Crayfish,Other,2,0,Serum,Renewal,,0.1,-1.0
+,2795-39-3,,,,,Australian Redclaw Crayfish,Other,2,0,Hepatopancreas,Renewal,,0.1,-1.0
+,2795-39-3,,,,,Australian Redclaw Crayfish,Other,2,0,Muscle,Renewal,,10.0,1.0
+,2795-39-3,,,,,Australian Redclaw Crayfish,Other,2,0,Muscle,Renewal,,0.1,-1.0
+,2795-39-3,,,,,Australian Redclaw Crayfish,Other,2,0,Serum,Renewal,,0.001,-3.0
+,2795-39-3,,,,,Australian Redclaw Crayfish,Other,2,0,Hepatopancreas,Renewal,,0.001,-3.0
+,2795-39-3,,,,,Chinese Mitten Crab,Other,2,0,Hepatopancreas,Renewal,,100.0,2.0
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,1806.404755,3.2568150677759453
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,9.549999999999999,0.9800033715837463
+,2795-39-3,,,,,Bluegill,Other,2,0,Edible tissue,Flow-through,,870.0,2.9395192526186187
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,409.811228,2.6125838530198915
+,2795-39-3,,,,,Bluegill,Other,2,0,Whole organism,Flow-through,,870.0,2.9395192526186187
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,172.55209599999998,2.2369202390590064
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Multiple routes between application groups,,29.0,1.462397997898956
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,43.138023999999994,1.6348602477310439
+,2795-39-3,,,,,Bluegill,Other,2,0,Multiple tissueorgan,Flow-through,,870.0,2.9395192526186187
+,2795-39-3,,,,,Bluegill,Other,2,0,Edible tissue,Flow-through,,86.0,1.9344984512435677
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,21.569011999999997,1.3338302520670626
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Multiple routes between application groups,,143.0,2.155336037465062
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,9.549999999999999,0.9800033715837463
+,2795-39-3,,,,,Common Carp,Fish,3,1,Whole organism,Flow-through,,16.0,1.2041199826559248
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Multiple routes between application groups,,0.12,-0.9208187539523752
+,2795-39-3,,,,,Bluegill,Other,2,0,Whole organism,Flow-through,,86.0,1.9344984512435677
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Multiple routes between application groups,,4.5,0.6532125137753437
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Multiple routes between application groups,,0.7,-0.1549019599857432
+,2795-39-3,,,,,Bluegill,Other,2,0,Multiple tissueorgan,Flow-through,,86.0,1.9344984512435677
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Multiple routes between application groups,,0.12,-0.9208187539523752
+,2795-39-3,,,,,Common Carp,Fish,3,1,Whole organism,Flow-through,,1.88,0.2741578492636798
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,409.811228,2.6125838530198915
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,43.138023999999994,1.6348602477310439
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,21.569011999999997,1.3338302520670626
+,2795-39-3,,,,,Japanese Medaka,Fish,3,1,Liver,Static,,1000.0,3.0
+,2795-39-3,,,,,Japanese Medaka,Fish,3,1,Liver,Static,,1000.0,3.0
+,2795-39-3,,,,,Sea Bass,Other,2,0,Liver,Food,,4.83,0.6839471307515121
+,2795-39-3,,,,,Fathead Minnow,Fish,3,1,Gonad(s),Renewal,,140.0,2.146128035678238
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,20.0,1.3010299956639813
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,20.0,1.3010299956639813
+,2795-39-3,,,,,Fathead Minnow,Fish,3,1,Gonad(s),Renewal,,88.0,1.9444826721501687
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Multiple entries,Renewal,,500.0,2.6989700043360187
+,2795-39-3,,,,,Zebra Danio,Other,2,0,,Static,,2955.0085665300003,3.4705587442329477
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Multiple entries,Renewal,,0.609,-0.21538270736712464
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Multiple entries,Renewal,,2000.0,3.3010299956639813
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Multiple entries,Static,,205.33,2.3124524071524406
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Whole organism,Static,,83.4712,1.9215366570573962
+,2795-39-3,,,,,Zebra Danio,Other,2,0,Multiple entries,Renewal,,500.0,2.6989700043360187
+,2795-39-3,,,,,Rainbow Trout,Fish,3,1,Plasma,Flow-through,,6.338,0.8019522348542817
+,2795-39-3,,,,,Rainbow Trout,Fish,3,1,Plasma,Flow-through,,3.985,0.6004283257321311
+,2795-39-3,,,,,Rainbow Trout,Fish,3,1,Kidney,Food,,172.0,2.2355284469075487
+,2795-39-3,,,,,Rainbow Trout,Fish,3,1,Liver,Food,,172.0,2.2355284469075487
+,2795-39-3,,,,,Rainbow Trout,Fish,3,1,Blood,Food,,172.0,2.2355284469075487
+,2795-39-3,,,,,Rainbow Trout,Fish,3,1,Gill(s),Food,,172.0,2.2355284469075487
+,2795-39-3,,,,,Rainbow Trout,Fish,3,1,"Residual, remnant, carcass",Food,,172.0,2.2355284469075487
+,2795-39-3,,,,,Rainbow Trout,Fish,3,1,Muscle,Food,,172.0,2.2355284469075487
+,2795-39-3,,,,,Rainbow Trout,Fish,3,1,"Skin, epidermis",Food,,172.0,2.2355284469075487
+,2795-39-3,,,,,Grass Carp,Fish,3,1,Whole organism,Renewal,,0.4,-0.3979400086720376
+,2795-39-3,,,,,Grass Carp,Fish,3,1,Organ,Renewal,,0.4,-0.3979400086720376
+,2795-39-3,,,,,Grass Carp,Fish,3,1,Gill(s),Renewal,,0.4,-0.3979400086720376
+,2795-39-3,,,,,Grass Carp,Fish,3,1,Muscle,Renewal,,0.4,-0.3979400086720376
+,2795-39-3,,,,,Grass Carp,Fish,3,1,Scale,Renewal,,0.4,-0.3979400086720376
+,2795-39-3,,,,,Grass Carp,Fish,3,1,Head,Renewal,,0.4,-0.3979400086720376
+,2795-39-3,,,,,Green Mussel,Other,2,0,Tissue,Renewal,,96.0,1.9822712330395684
+,2795-39-3,,,,,Green Mussel,Other,2,0,Tissue,Renewal,,96.0,1.9822712330395684
+,2795-39-3,,,,,Green Mussel,Other,2,0,Tissue,Renewal,,96.0,1.9822712330395684
+,2795-39-3,,,,,Green Mussel,Other,2,0,Tissue,Renewal,,96.0,1.9822712330395684
+,2795-39-3,,,,,Green Mussel,Other,2,0,Tissue,Renewal,,96.0,1.9822712330395684
+,2795-39-3,,,,,Green Mussel,Other,2,0,Tissue,Renewal,,96.0,1.9822712330395684
+,2795-39-3,,,,,Green Mussel,Other,2,0,Tissue,Renewal,,96.0,1.9822712330395684
+,2795-39-3,,,,,Mussel,Other,2,0,Gill(s),Static,,53.92253,1.7317702607391003
+,2795-39-3,,,,,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.2,0.8573324964312685
+,2795-39-3,,,,,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.0,0.8450980400142568
+,2795-39-3,,,,,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.1000000000000005,0.785329835010767
+,2795-39-3,,,,,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.1000000000000005,0.785329835010767
+,2795-39-3,,,,,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.1000000000000005,0.785329835010767
+,2795-39-3,,,,,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.1000000000000005,0.785329835010767
+,2795-39-3,,,,,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.0,0.8450980400142568
+,2795-39-3,,,,,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.2,0.8573324964312685
+,2795-39-3,,,,,Asian Clam,Other,2,0,Soft tissue,Renewal,,100.0,2.0
+,2795-39-3,,,,,Asian Clam,Other,2,0,Soft tissue,Renewal,,100.0,2.0
+,2795-39-3,,,,,Asian Clam,Other,2,0,Viscera,Renewal,,0.5082,-0.29396533928564944
+,2795-39-3,,,,,Asian Clam,Other,2,0,Soft tissue,Renewal,,1000.0,3.0
+,2795-39-3,,,,,Asian Clam,Other,2,0,Gill(s),Renewal,,0.5082,-0.29396533928564944
+,2795-39-3,,,,,Asian Clam,Other,2,0,Soft tissue,Renewal,,100.0,2.0
+,2795-39-3,,,,,Asian Clam,Other,2,0,Soft tissue,Renewal,,100.0,2.0
+,2795-39-3,,,,,Asian Clam,Other,2,0,Soft tissue,Renewal,,10.0,1.0
+,2795-39-3,,,,,Asian Clam,Other,2,0,Soft tissue,Renewal,,10.0,1.0
+,2795-39-3,,,,,Asian Clam,Other,2,0,Soft tissue,Renewal,,10.0,1.0
+,2795-39-3,,,,,Ciliate Protozoa,Other,2,0,Whole organism,Static,,40000.0,4.6020599913279625
+,2795-39-3,,,,,Ciliate Protozoa,Other,2,0,Whole organism,Static,,40000.0,4.6020599913279625
+,2795-39-3,,,,,Ciliate Protozoa,Other,2,0,Whole organism,Static,,40000.0,4.6020599913279625
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,957.0,2.9809119377768436
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,932.0,2.9694159123539814
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,914.0,2.960946195733831
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,957.0,2.9809119377768436
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,914.0,2.960946195733831
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,932.0,2.9694159123539814
+,2795-39-3,,,,,Polychaete Worm,Other,2,0,Whole organism,Renewal,,0.028,-1.5528419686577808
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,957.0,2.9809119377768436
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,957.0,2.9809119377768436
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,,Renewal,,2000.0,3.3010299956639813
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,932.0,2.9694159123539814
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,914.0,2.960946195733831
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,914.0,2.960946195733831
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,Whole organism,Renewal,,932.0,2.9694159123539814
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,,Renewal,,2000.0,3.3010299956639813
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,,Renewal,,200.0,2.3010299956639813
+,2795-39-3,,,,,"Tubificid Worm, Oligochaete",Other,2,0,,Renewal,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Blood,Gavage,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Liver,Gavage,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Liver,Gavage,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Blood,Gavage,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Liver,Gavage,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Blood,Gavage,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Kidney,Gavage,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Kidney,Gavage,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Liver,Gavage,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Kidney,Gavage,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Blood,Gavage,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Kidney,Gavage,,200.0,2.3010299956639813
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Whole organism,Renewal,,100.0,2.0
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Whole organism,Renewal,,100.0,2.0
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Whole organism,Renewal,,100.0,2.0
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Whole organism,Renewal,,100.0,2.0
+,4021-47-0,,,,,Atlantic Salmon,Fish,3,1,Whole organism,Renewal,,100.0,2.0
+,27619-97-2,,,,,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+,27619-97-2,,,,,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+,27619-97-2,,,,,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+,27619-97-2,,,,,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+,27619-97-2,,,,,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+,27619-97-2,,,,,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+,27619-97-2,,,,,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+,27619-97-2,,,,,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+,27619-97-2,,,,,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+,27619-97-2,,,,,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+,27619-97-2,,,,,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+,27619-97-2,,,,,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+,27619-97-2,,,,,Water-Hyacinth,Other,2,0,Multiple entries,Static,,500.0,2.6989700043360187
+,1651215-26-7,,,,,Rainbow Trout,Fish,3,1,Kidney,Food,,6840.0,3.835056101720116
+,1651215-26-7,,,,,Rainbow Trout,Fish,3,1,Liver,Food,,6840.0,3.835056101720116
+,1651215-26-7,,,,,Rainbow Trout,Fish,3,1,Blood,Food,,6840.0,3.835056101720116
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Common Carp,Fish,3,1,Whole organism,Flow-through,,0.9460000000000001,-0.024108863598207207
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Common Carp,Fish,3,1,Whole organism,Flow-through,,0.0911,-1.0404816230270018
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Midge,Other,2,0,Whole organism,Static,,9.32,0.9694159123539814
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Midge,Other,2,0,Whole organism,Static,,9.45,0.9754318085092629
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Midge,Other,2,0,Whole organism,Static,,9.45,0.9754318085092629
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Midge,Other,2,0,Whole organism,Static,,9.32,0.9694159123539814
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Midge,Other,2,0,Whole organism,Static,,9.45,0.9754318085092629
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Midge,Other,2,0,Whole organism,Static,,9.32,0.9694159123539814
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Midge,Other,2,0,Whole organism,Static,,9.32,0.9694159123539814
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Midge,Other,2,0,Whole organism,Static,,9.45,0.9754318085092629
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Mussel,Other,2,0,Gill(s),Static,,56.409420000000004,1.75135163434524
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.3,0.8633228601204559
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.1000000000000005,0.8512583487190754
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.0,0.8450980400142568
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.8,0.8325089127062363
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.3,0.8633228601204559
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.1000000000000005,0.8512583487190754
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.8,0.8325089127062363
+PFUnDA,2058-94-8,Carboxylate,11.0,564.1,7.59,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.0,0.8450980400142568
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,0.44499999999999995,-0.35163998901906846
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,1.183,0.07298474462793039
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,0.44499999999999995,-0.35163998901906846
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,1.183,0.07298474462793039
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Leopard Frog,Other,2,0,Whole organism,Renewal,,0.44499999999999995,-0.35163998901906846
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Scud,Other,2,0,Tissue,Static,,12.3,1.089905111439398
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Scud,Other,2,0,Tissue,Static,,12.3,1.089905111439398
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Scud,Other,2,0,Tissue,Static,,12.3,1.089905111439398
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Scud,Other,2,0,Tissue,Static,,12.3,1.089905111439398
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Scud,Other,2,0,Tissue,Static,,12.3,1.089905111439398
+PFHxS,355-46-4,Sulfonate,6.0,400.1,4.14,Zebra Danio,Other,2,0,Whole organism,Renewal,,400.1114,2.6021809255018704
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,3425.83566,3.5347665256852383
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,263.52582,2.4208231733784014
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,351.36776,2.5457619099867013
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,1919.346389,3.2831533599651794
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,144.939201,2.161185862872645
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,16059.999999999998,4.2057455409426625
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,28040.0,4.447778009294621
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,9070.0,3.957607287060095
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,3425.83566,3.5347665256852383
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,263.52582,2.4208231733784014
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,351.36776,2.5457619099867013
+,3871-99-6,,,,,Fathead Minnow,Fish,3,1,Ovaries,Renewal,,301.0,2.4785664955938436
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,9070.0,3.957607287060095
+,3871-99-6,,,,,Fathead Minnow,Fish,3,1,Ovaries,Renewal,,180.0,2.255272505103306
+,3871-99-6,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,2196.0485,3.3416419273307767
+,3871-99-6,,,,,Rainbow Trout,Fish,3,1,Multiple entries,Food,,308.0,2.4885507165004443
+,3871-99-6,,,,,Mussel,Other,2,0,Gill(s),Static,,43.92097,1.6426719229947577
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,Whole organism,Static,,99376.992,4.997285847133078
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,40000.0,4.6020599913279625
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,80000.0,4.903089986991944
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,20000.0,4.301029995663981
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,10000.0,4.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,5000.0,3.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,970.0,2.9867717342662448
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,950.0,2.9777236052888476
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,860.0,2.934498451243568
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,950.0,2.9777236052888476
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,840.0,2.9242792860618816
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,940.0,2.9731278535996988
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,950.0,2.9777236052888476
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Algae,Other,2,0,,Static,,830.0,2.9190780923760737
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Blue-Green Algae,Other,2,0,,Static,,87.7667,1.9433297693292084
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Blue-Green Algae,Other,2,0,,Static,,88.86670000000001,1.9487390532593034
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Blue-Green Algae,Other,2,0,,Static,,92.5,1.9661417327390327
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Blue-Green Algae,Other,2,0,,Static,,90.39999999999999,1.9561684304753633
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Lentic ,,66.0,1.8195439355418688
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Lentic ,,7.3,0.8633228601204559
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Lentic ,,2.9,0.4623979978989561
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Leopard Frog,Other,2,0,Whole organism,Renewal,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Water Flea,Other,2,0,Whole organism,Renewal,,99376.992,4.997285847133078
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Water Flea,Other,2,0,Whole organism,Static,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Water Flea,Other,2,0,Whole organism,Static,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Water Flea,Other,2,0,Whole organism,Static,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Water Flea,Other,2,0,Whole organism,Static,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,"Hirame, Flounder",Other,2,0,Whole organism,Static,,210.0,2.322219294733919
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,"Hirame, Flounder",Other,2,0,Whole organism,Static,,0.25999999999999995,-0.5850266520291821
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Flounder,Other,2,0,Muscle,Renewal,,197.0,2.294466226161593
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Indian Medaka,Fish,3,1,Multiple entries,Renewal,,103.5,2.0149403497929366
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Indian Medaka,Fish,3,1,Multiple entries,Renewal,,109.7,2.0402066275747113
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Indian Medaka,Fish,3,1,Multiple entries,Renewal,,102.4,2.010299956639812
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Nile Tilapia,Other,2,0,Multiple entries,Food,,5000000.0,6.698970004336019
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,500.0,2.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,500.0,2.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,500.0,2.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,500.0,2.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,140784.07200000001,5.148553522463728
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Guppy,Other,2,0,Whole organism,Renewal,,0.94,-0.026872146400301365
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Whole organism,Flow-through,,433.2,2.636688447953283
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Whole organism,Flow-through,,456.3,2.659250468772661
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Static,,5623.081464,3.749974375365955
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Whole organism,Flow-through,,47.6,1.677606952720493
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Whole organism,Flow-through,,440.09999999999997,2.643551368562945
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Whole organism,Flow-through,,451.1,2.6542728270977105
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Whole organism,Flow-through,,471.5,2.6734816970733473
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Liver,Flow-through,,471.5,2.6734816970733473
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Liver,Flow-through,,456.3,2.659250468772661
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Whole organism,Flow-through,,411.7,2.614580866997486
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Liver,Flow-through,,433.2,2.636688447953283
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Liver,Flow-through,,440.09999999999997,2.643551368562945
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Whole organism,Flow-through,,4.71,0.6730209071288962
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Blood,Flow-through,,456.3,2.659250468772661
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Liver,Flow-through,,411.7,2.614580866997486
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Liver,Flow-through,,451.1,2.6542728270977105
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Blood,Flow-through,,471.5,2.6734816970733473
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Blood,Flow-through,,411.7,2.614580866997486
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Blood,Flow-through,,433.2,2.636688447953283
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,8695.486799999999,3.9392939001553917
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,16976.9028,4.229858462141208
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Blood,Flow-through,,440.09999999999997,2.643551368562945
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Goldfish,Other,2,0,Blood,Flow-through,,451.1,2.6542728270977105
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Muscle,Renewal,,99376.992,4.997285847133078
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Ovaries,Renewal,,99376.992,4.997285847133078
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Static,,1055.8805399999999,3.0236147858554276
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Fathead Minnow,Fish,3,1,Plasma,Flow-through,,2040.0,3.3096301674258988
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Brain,Renewal,,99376.992,4.997285847133078
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Fathead Minnow,Fish,3,1,Plasma,Flow-through,,4990.0,3.6981005456233897
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,1631.4389520000002,3.212570827247047
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Fathead Minnow,Fish,3,1,Plasma,Flow-through,,481.0,2.682145076373832
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Fathead Minnow,Fish,3,1,Plasma,Flow-through,,16620.0,4.220631019448092
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,9.58,0.9813655090785445
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,9.43,0.9745116927373284
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Fathead Minnow,Fish,3,1,Plasma,Flow-through,,182.0,2.2600713879850747
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,86.954868,1.9392939001553917
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,819.860184,2.9137397956830036
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,9.5236284,0.9788024414390654
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,173.909736,2.240323895819373
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Intestinal tract,Renewal,,99376.992,4.997285847133078
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Gill(s),Renewal,,99376.992,4.997285847133078
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Liver,Renewal,,99376.992,4.997285847133078
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Blood,Renewal,,99376.992,4.997285847133078
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Static,,460.0,2.662757831681574
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Muscle,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Muscle,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Muscle,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Brain,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gonad(s),Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Scale,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Intestinal tract,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,"Skin, epidermis",Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Intestinal tract,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gill(s),Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Kidney,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gill(s),Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Kidney,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Brain,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gonad(s),Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Muscle,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,33010.0,4.518645524330312
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Intestinal tract,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,19000.0,4.278753600952829
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Intestinal tract,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Muscle,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Intestinal tract,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Intestinal tract,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Muscle,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Brain,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Intestinal tract,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gall bladder,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Scale,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,"Skin, epidermis",Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Brain,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gall bladder,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Intestinal tract,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Scale,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,9910.0,3.9960736544852753
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gonad(s),Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gonad(s),Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gonad(s),Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gill(s),Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Intestinal tract,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Muscle,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Brain,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Scale,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,140784.07200000001,5.148553522463728
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gill(s),Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,"Skin, epidermis",Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gonad(s),Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Brain,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gill(s),Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gonad(s),Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Kidney,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,"Skin, epidermis",Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gill(s),Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gill(s),Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gonad(s),Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Brain,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gill(s),Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Intestinal tract,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Scale,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Muscle,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Brain,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,"Skin, epidermis",Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Scale,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,"Skin, epidermis",Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,"Skin, epidermis",Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Scale,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Muscle,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Kidney,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gill(s),Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Scale,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,"Skin, epidermis",Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gill(s),Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Muscle,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Kidney,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Kidney,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Kidney,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Kidney,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Kidney,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gall bladder,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,8695.486799999999,3.9392939001553917
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,16976.9028,4.229858462141208
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gall bladder,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gall bladder,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gall bladder,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Kidney,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gall bladder,Renewal,,92.1,1.964259630196849
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gall bladder,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gall bladder,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gall bladder,Renewal,,9.03,0.9556877503135057
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Kidney,Flow-through,,2000.0,3.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Brain,Flow-through,,2000.0,3.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gonad(s),Flow-through,,2000.0,3.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Blood,Flow-through,,2000.0,3.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Muscle,Flow-through,,2000.0,3.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,19350.0,4.28668096935493
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gill(s),Flow-through,,2000.0,3.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Flow-through,,2000.0,3.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,9910.0,3.9960736544852753
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Japanese Medaka,Fish,3,1,Liver,Static,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Japanese Medaka,Fish,3,1,Liver,Static,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Flow-through,,2000.0,3.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Zebra Danio,Other,2,0,Whole organism,Renewal,,6380.0,3.8048206787211623
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gill(s),Flow-through,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Brain,Flow-through,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Flow-through,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Gonad(s),Flow-through,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Kidney,Flow-through,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Blood,Flow-through,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Muscle,Flow-through,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Common Carp,Fish,3,1,Liver,Flow-through,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Yolk,Static,,110.0,2.041392685158225
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Yolk,Static,,80.0,1.9030899869919435
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Yolk,Static,,670.0,2.8260748027008264
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Yolk,Static,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Yolk,Static,,2120.0,3.326335860928751
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Yolk,Static,,10580.0,4.024485667699167
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Yolk,Static,,1110.0,3.0453229787866576
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Yolk,Static,,10110.0,4.004751155591001
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Plasma,Flow-through,,7.683,0.8855308331880921
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Kidney,Gavage,,200.0,2.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Liver,Gavage,,200.0,2.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Liver,Gavage,,200.0,2.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Liver,Gavage,,200.0,2.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Blood,Gavage,,200.0,2.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Kidney,Gavage,,200.0,2.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Kidney,Gavage,,200.0,2.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Blood,Gavage,,200.0,2.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Kidney,Gavage,,200.0,2.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Liver,Gavage,,200.0,2.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Blood,Gavage,,200.0,2.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Atlantic Salmon,Fish,3,1,Blood,Gavage,,200.0,2.3010299956639813
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Yolk,Static,,10110.0,4.004751155591001
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Yolk,Static,,10580.0,4.024485667699167
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Multiple entries,Food,,299.0,2.4756711883244296
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Rainbow Trout,Fish,3,1,Multiple entries,"Diet, unspecified",,1.2,0.07918124604762482
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Asian Water Plantain,Other,2,0,Root,Static,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Waterweed,Other,2,0,Leafneedle,"Aquatic, unspecified",,2.0,0.3010299956639812
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Eelgrass,Other,2,0,Rhizome,Renewal,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Eelgrass,Other,2,0,Leafneedle,Renewal,,10.0,1.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Eelgrass,Other,2,0,Rhizome,Renewal,,5.0,0.6989700043360189
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Eelgrass,Other,2,0,Leafneedle,Renewal,,5.0,0.6989700043360189
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Asian Water Plantain,Other,2,0,Root,Static,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Asian Water Plantain,Other,2,0,Root,Static,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Asian Water Plantain,Other,2,0,Multiple entries,Renewal,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Asian Water Plantain,Other,2,0,Root,Static,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Coon-Tail,Other,2,0,Whole organism,Static,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Asian Water Plantain,Other,2,0,Multiple entries,Static,,1000.0,3.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Duckweed,Other,2,0,Tissue,"Aquatic, unspecified",,0.16,-0.7958800173440752
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Midge,Other,2,0,Whole organism,Static,,9.809999999999999,0.9916690073799485
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Midge,Other,2,0,Whole organism,Static,,9.799999999999999,0.9912260756924948
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Midge,Other,2,0,Whole organism,Static,,9.799999999999999,0.9912260756924948
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Midge,Other,2,0,Whole organism,Static,,9.809999999999999,0.9916690073799485
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Midge,Other,2,0,Whole organism,Static,,9.799999999999999,0.9912260756924948
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Midge,Other,2,0,Whole organism,Static,,9.799999999999999,0.9912260756924948
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Midge,Other,2,0,Whole organism,Static,,9.809999999999999,0.9916690073799485
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Midge,Other,2,0,Whole organism,Static,,9.809999999999999,0.9916690073799485
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Mussel,Other,2,0,Tissue,Renewal,,93.0,1.968482948553935
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Mussel,Other,2,0,Tissue,Renewal,,93.0,1.968482948553935
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Mussel,Other,2,0,Tissue,Renewal,,93.0,1.968482948553935
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Mussel,Other,2,0,Tissue,Renewal,,93.0,1.968482948553935
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Mussel,Other,2,0,Tissue,Renewal,,93.0,1.968482948553935
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Mussel,Other,2,0,Tissue,Renewal,,93.0,1.968482948553935
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Green Mussel,Other,2,0,Tissue,Renewal,,93.0,1.968482948553935
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Mussel,Other,2,0,Gill(s),Static,,41.40708,1.6170746054214724
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.1000000000000005,0.8512583487190754
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.7,0.8260748027008264
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.8,0.8325089127062363
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.5,0.8129133566428556
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Short-Necked Clam,Other,2,0,Soft tissue,Renewal,,0.93,-0.03151705144606486
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,7.1000000000000005,0.8512583487190754
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.5,0.8129133566428556
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.8,0.8325089127062363
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Pacific Oyster,Other,2,0,Soft tissue,Renewal,,6.7,0.8260748027008264
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Mediterranean Mussel,Other,2,0,Adductor muscle,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Mediterranean Mussel,Other,2,0,Gonad(s),Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Mediterranean Mussel,Other,2,0,Gill(s),Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Mediterranean Mussel,Other,2,0,Whole organism,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Mediterranean Mussel,Other,2,0,Digestive gland,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Mediterranean Mussel,Other,2,0,Mantle,Renewal,,100.0,2.0
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Short-Necked Clam,Other,2,0,Hemocyte,Renewal,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Short-Necked Clam,Other,2,0,Hemocyte,Renewal,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Short-Necked Clam,Other,2,0,Hemocyte,Renewal,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Short-Necked Clam,Other,2,0,Hemocyte,Renewal,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Short-Necked Clam,Other,2,0,Hemocyte,Renewal,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Short-Necked Clam,Other,2,0,Hemocyte,Renewal,,0.2,-0.6989700043360187
+PFOA,335-67-1,Carboxylate,8.0,414.1,5.3,Short-Necked Clam,Other,2,0,Hemolymph,Renewal,,0.93,-0.03151705144606486
+,3825-26-1,,,,,Fathead Minnow,Fish,3,1,Tissue,Static,,25900.0,4.413299764081252
+,3825-26-1,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,1582.141771,3.199245396737096
+,3825-26-1,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,163.81849400000002,2.2143629291018168
+,914637-49-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,164.21227199999998,2.215405609925489
+,914637-49-3,,,,,Zebra Danio,Other,2,0,Whole organism,Renewal,,1378.698867,3.1394694186910113

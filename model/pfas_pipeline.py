@@ -130,8 +130,8 @@ ECOTOX_COL_ALIASES = {
     "Exposure Route":    ["Exposure Type", "Exposure Route", "exposure_route", "Route"],
     "Exposure Duration": ["Observed Duration Mean (Days)", "Exposure Duration Mean", "Exposure Duration", "Duration Mean", "duration"],
     "Duration Unit":     ["Observed Duration Units (Days)", "Exposure Duration Unit", "Duration Unit", "duration_unit"],
-    "Result Value":      ["Conc 1 Mean (Standardized)", "Result Value Mean", "Result Value", "Concentration", "result_value"],
-    "Result Unit":       ["Conc 1 Units (Standardized)", "Result Unit", "result_unit", "Conc Unit"],
+    "Result Value":      ["Conc 1 Mean (Author)", "Conc 1 Mean (Standardized)", "Result Value Mean", "Result Value", "Concentration", "result_value"],
+    "Result Unit":       ["Conc 1 Units (Author)", "Conc 1 Units (Standardized)", "Result Unit", "result_unit", "Conc Unit"],
     "BCF":               ["BCF 1 Value", "BCF", "bcf"],
     "Study Year":        ["Publication Year", "Study Year", "year"],
     "DOI":               ["DOI", "doi", "Reference DOI"],
@@ -194,6 +194,20 @@ UNIT_TO_NG_G = {
     "ug/l":  1,
     "ai mg/kg bdwt": 1_000,
     "ai mg/kg food": 1_000,
+    "mg/kg soil": 1_000,
+    "mg/g soil": 1_000_000,
+    "ng/g soil": 1,
+    "ug/kg soil": 1,
+    "ug/g egg": 1_000,
+    "mg/kg dry soil": 1_000,
+    "mg/kg egg": 1_000,
+    "mg/kg diet": 1_000,
+    "ppb dry wt": 1,
+    "ppm": 1_000,
+    "ug/kg dry soil": 1,
+    "ng/g dw soil": 1,
+    "ug/ml": 1,
+    "ug/l": 1,
 }
 
 DURATION_TO_DAYS = {
@@ -341,7 +355,6 @@ def build_ml_ready(df):
         "MW",
         "LogKow",
         "Duration_days",
-        "Route_encoded",
         "Trophic_Level",
         "Is_Aquatic",
         "is_fish",
@@ -553,5 +566,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-#Add main pipeline script

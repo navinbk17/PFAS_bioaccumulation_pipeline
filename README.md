@@ -1,4 +1,4 @@
-# PFAS Bioaccumulation Data Pipeline
+# PFAS Bioaccumulation Data Pipeline (ECOTOX + CompTox Integration)
 
 A reproducible data pipeline for building a machine-learning-ready dataset of PFAS bioaccumulation across species, tissues, and exposure conditions. Integrates EPA ECOTOX biological data with EPA CompTox chemical properties.
 

@@ -114,19 +114,19 @@ ECOTOX mammal records for PFAS are almost entirely dose-response studies (mg/kg/
 - Dataset: 1,524 rows, R²=0.174
 - All 7 outputs generated in one command
 
-### v2.1 — June 2026
+### v2.1 — May 2026
 - Added terrestrial ECOTOX exports
 - Added Tier 2 PFAS (PFDA, PFUnDA, PFHpA)
 - Dataset grew from 697 → 1,273 rows
 - Plant species group appeared for first time
 - Removed Route_encoded (identified as data leakage)
 
-### v2.0 — June 2026
+### v2.0 — May 2026
 - Added aquatic exports for PFNA, PFHxS, PFBS, PFOA
 - First gap heatmap and cross-species validation
 - R²=0.279
 
-### v1.0 — June 2026
+### v1.0 — April 2026
 - Initial pipeline, PFOS only (411 rows)
 - First Random Forest model
 

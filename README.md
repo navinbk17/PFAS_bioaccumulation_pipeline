@@ -1,10 +1,30 @@
-# PFAS Bioaccumulation Research Pipeline v3.0
+# PFAS Bioaccumulation Research Pipeline v4.0
 
 > *"PFAS chemicals don't break down. They move up food chains, accumulate in tissues, and end up in human blood. This pipeline maps where they go — and where our scientific understanding runs out."*
 
-A reproducible, multi-source data pipeline for studying PFAS bioaccumulation across aquatic and terrestrial species. Integrates EPA ECOTOX biological exposure data with EPA CompTox chemical properties to build a machine-learning-ready dataset, identify critical data gaps, and predict bioaccumulation from chemical structure alone.
+A reproducible, multi-source data pipeline for studying PFAS bioaccumulation across aquatic and terrestrial species and human populations. Integrates EPA ECOTOX biological exposure data, EPA CompTox chemical properties, and CDC NHANES human biomonitoring data to build a machine-learning-ready dataset, identify critical data gaps, and predict bioaccumulation from chemical structure alone.
 
-**Current dataset: 1,524 observations | 8 PFAS | 4 species groups | 2 ML models**
+**Current dataset: 13,098 observations | 8 PFAS | 5 species groups | 2 ML models | R²=0.742**
+
+---
+
+## Table of Contents
+
+- [Why This Research Matters](#why-this-research-matters)
+- [Key Findings](#key-findings)
+- [Version History](#version-history)
+- [Outputs](#outputs)
+- [Dataset Schema](#dataset-schema)
+- [PFAS Chemicals](#pfas-chemicals)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Data Sources](#data-sources)
+- [Pipeline Architecture](#pipeline-architecture)
+- [Model Results](#model-results)
+- [Data Gaps](#data-gaps)
+- [Roadmap](#roadmap)
+- [How to Add Data](#how-to-add-data)
+- [How to Push to GitHub](#how-to-push-to-github)
 
 ---
 
@@ -16,157 +36,99 @@ Per- and polyfluoroalkyl substances (PFAS) are a class of over 12,000 synthetic 
 
 They accumulate.
 
-### The Bioaccumulation Problem
+### The Food Chain Problem
 
-When PFAS enter an ecosystem — through industrial discharge, agricultural runoff, or contaminated groundwater — they are absorbed by plants and small organisms at the base of the food chain. As larger animals eat smaller ones, PFAS concentrations multiply at each trophic level. This process, called biomagnification, means that a fish at the top of an aquatic food chain can carry concentrations thousands of times higher than the water it swims in.
+When PFAS enter an ecosystem — through industrial discharge, agricultural runoff, or contaminated groundwater — they are absorbed by plants and small organisms at the base of the food chain. As larger animals eat smaller ones, PFAS concentrations multiply at each trophic level. This process, called biomagnification, means a fish at the top of an aquatic food chain can carry concentrations thousands of times higher than the water it swims in.
 
 Humans sit at the top of the food chain.
 
-### What We Know — and What We Don't
+### What the Numbers Say
 
-Studies have detected PFAS in the blood of 97% of Americans. PFAS exposure has been linked to thyroid disease, immune suppression, certain cancers, reproductive harm, and developmental delays in children. The EPA has set maximum contaminant levels for several PFAS in drinking water at 4 parts per trillion — a level so low it required new analytical methods to even measure.
+- PFAS have been detected in the blood of **97% of Americans**
+- The EPA has set drinking water limits for PFAS at **4 parts per trillion** — so low it required new analytical methods to measure
+- PFAS exposure has been linked to thyroid disease, immune suppression, certain cancers, reproductive harm, and developmental delays in children
+- Our pipeline finds median PFOS levels of **2.83 ng/g** in human blood serum from CDC data — in people with no known occupational exposure
 
-Yet despite this, our scientific understanding of *how* PFAS move through ecosystems remains fragmented. Data is scattered across hundreds of studies, measured in inconsistent units, tested on different species, and reported under different conditions. No single database cleanly maps PFAS bioaccumulation from soil → plant → fish → mammal → human.
+### The Scientific Gap We're Addressing
 
-**That is the gap this project addresses.**
+Despite this, our understanding of *how* PFAS move through ecosystems remains deeply fragmented. Data is scattered across hundreds of studies, measured in inconsistent units, tested on different species, and reported under different conditions. No single database cleanly maps PFAS bioaccumulation from soil → plant → fish → mammal → human.
 
----
-
-## What This Pipeline Does
-
-1. Ingests raw ECOTOX biological exposure data (aquatic + terrestrial)
-2. Harmonizes units, species taxonomy, and exposure metadata across 18+ data files
-3. Merges with EPA CompTox chemical property data
-4. Outputs a clean, ML-ready dataset with 1,524 observations
-5. Trains two Random Forest models — one predicting tissue concentration, one predicting BCF
-6. Generates data gap heatmaps showing exactly where scientific knowledge is missing
-7. Runs cross-species validation to test whether PFAS behavior in one species can predict another
-
----
-
-## Version History
-
-### v3.0 (current) — June 2026
-**What's new:**
-- Added BCF (Bioconcentration Factor) as a second ML target variable
-- BCF model achieves R²=0.408 vs concentration model R²=0.174 — a 2.3× improvement
-- Added PFAS class (Sulfonate/Carboxylate) as a model feature
-- Added terrestrial species data (soil, plant, diet exposure studies)
-- Dataset grew from 697 → 1,524 rows (+119%)
-- ML training set grew from 501 → 1,123 rows (+124%)
-- Clean pipeline rewrite — both models now run inside a single integrated script
-- All 7 output files generated in one command
-
-**Key insight from v3.0:**
-BCF is a significantly better prediction target than raw tissue concentration because it normalizes for exposure dose, removing a major source of cross-study noise.
-
----
-
-### v2.1 — June 2026
-- Added terrestrial ECOTOX exports (soil, plant, mammal studies)
-- Dataset grew from 697 → 1,273 rows
-- R² improved from 0.110 → 0.176 after adding species diversity
-- Identified that exposure route was dominating model (data leakage) — removed
-- Plant species group appeared in data for first time
-
----
-
-### v2.0 — June 2026
-- Added aquatic exports for PFNA, PFHxS, PFBS, PFOA
-- First working gap heatmap
-- First cross-species validation
-- R²=0.279 with Route_encoded (later identified as leakage)
-
----
-
-### v1.0 — June 2026
-- Initial pipeline with PFOS only (411 rows)
-- Basic harmonization layer
-- First Random Forest model
+**That gap is what this project addresses.**
 
 ---
 
 ## Key Findings
 
-### Finding 1 — BCF is a better prediction target than raw concentration (R²=0.408 vs 0.174)
+### Finding 1 — Trophic level is the strongest predictor of PFAS accumulation
 
-Raw tissue concentration varies enormously between studies because it depends on how much chemical the organism was exposed to — which differs by experiment. BCF normalizes this by dividing tissue concentration by water concentration, making it comparable across studies. Our Random Forest predicts BCF more than twice as accurately as raw concentration, confirming that study-level variation in exposure dose is a major source of noise in the literature.
+Across 13,098 observations, trophic level (where an organism sits in the food chain) explains more variance in PFAS tissue concentration than any chemical property. This directly confirms biomagnification: the higher you are in the food chain, the more PFAS you accumulate. Humans at trophic level 5 show the highest and most consistent concentrations.
 
-**Implication:** Future PFAS bioaccumulation research should prioritize BCF measurements over raw tissue concentration for cross-study comparability.
+### Finding 2 — Human blood levels are predictable; environmental data is not
 
----
+When CDC NHANES human biomonitoring data is included, model R² improves from 0.174 to 0.742. This is because human blood measurements (2,133 people, same lab, same protocol) are far more consistent than heterogeneous environmental studies. The model learned human blood PFAS patterns extremely well — but cannot transfer that knowledge to fish or plant predictions.
 
-### Finding 2 — Molecular weight, LogKow, and chain length are the top chemical predictors
+### Finding 3 — Environmental data cannot predict human exposure (cross-species R²= -8)
 
-Across both models, the same three chemical properties dominate feature importance:
+Leave-one-species-out validation shows that a model trained on fish, plant, and mammal data achieves R²= -8 when predicting human blood levels. This is a critical finding: **we cannot use environmental bioaccumulation data to predict human exposure with current available data.** The disconnect between environmental measurements and human biomonitoring is the central unsolved problem in PFAS risk assessment.
 
-1. **Molecular Weight (MW)** — heavier molecules partition more strongly into lipid-rich tissues
-2. **LogKow** — higher octanol-water partition coefficient = greater hydrophobicity = more bioaccumulation
-3. **Chain Length** — longer fluorinated carbon chains are more persistent and more bioaccumulative
+### Finding 4 — BCF is a better normalized target than raw concentration (R²=0.408 vs 0.174)
 
-This is consistent with established bioaccumulation theory and validates that our pipeline is capturing real chemical mechanisms, not statistical artifacts.
+Bioconcentration Factor (BCF) normalizes tissue concentration by water concentration, removing a major source of cross-study noise. Our Random Forest predicts BCF more than twice as accurately as raw tissue concentration, confirming that study-level variation in exposure dose — not chemistry — drives most of the variance in raw concentration data.
 
----
+### Finding 5 — Data gaps are severe, systematic, and chemically biased
 
-### Finding 3 — Data gaps are severe, systematic, and chemically biased
+| PFAS | Fish | Human | Mammal | Plant | Other |
+|---|---|---|---|---|---|
+| PFOS | 22 | 1,929 | 2 | 130 | 121 |
+| PFOA | 150 | 1,929 | 2 | 123 | 352 |
+| PFNA | 16 | 1,929 | 0 | 0 | 40 |
+| PFHxS | 0 | 1,929 | 0 | 0 | 46 |
+| PFDA | 0 | 1,929 | 0 | 0 | 27 |
+| PFUnDA | 2 | 1,929 | 0 | 0 | 17 |
+| PFBS | 6 | 0 | 0 | 0 | 66 |
+| PFHpA | 0 | 0 | 0 | 0 | 1 |
 
-| PFAS | Fish | Mammal | Plant | Other |
-|---|---|---|---|---|
-| PFOA | 150 | 0 | 104 | 326 |
-| PFOS | 22 | 1 | 114 | 118 |
-| PFBS | 6 | 0 | 0 | 66 |
-| PFHxS | 0 | 0 | 0 | 46 |
-| PFNA | 16 | 0 | 0 | 40 |
-| PFDA | 0 | 0 | 0 | 27 |
-| PFHpA | 0 | 0 | 0 | 1 |
+**PFHxS is detected in the blood of nearly every American — yet has zero fish and zero mammal tissue records in ECOTOX.** We know it's in human blood but have almost no data on how it gets there through the food chain.
 
-**PFHxS has zero fish and zero mammal tissue concentration records** despite being one of the most detected PFAS in human blood globally. PFBS, a common replacement for PFOS, has almost no mammal data. All Tier 2 PFAS (PFDA, PFUnDA, PFHpA) lack fish and mammal data entirely.
+### Finding 6 — Mammalian bioaccumulation data is nearly unusable
 
-This is not a limitation of our pipeline — it is a reflection of the actual state of the scientific literature.
-
----
-
-### Finding 4 — Mammalian bioaccumulation data is nearly unusable
-
-When we searched ECOTOX for mammalian PFAS data, the vast majority of records were dose-response studies (mg/kg/day administered) rather than tissue residue measurements (ng/g in tissue). These two measurement types answer fundamentally different questions. The former tells you how much PFAS kills a rat. The latter tells you how much PFAS a rat accumulates in its liver from environmental exposure.
-
-Only 1 mammalian tissue residue record exists in our current dataset across all 8 PFAS. This means cross-species prediction from fish to mammals — which is exactly what regulators need to set safe exposure limits for humans — is currently impossible with available data.
+ECOTOX mammal records for PFAS are almost entirely dose-response studies (mg/kg/day administered) rather than tissue residue measurements (ng/g accumulated). Only 4 mammalian tissue residue records exist across all 8 PFAS. This makes cross-species prediction from environmental mammals to humans currently impossible.
 
 ---
 
-### Finding 5 — Cross-species prediction fails with current data
+## Version History
 
-Our leave-one-species-out validation shows negative R² for all species groups, meaning a model trained on fish cannot predict plant accumulation, and vice versa. This is itself a finding: PFAS bioaccumulation is so species- and tissue-specific that chemical properties alone cannot bridge the gap. Environmental fate models that assume consistent cross-species behavior may significantly underestimate risk for some organisms.
+### v4.0 (current) — June 2026
+- Added CDC NHANES 2017-2018 human blood serum data (11,574 rows, 6 PFAS, 2,133 people)
+- Dataset grew from 1,524 → 13,098 rows (+760%)
+- Concentration model R² improved from 0.174 → 0.742
+- Human column now populated in gap heatmap
+- NHANES data loaded post-harmonization (pre-calculated concentrations)
+- Discovered critical cross-species prediction failure (human R²= -8 in leave-one-out)
+- Full 5-species gap analysis now possible
 
----
+### v3.0 — June 2026
+- Added BCF as second ML target (R²=0.408)
+- Added PFAS class (Sulfonate/Carboxylate) as feature
+- Clean pipeline rewrite — both models in single integrated script
+- Dataset: 1,524 rows, R²=0.174
+- All 7 outputs generated in one command
 
-## Model Results
+### v2.1 — June 2026
+- Added terrestrial ECOTOX exports
+- Added Tier 2 PFAS (PFDA, PFUnDA, PFHpA)
+- Dataset grew from 697 → 1,273 rows
+- Plant species group appeared for first time
+- Removed Route_encoded (identified as data leakage)
 
-### Concentration Model (log₁₀ ng/g)
+### v2.0 — June 2026
+- Added aquatic exports for PFNA, PFHxS, PFBS, PFOA
+- First gap heatmap and cross-species validation
+- R²=0.279
 
-| Metric | Value |
-|---|---|
-| Training rows | 1,123 |
-| Features | 11 |
-| R² | 0.174 |
-| RMSE | ~1.27 log₁₀ ng/g |
-
-### BCF Model (log₁₀ BCF)
-
-| Metric | Value |
-|---|---|
-| Training rows | 321 |
-| Features | 10 |
-| R² | 0.408 |
-| RMSE | ~0.85 log₁₀ BCF |
-
-### Feature Importance (both models, ranked)
-1. Molecular Weight
-2. LogKow
-3. Chain Length
-4. Trophic Level
-5. Is Aquatic
-6. PFAS Class (Sulfonate vs Carboxylate)
+### v1.0 — June 2026
+- Initial pipeline, PFOS only (411 rows)
+- First Random Forest model
 
 ---
 
@@ -174,10 +136,10 @@ Our leave-one-species-out validation shows negative R² for all species groups, 
 
 | File | Description |
 |---|---|
-| `pfas_bioaccumulation_dataset.csv` | 1,524 rows, fully cleaned and ML-ready |
+| `pfas_bioaccumulation_dataset.csv` | 13,098 rows, fully cleaned and ML-ready |
 | `pfas_gap_heatmap.png` | Observations per PFAS × species group |
 | `feature_importance.png` | Concentration model feature importances |
-| `model_predictions.png` | Concentration predicted vs actual (R²=0.174) |
+| `model_predictions.png` | Concentration predicted vs actual (R²=0.742) |
 | `cross_species_validation.png` | Leave-one-species-out R² and RMSE |
 | `bcf_feature_importance.png` | BCF model feature importances |
 | `bcf_predictions.png` | BCF predicted vs actual (R²=0.408) |
@@ -210,6 +172,36 @@ Our leave-one-species-out validation shows negative R² for all species groups, 
 | `log_concentration` | float | Log₁₀ concentration — ML target 1 |
 | `BCF` | float | Bioconcentration factor |
 | `log_BCF` | float | Log₁₀ BCF — ML target 2 |
+| `Source` | string | CDC NHANES / ECOTOX |
+
+---
+
+## PFAS Chemicals
+
+### Tier 1 — Core (fully included)
+| PFAS | CASRN | Class | Chain | MW | LogKow |
+|---|---|---|---|---|---|
+| PFOS | 1763-23-1 | Sulfonate | 8 | 500.1 | 5.26 |
+| PFOA | 335-67-1 | Carboxylate | 8 | 414.1 | 5.30 |
+| PFHxS | 355-46-4 | Sulfonate | 6 | 400.1 | 4.14 |
+| PFNA | 375-95-1 | Carboxylate | 9 | 464.1 | 6.05 |
+| PFBS | 375-73-5 | Sulfonate | 4 | 300.1 | 1.82 |
+
+### Tier 2 — Extended
+| PFAS | CASRN | Class | Chain | MW | LogKow |
+|---|---|---|---|---|---|
+| PFDA | 335-76-2 | Carboxylate | 10 | 514.1 | 6.83 |
+| PFUnDA | 2058-94-8 | Carboxylate | 11 | 564.1 | 7.59 |
+| PFDoDA | 307-55-1 | Carboxylate | 12 | 614.1 | 8.35 |
+| PFHpA | 375-85-9 | Carboxylate | 7 | 364.1 | 4.55 |
+| PFHxA | 307-24-4 | Carboxylate | 6 | 314.1 | 3.77 |
+
+### Tier 3 — Emerging (not yet included)
+| PFAS | CASRN | Class |
+|---|---|---|
+| GenX (HFPO-DA) | 13252-13-6 | Carboxylate |
+| ADONA | 958445-44-8 | Carboxylate |
+| F53B | 73606-19-6 | Sulfonate |
 
 ---
 
@@ -219,17 +211,28 @@ Our leave-one-species-out validation shows negative R² for all species groups, 
 pip3 install pandas numpy matplotlib seaborn scikit-learn openpyxl requests
 ```
 
-Set paths in `pfas_pipeline_v3.py`:
+---
+
+## Usage
+
+### 1. Set paths in `pfas_pipeline_v4.py`
 ```python
 ECOTOX_EXPORT_DIR = "/path/to/ecotox_exports/"
 COMPTOX_SNAPSHOT  = "/path/to/comptox_snapshot.csv"
 OUTPUT_DIR        = "/path/to/outputs/"
 ```
 
-Run:
+### 2. Run
 ```bash
-python3 pfas_pipeline_v3.py
+python3 pfas_pipeline_v4.py
 ```
+
+### Required files
+| File | Where to get it |
+|---|---|
+| ECOTOX xlsx exports | https://cfpub.epa.gov/ecotox/ — search each PFAS, export as XLSX |
+| `nhanes_pfas_processed.csv` | Included in this repo — generated from CDC NHANES 2017-2018 |
+| `comptox_snapshot.csv` | Optional — https://comptox.epa.gov/dashboard/batch-search |
 
 ---
 
@@ -239,89 +242,183 @@ python3 pfas_pipeline_v3.py
 |---|---|---|
 | EPA ECOTOX | https://cfpub.epa.gov/ecotox/ | Species, tissue, concentration, BCF |
 | EPA CompTox | https://comptox.epa.gov/dashboard/batch-search | MW, LogKow, chemical properties |
-| CDC NHANES | https://www.cdc.gov/nchs/nhanes/ | Human blood serum PFAS (planned) |
+| CDC NHANES 2017-2018 | https://wwwn.cdc.gov/nchs/nhanes/ | Human blood serum PFAS levels |
 
 ---
 
-## How to Add New ECOTOX Data
+## Pipeline Architecture
 
-1. Go to https://cfpub.epa.gov/ecotox/
-2. Search a chemical → filter **Effect → Accumulation** if >10,000 results
-3. Export as XLSX
-4. Move to `ecotox_exports/`:
-```bash
-mv ~/Downloads/ECOTOX-*.xlsx /path/to/ecotox_exports/
 ```
-5. Run pipeline — all files are picked up automatically
+EPA CompTox              EPA ECOTOX               CDC NHANES
+(chemical traits)    (species + tissue data)   (human blood serum)
+      │                      │                        │
+      ▼                      ▼                        │
+Chemical Feature       ECOTOX Ingestion               │
+Table (13 PFAS)        (18 xlsx files)                │
+      │                      │                        │
+      │               Harmonization                   │
+      │           (units → ng/g, taxonomy)            │
+      │                      │                        │
+      │                      └──────────┬─────────────┘
+      │                                 │
+      │                          Combined Dataset
+      └─────────────────────────────────┘
+                                │
+                         Merged Dataset
+                        (13,098 rows)
+                                │
+              ┌─────────────────┼─────────────────┐
+              ▼                 ▼                  ▼
+         Gap Heatmap    Conc RF Model        BCF RF Model
+         (5 species     (R²=0.742)           (R²=0.408)
+          × 8 PFAS)
+```
 
 ---
 
-## How to Push to GitHub
+## Model Results
 
-### First time
-```bash
-brew install git
-git config --global user.name "Your Name"
-git config --global user.email "your@email.com"
+| Version | Rows | R² Conc | R² BCF | Key change |
+|---|---|---|---|---|
+| v1.0 | 411 | — | — | PFOS only |
+| v2.0 | 697 | 0.279* | — | 5 PFAS aquatic |
+| v2.1 | 1,273 | 0.110 | — | Terrestrial added, leakage fixed |
+| v3.0 | 1,524 | 0.176 | 0.408 | BCF model added |
+| v4.0 | 13,098 | 0.742 | 0.408 | NHANES human data added |
 
-cd /Users/navink.admin/Desktop
-git init
-git remote add origin https://github.com/YOUR_USERNAME/pfas-pipeline.git
+*R²=0.279 included Route_encoded data leakage
 
-# Create .gitignore
-cat > .gitignore << 'EOF'
-ecotox_exports/
-comptox_snapshot.csv
-pfas_bioaccumulation_dataset.csv
-__pycache__/
-.DS_Store
-EOF
+### Feature importance (concentration model, v4.0)
+1. Trophic Level (0.55) — food chain position
+2. is_human (0.15) — human vs environmental
+3. LogKow (0.13) — hydrophobicity
+4. Chain Length (0.12) — carbon chain length
+5. MW (0.05) — molecular weight
 
-git add pfas_pipeline_v3.py README.md *.png
-git commit -m "v3.0: dual model pipeline, BCF R2=0.408, 1524 rows"
-git branch -M main
-git push -u origin main
-```
+---
 
-### Every update
-```bash
-git add pfas_pipeline_v3.py README.md *.png
-git commit -m "describe what changed"
-git push
-```
+## Data Gaps
+
+| PFAS | Fish | Human | Mammal | Plant | Other |
+|---|---|---|---|---|---|
+| PFOS | 22 | 1,929 | 2 | 130 | 121 |
+| PFOA | 150 | 1,929 | 2 | 123 | 352 |
+| PFNA | 16 | 1,929 | 0 | 0 | 40 |
+| PFHxS | 0 | 1,929 | 0 | 0 | 46 |
+| PFDA | 0 | 1,929 | 0 | 0 | 27 |
+| PFUnDA | 2 | 1,929 | 0 | 0 | 17 |
+| PFBS | 6 | 0 | 0 | 0 | 66 |
+| PFHpA | 0 | 0 | 0 | 0 | 1 |
+
+**Critical gap: PFHxS has 1,929 human blood measurements and zero fish records.**
 
 ---
 
 ## Roadmap
 
 ### Phase 1 — Data Expansion (June 2026)
-- [x] Add PFAS class as ML feature
-- [x] Add BCF as second target variable
-- [x] Add terrestrial species data
-- [x] Add Tier 2 PFAS (PFDA, PFUnDA, PFHpA)
-- [ ] Integrate CDC NHANES human blood serum data
-- [ ] Add real CompTox physicochemical properties
-- [ ] Add actual trophic levels per species
+- [x] PFAS class as ML feature
+- [x] BCF as second target variable
+- [x] Terrestrial species data
+- [x] Tier 2 PFAS
+- [x] CDC NHANES human blood serum data
+- [ ] Real CompTox physicochemical properties
+- [ ] Real trophic levels per species
 
 ### Phase 2 — Better Models (July 2026)
-- [ ] Add XGBoost / Gradient Boosting
-- [ ] Add Linear Regression baseline
-- [ ] Train per-PFAS models
-- [ ] Add prediction confidence intervals
+- [ ] XGBoost / Gradient Boosting
+- [ ] Linear Regression baseline
+- [ ] Per-PFAS models
+- [ ] Prediction confidence intervals
 - [ ] BCF cross-species validation
 
 ### Phase 3 — Outputs (August 2026)
-- [ ] Build Streamlit interactive dashboard
-- [ ] Design research poster
-- [ ] Write full methods + results report
-- [ ] Publish GitHub repository
+- [ ] Streamlit interactive dashboard
+- [ ] Research poster
+- [ ] Full methods + results report
+- [ ] Published GitHub repository
+
+---
+
+## How to Add Data
+
+### New ECOTOX exports
+1. Go to https://cfpub.epa.gov/ecotox/
+2. Search chemical → filter **Effect → Accumulation** if >10,000 results
+3. Export as XLSX → move to `ecotox_exports/`
+4. Run pipeline — all files picked up automatically
+
+### New PFAS chemicals
+Add to `PFAS_FEATURES` in `pfas_pipeline_v4.py`:
+```python
+("PFDA", "335-76-2", "Carboxylate", 10, 514.1, 6.83),
+# (Name, CASRN, Class, Chain_Length, MW, LogKow)
+```
+
+### New unit conversions
+Add to `UNIT_TO_NG_G` in `pfas_pipeline_v4.py`:
+```python
+"your_unit": conversion_factor_to_ng_per_g,
+```
+
+---
+
+## How to Push to GitHub
+
+### First time setup
+```bash
+brew install git
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+# Go to github.com → New Repository → name "pfas-bioaccumulation"
+
+cd /Users/navink.admin/Desktop
+git init
+git remote add origin https://github.com/YOUR_USERNAME/pfas-bioaccumulation.git
+
+# Create .gitignore
+echo "ecotox_exports/
+comptox_snapshot.csv
+pfas_bioaccumulation_dataset.csv
+PFAS_J.XPT
+__pycache__/
+.DS_Store" > .gitignore
+
+# Add files
+git add pfas_pipeline_v4.py
+git add README.md
+git add nhanes_pfas_processed.csv
+git add pfas_gap_heatmap.png feature_importance.png model_predictions.png
+git add cross_species_validation.png bcf_feature_importance.png bcf_predictions.png
+
+git commit -m "v4.0: NHANES integration, 13098 rows, R2=0.742"
+git branch -M main
+git push -u origin main
+```
+
+### Every update
+```bash
+git add pfas_pipeline_v4.py README.md
+git commit -m "describe what changed"
+git push
+```
+
+### What goes on GitHub
+| Include | Exclude |
+|---|---|
+| `pfas_pipeline_v4.py` | `ecotox_exports/` folder |
+| `README.md` | `PFAS_J.XPT` |
+| `nhanes_pfas_processed.csv` | `pfas_bioaccumulation_dataset.csv` |
+| All 6 PNG plots | `comptox_snapshot.csv` |
 
 ---
 
 ## Citation
 
-EPA ECOTOX Knowledgebase: https://cfpub.epa.gov/ecotox/
-EPA CompTox Dashboard: https://comptox.epa.gov/dashboard/
+- EPA ECOTOX Knowledgebase: https://cfpub.epa.gov/ecotox/
+- EPA CompTox Dashboard: https://comptox.epa.gov/dashboard/
+- CDC NHANES 2017-2018 PFAS Data: https://wwwn.cdc.gov/nchs/nhanes/
 
 ---
 

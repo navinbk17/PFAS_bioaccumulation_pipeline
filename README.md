@@ -1,8 +1,8 @@
-# PFAS Bioaccumulation Research Pipeline v5.0
+# PFAS Bioaccumulation Research Pipeline v6.0
 
 A reproducible, multi-source data pipeline for studying PFAS bioaccumulation across aquatic and terrestrial species and human populations. Integrates EPA ECOTOX biological exposure data, EPA CompTox chemical properties, and CDC NHANES human biomonitoring data to build a machine-learning-ready dataset, identify critical data gaps, and predict bioaccumulation from chemical structure alone.
 
-**Current dataset: 13,098 observations | 8 PFAS | 5 species groups | 3 ML models | Best R²=0.742**
+**Current dataset: 25,056 observations | 13 PFAS | 5 species groups | 5 ML models | Best Held-Out R²=0.712**
 
 ---
 
@@ -59,23 +59,23 @@ Despite this, our understanding of how PFAS move through ecosystems remains deep
 
 ### Finding 1 — Trophic level is the strongest predictor of PFAS accumulation
 
-Across 13,098 observations, trophic level (where an organism sits in the food chain) explains more variance in PFAS tissue concentration than any chemical property. This directly confirms biomagnification: the higher you are in the food chain, the more PFAS you accumulate. Humans at trophic level 5 show the highest and most consistent concentrations.
+Across 25,056 observations, trophic level (where an organism sits in the food chain) explains more variance in PFAS tissue concentration than any chemical property. This directly confirms biomagnification: the higher you are in the food chain, the more PFAS you accumulate. Humans at trophic level 5 show the highest and most consistent concentrations.
 
 ### Finding 2 — PFAS bioaccumulation follows predictable linear relationships
 
-A simple linear regression model achieves R²=0.722, only marginally below Random Forest at R²=0.742. This narrow gap indicates that trophic level, LogKow, and chain length have straightforward additive effects on PFAS accumulation — the relationship is largely linear, not complex. This is scientifically meaningful: it validates that classical bioaccumulation theory (longer chains, higher hydrophobicity = more accumulation) holds across species and environments.
+A simple linear regression model achieves held-out R²=0.698, only marginally below Random Forest at held-out R²=0.712. This narrow gap indicates that trophic level, LogKow, and chain length have straightforward additive effects on PFAS accumulation — the relationship is largely linear, not complex. This is scientifically meaningful: it validates that classical bioaccumulation theory (longer chains, higher hydrophobicity = more accumulation) holds across species and environments.
 
 ### Finding 3 — Human blood levels are predictable; environmental data is not
 
-When CDC NHANES human biomonitoring data is included, model R² improves from 0.174 to 0.742. Human blood measurements from 2,133 people under standardized laboratory protocols are far more consistent than heterogeneous environmental studies. The model learned human blood PFAS patterns well — but cannot transfer that knowledge to fish or plant predictions.
+When CDC NHANES human biomonitoring data was introduced into the pipeline, model performance increased dramatically relative to environmental-only datasets. Human blood measurements collected under standardized laboratory protocols are far more consistent than heterogeneous environmental studies. The model learned human PFAS patterns well — but cannot transfer that knowledge to fish or plant predictions.
 
 ### Finding 4 — Environmental data cannot predict human exposure (cross-species R²= -8)
 
 Leave-one-species-out validation shows that a model trained on fish, plant, and mammal data achieves R²= -8 when predicting human blood levels. This is a critical finding: we cannot use environmental bioaccumulation data to predict human exposure with current data. The disconnect between environmental measurements and human biomonitoring is the central unsolved problem in PFAS risk assessment.
 
-### Finding 5 — BCF is a better normalized target than raw concentration (R²=0.408 vs 0.174)
+### Finding 5 — BCF remains difficult to predict despite normalization
 
-Bioconcentration Factor (BCF) normalizes tissue concentration by water concentration, removing cross-study noise from varying exposure doses. Our Random Forest predicts BCF more than twice as accurately as raw tissue concentration, confirming that study-level variation in exposure is the dominant noise source in raw concentration data.
+Bioconcentration Factor (BCF) normalizes tissue concentration by exposure concentration, reducing some study-level variability. However, the held-out BCF model achieved R²=0.315, substantially lower than the concentration model (R²=0.712). This suggests that important drivers of BCF remain unmeasured in current datasets, including exposure conditions, species physiology, and experimental design differences.
 
 ### Finding 6 — Data gaps are severe, systematic, and chemically biased
 
@@ -85,11 +85,45 @@ PFHxS is detected in the blood of nearly every American — yet has zero fish an
 
 ECOTOX mammal records for PFAS are almost entirely dose-response studies rather than tissue residue measurements. Only 4 mammalian tissue records exist across all 8 PFAS. Cross-species prediction from environmental mammals to humans is currently impossible.
 
+### Finding 8 — Environmental-only prediction remains extremely difficult
+
+To test whether PFAS chemistry alone can explain accumulation patterns, species-specific models were trained using only chemical descriptors (chain length, molecular weight, LogKow, PFAS class, and exposure duration).
+
+Results were poor:
+
+| Model | Held-Out R² |
+|--------|--------|
+| Fish-only | 0.113 |
+| Plant-only | 0.003 |
+
+For fish, a simple PFAS-average baseline actually outperformed the chemistry-only model. This suggests current environmental bioaccumulation datasets remain too sparse and heterogeneous for reliable within-species prediction. More standardized residue measurements are needed before chemistry-based ecological forecasting becomes feasible.
+
 ---
 
 ## Version History
 
-### v5.0 (current) — June 2026
+### v6.0 (current) — July 2026
+- Added proper 80/20 train/test split
+- Removed in-sample metrics from headline reporting
+- Added group-mean baseline model (R²=0.353)
+- Added per-species-group held-out evaluation
+- Added Fish-only chemistry model (R²=0.113)
+- Added Plant-only chemistry model (R²=0.003)
+- Added NHANES 2015–2016 data
+- Dataset grew from 13,098 → 25,056 observations
+- PFAS feature table expanded from 10 → 13 PFAS
+- Added `per_group_metrics.png`
+- Added `fish_feature_importance.png`
+- Added `fish_predictions.png`
+- Added `plant_feature_importance.png`
+- Added `plant_predictions.png`
+- Added `chain_length_bcf_scatter.png`
+- Added `nhanes_time_trend.png`
+
+Key methodological improvement:
+All headline performance metrics are now measured on held-out test data rather than the full dataset.
+
+### v5.0 — June 2026
 - Added Linear Regression baseline model (R²=0.722)
 - Key finding: RF (0.742) barely outperforms Linear (0.722) — relationship is largely linear
 - Added model comparison summary printed at end of pipeline
@@ -133,14 +167,21 @@ ECOTOX mammal records for PFAS are almost entirely dose-response studies rather 
 
 | File | Description |
 |---|---|
-| `pfas_bioaccumulation_dataset.csv` | 13,098 rows, fully cleaned and ML-ready |
+| `pfas_bioaccumulation_dataset.csv` | 25,056 rows, fully cleaned and ML-ready |
 | `pfas_gap_heatmap.png` | Observations per PFAS × species group |
 | `feature_importance.png` | RF concentration model feature importances |
-| `model_predictions.png` | RF concentration predicted vs actual (R²=0.742) |
+| `model_predictions.png` | RF concentration predicted vs actual (Held-Out R²=0.712) |
 | `cross_species_validation.png` | Leave-one-species-out R² and RMSE |
 | `bcf_feature_importance.png` | RF BCF model feature importances |
-| `bcf_predictions.png` | RF BCF predicted vs actual (R²=0.408) |
-| `linear_coefficients.png` | Linear regression standardized coefficients (R²=0.722) |
+| `bcf_predictions.png` | RF BCF predicted vs actual (Held-Out R²=0.315) |
+| `linear_coefficients.png` | Linear regression standardized coefficients (Held-Out R²=0.698) |
+| `per_group_metrics.png` | Held-out R² and baseline comparison by species group |
+| `fish_feature_importance.png` | Fish-only chemistry model feature importance |
+| `fish_predictions.png` | Fish-only model predictions (R²=0.113) |
+| `plant_feature_importance.png` | Plant-only chemistry model feature importance |
+| `plant_predictions.png` | Plant-only model predictions (R²=0.003) |
+| `chain_length_bcf_scatter.png` | Chain length vs BCF relationship |
+| `nhanes_time_trend.png` | NHANES PFAS blood concentration trends |
 
 ---
 
@@ -194,12 +235,12 @@ ECOTOX mammal records for PFAS are almost entirely dose-response studies rather 
 | PFHpA | 375-85-9 | Carboxylate | 7 | 364.1 | 4.55 |
 | PFHxA | 307-24-4 | Carboxylate | 6 | 314.1 | 3.77 |
 
-### Tier 3 — Emerging (not yet included)
-| PFAS | CASRN | Class |
-|---|---|---|
-| GenX (HFPO-DA) | 13252-13-6 | Carboxylate |
-| ADONA | 958445-44-8 | Carboxylate |
-| F53B | 73606-19-6 | Sulfonate |
+### Tier 3 — Emerging (included in feature table)
+| PFAS | CASRN | Class | Chain | MW | LogKow |
+|---|---|---|---|---|---|
+| GenX (HFPO-DA) | 13252-13-6 | Carboxylate | 6 | 330.1 | 2.50 |
+| ADONA | 958445-44-8 | Carboxylate | 8 | 380.1 | 2.80 |
+| F53B | 73606-19-6 | Sulfonate | 6 | 570.1 | 4.00 |
 
 ---
 
@@ -213,7 +254,7 @@ pip3 install pandas numpy matplotlib seaborn scikit-learn openpyxl requests
 
 ## Usage
 
-### Set paths in `pfas_pipeline_v4.py`
+### Set paths in `pfas_pipeline_v6.py`
 ```python
 ECOTOX_EXPORT_DIR = "/path/to/ecotox_exports/"
 COMPTOX_SNAPSHOT  = "/path/to/comptox_snapshot.csv"
@@ -223,7 +264,7 @@ OUTPUT_DIR        = "/path/to/outputs/"
 
 ### Run
 ```bash
-python3 pfas_pipeline_v4.py
+python3 pfas_pipeline_v6.py
 ```
 
 ### Required files
@@ -241,7 +282,7 @@ python3 pfas_pipeline_v4.py
 |---|---|---|
 | EPA ECOTOX | https://cfpub.epa.gov/ecotox/ | Species, tissue, concentration, BCF |
 | EPA CompTox | https://comptox.epa.gov/dashboard/batch-search | MW, LogKow, chemical properties |
-| CDC NHANES 2017-2018 | https://wwwn.cdc.gov/nchs/nhanes/ | Human blood serum PFAS levels |
+| CDC NHANES 2015-2016 & 2017-2018 | https://wwwn.cdc.gov/nchs/nhanes/ | Human blood serum PFAS levels |
 
 ---
 
@@ -264,15 +305,21 @@ Table (13 PFAS)     (18 xlsx files)              │
       └──────────────────────────────┘
                              │
                       Merged Dataset
-                      (13,098 rows)
+                      (25,056 rows)
                              │
-           ┌─────────────────┼──────────────────┐
-           ▼                 ▼                   ▼
-      Gap Heatmap     RF Conc Model        RF BCF Model
-      (5 species       (R²=0.742)           (R²=0.408)
-       × 8 PFAS)            │
-                      Linear Baseline
-                       (R²=0.722)
+           ┌─────────────────┼────────────────────┬────────────────────┐
+           ▼                 ▼                    ▼
+      Gap Heatmap     RF Conc Model         RF BCF Model
+                           │
+                           ▼
+                    Linear Baseline
+                           │
+                           ▼
+                  Per-Group Evaluation
+                           │
+              ┌────────────┴────────────┐
+              ▼                         ▼
+         Fish Model               Plant Model
 ```
 
 ---
@@ -287,8 +334,11 @@ Table (13 PFAS)     (18 xlsx files)              │
 | v3.0 | 1,524 | 0.176 | — | 0.408 | BCF model added |
 | v3.5 | 13,098 | 0.742 | — | 0.408 | NHANES added |
 | v4.0 | 13,098 | 0.742 | 0.722 | 0.408 | Linear baseline added |
+| v6.0 | 25,056 | 0.712* | 0.698* | 0.315* | Proper held-out validation |
 
 *v2.0 R²=0.279 included Route_encoded data leakage
+*v6.0 Held-out test performance from an 80/20 train-test split.
+Earlier versions reported performance on the full dataset and should not be compared directly.
 
 ### Feature importance (RF concentration model)
 1. Trophic Level (0.55)
@@ -298,7 +348,29 @@ Table (13 PFAS)     (18 xlsx files)              │
 5. MW (0.05)
 
 ### Model comparison insight
-The narrow gap between RF (0.742) and Linear (0.722) confirms that PFAS bioaccumulation follows largely linear relationships with chemical and biological features. Non-linear interactions exist but are limited with current data.
+The narrow gap between RF (0.712) and Linear (0.698) confirms that PFAS bioaccumulation follows largely linear relationships with chemical and biological features. Non-linear interactions exist but appear limited with current data.
+
+### Held-Out Test Results (80/20 Split)
+
+| Model | R² | RMSE |
+|---------|---------|---------|
+| Random Forest (Concentration) | 0.712 | 0.445 |
+| Linear Regression | 0.698 | 0.456 |
+| Random Forest (BCF) | 0.315 | 0.904 |
+| Group Mean Baseline | 0.353 | — |
+
+The Random Forest concentration model improves performance by +0.359 R² beyond simply knowing the species group.
+
+### Per-Group Held-Out Performance
+
+| Group | n | RF R² | Baseline R² | Gain |
+|---------|---------|---------|---------|---------|
+| Human | 4,708 | 0.648 | 0.000 | +0.648 |
+| Other | 132 | 0.140 | -0.007 | +0.147 |
+| Fish | 37 | 0.111 | -0.017 | +0.128 |
+| Plant | 53 | 0.063 | -0.003 | +0.066 |
+
+Human biomonitoring data remain substantially easier to predict than environmental measurements.
 
 ---
 
@@ -336,6 +408,11 @@ The narrow gap between RF (0.742) and Linear (0.722) confirms that PFAS bioaccum
 - [ ] XGBoost (pending libomp install)
 - [ ] Per-PFAS models
 - [ ] Prediction confidence intervals
+- [x] Per-species-group evaluation
+- [x] Fish-only chemistry model
+- [x] Plant-only chemistry model
+- [x] Held-out validation framework
+- [x] NHANES trend analysis
 
 ### Phase 3 — Outputs (July–August 2026)
 - [ ] Streamlit interactive dashboard
@@ -353,11 +430,11 @@ The narrow gap between RF (0.742) and Linear (0.722) confirms that PFAS bioaccum
 # Filter: Effect → Accumulation if >10,000 results
 # Export as XLSX, then:
 mv ~/Downloads/ECOTOX-*.xlsx /path/to/ecotox_exports/
-python3 pfas_pipeline_v4.py
+python3 pfas_pipeline_v6.py
 ```
 
 ### New PFAS chemicals
-Add to `PFAS_FEATURES` in `pfas_pipeline_v4.py`:
+Add to `PFAS_FEATURES` in `pfas_pipeline_v6.py`:
 ```python
 ("PFDA", "335-76-2", "Carboxylate", 10, 514.1, 6.83),
 # (Name, CASRN, Class, Chain_Length, MW, LogKow)
@@ -384,7 +461,7 @@ PFAS_J.XPT
 __pycache__/
 .DS_Store" > .gitignore
 
-git add pfas_pipeline_v4.py README.md nhanes_pfas_processed.csv
+git add pfas_pipeline_v6.py README.md nhanes_pfas_processed.csv
 git add pfas_gap_heatmap.png feature_importance.png model_predictions.png
 git add cross_species_validation.png bcf_feature_importance.png
 git add bcf_predictions.png linear_coefficients.png
@@ -396,7 +473,7 @@ git push -u origin main
 
 ### Every update
 ```bash
-git add pfas_pipeline_v4.py README.md
+git add pfas_pipeline_v6.py README.md
 git commit -m "describe what changed"
 git push
 ```
@@ -404,10 +481,10 @@ git push
 ### What goes on GitHub
 | Include | Exclude |
 |---|---|
-| `pfas_pipeline_v4.py` | `ecotox_exports/` folder |
+| `pfas_pipeline_v6.py` | `ecotox_exports/` folder |
 | `README.md` | `PFAS_J.XPT` |
 | `nhanes_pfas_processed.csv` | `pfas_bioaccumulation_dataset.csv` |
-| All 8 PNG plots | `comptox_snapshot.csv` |
+| All generated PNG plots | `comptox_snapshot.csv` |
 
 ---
 
@@ -415,10 +492,13 @@ git push
 
 - EPA ECOTOX Knowledgebase: https://cfpub.epa.gov/ecotox/
 - EPA CompTox Dashboard: https://comptox.epa.gov/dashboard/
-- CDC NHANES 2017-2018: https://wwwn.cdc.gov/nchs/nhanes/
+- CDC NHANES 2015–2016 and 2017–2018: https://wwwn.cdc.gov/nchs/nhanes/
 
 ---
 
 ## Author
 
-PFAS Environmental Informatics Research Project, 2026
+PFAS Environmental Informatics Research Project (2026)
+
+Author: Navin Bargav Karthikeyan  
+Research Mentor: Laura Wegner (MSt, University of Oxford)

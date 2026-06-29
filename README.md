@@ -36,10 +36,10 @@ Humans sit at the top of the food chain.
 - The EPA has set drinking water limits for PFAS at **4 parts per trillion** — so low it required new analytical methods to measure
 - PFAS exposure has been linked to thyroid disease, immune suppression, certain cancers, reproductive harm, and developmental delays in children
 - Our pipeline finds median PFOS levels of **2.83 ng/g** in human blood serum from CDC data — in people with no known occupational exposure
-- 
+
 ### The Scientific Gap We're Addressing
-Despite this, our understanding of how PFAS move through ecosystems remains deeply fragmented. Data is scattered across hundreds of studies, measured in inconsistent units, tested on different species, and reported under different conditions. No single database cleanly maps PFAS bioaccumulation from soil → plant → fish → mammal → human.
-**That gap is what this project addresses.**
+Despite this, our understanding of how PFAS move through ecosystems remains deeply fragmented. Data is scattered across hundreds of studies, measured in inconsistent units, tested on different species, and reported under different conditions. No single database cleanly maps PFAS bioaccumulation from soil → plant → fish → mammal → human. That gap is what this project addresses.
+
 ---
 ## Key Findings
 ### Finding 1 — Trophic level is the strongest predictor of PFAS accumulation
@@ -65,6 +65,7 @@ ECOTOX mammal records for PFAS are almost entirely dose-response studies rather 
 
 ### Finding 8 — Environmental-only prediction remains extremely difficult
 To test whether PFAS chemistry alone can explain accumulation patterns, species-specific models were trained using only chemical descriptors (chain length, molecular weight, LogKow, PFAS class, and exposure duration).
+
 Results were poor:
 | Model | Held-Out R² |
 |--------|--------|
@@ -74,6 +75,7 @@ For fish, a simple PFAS-average baseline actually outperformed the chemistry-onl
 
 ### Finding 9 — Model performance is robust; leakage was minimal
 After removing data-source proxy features (`is_human`, `is_fish`, `is_mammal`, `is_plant`, `Duration_days`) that encoded NHANES vs. ECOTOX identity rather than biology, best held-out R² dropped only from 0.712 → 0.710. This confirms the model's predictive power reflects genuine biological signal, not data artifact. The cleaned feature set (6 chemistry/biology inputs) is fully generalisable to new PFAS predictions.
+
 ---
 ## Version History
 ### v7.0 (current) — June–July 2026

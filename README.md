@@ -1,8 +1,7 @@
-# PFAS Bioaccumulation Research Pipeline v9.0
-
+# PFAS Bioaccumulation Research Pipeline v10.0
 A reproducible, multi-source data pipeline for studying PFAS bioaccumulation across aquatic and terrestrial species and human populations. Integrates EPA ECOTOX biological exposure data, EPA CompTox chemical properties, and CDC NHANES human biomonitoring data to build a machine-learning-ready dataset, identify critical data gaps, and predict bioaccumulation from chemical structure alone — with calibrated uncertainty and per-compound confidence.
 
-**Current dataset: 25,056 observations | 13 curated PFAS (6 individually modelable) | 5 species groups | 5 ML models | Best Held-Out R²=0.710 | Calibrated 80%/95% prediction intervals**
+**Current dataset: 25,056 observations | 13 curated PFAS (6 individually modelable) | 5 species groups | 5 ML models | Best Held-Out R²=0.710 | Calibrated 80%/95% prediction intervals | Apparent half-life estimated for 4/6 modelable PFAS**
 
 ---
 ## Table of Contents
@@ -20,7 +19,6 @@ A reproducible, multi-source data pipeline for studying PFAS bioaccumulation acr
 - [Data Gaps](#data-gaps)
 - [Roadmap](#roadmap)
 - [How to Add Data](#how-to-add-data)
-- [How to Push to GitHub](#how-to-push-to-github)
 ---
 ## Why This Research Matters
 ### PFAS Are Everywhere — And They Don't Leave
@@ -35,8 +33,7 @@ Humans sit at the top of the food chain.
 - PFAS exposure has been linked to thyroid disease, immune suppression, certain cancers, reproductive harm, and developmental delays in children
 - Our pipeline finds median PFOS levels of **2.83 ng/g** in human blood serum from CDC data — in people with no known occupational exposure
 ### The Scientific Gap We're Addressing
-Despite this, our understanding of how PFAS move through ecosystems remains deeply fragmented. Data is scattered across hundreds of studies, measured in inconsistent units, tested on different species, and reported under different conditions. No single database cleanly maps PFAS bioaccumulation from soil → plant → fish → mammal → human.
-**That gap is what this project addresses.
+Despite this, our understanding of how PFAS move through ecosystems remains deeply fragmented. Data is scattered across hundreds of studies, measured in inconsistent units, tested on different species, and reported under different conditions. No single database cleanly maps PFAS bioaccumulation from soil → plant → fish → mammal → human. That gap is what this project addresses.
 
 ---
 ## Key Findings
@@ -69,9 +66,39 @@ Random Forest tree-to-tree prediction variance — a commonly used shortcut for 
 ### Finding 11 — Predictive reliability varies enormously across PFAS compounds
 Of the 13 chemically-characterized PFAS in the curated feature table, only 6 (PFOA, PFOS, PFNA, PFDA, PFHxS, PFUnDA) have sufficient monitoring data to support an individually-trained, meaningfully predictive model. PFOA is the most predictable (R²=0.649, n=4,549) and also the most data-rich. PFBS, despite having 72 records — enough to clear the modeling threshold — performs *worse than predicting the mean* (R²=-0.140), indicating its short-chain environmental behavior is not well captured by chain-length/LogKow chemistry alone at current sample sizes. PFHpA has essentially no usable data (n=1). Five chemically-characterized compounds — GenX, ADONA, F53B, PFDoDA, and PFHxA — have **zero** measured records in either ECOTOX or NHANES despite being fully characterized in the chemical feature table. In short: less than half of the PFAS this pipeline can theoretically predict for actually have the data to back up that prediction.
 
+### Finding 12 — Apparent NHANES half-lives are inflated by ongoing population exposure, not a measurement error
+A one-compartment first-order elimination estimate (`compute_apparent_half_life()`, v10.0) was computed from the two available NHANES survey-wave medians (2015–2016, 2017–2018) and compared against published longitudinal cohort half-lives. The apparent half-lives came out dramatically longer than the literature values: PFOS 42.3 years vs. a published 5.4 years (+683%), PFOA 18.7 years vs. 3.5 years (+435%), PFHxS 15.9 years vs. 8.5 years (+87%), and PFNA 3.4 years vs. 2.5 years (+37%). PFDA and PFUnDA showed non-decreasing concentration between waves and could not be estimated at all.
+
+This is not a bug — it's the expected signature of a cross-sectional population estimate contaminated by ongoing exposure. A true elimination half-life assumes no new intake during the measurement window; NHANES respondents keep being exposed to PFAS (drinking water, food packaging, etc.) throughout the survey period, so population blood levels decline far more slowly than any individual's true clearance rate would predict. Critically, the size of the distortion scales with the true half-life itself — PFOS and PFOA (longest true half-lives, most persistent) show the largest inflation, while PFNA (shortest true half-life) shows the smallest — because a slower-clearing chemical gives ongoing exposure more time to mask the decline within a fixed 2-year window. PFDA and PFUnDA, both long-chain and both essentially flat between waves, represent the limiting case where ongoing exposure and elimination roughly cancel out.
+
+This reframes the apparent-vs-literature gap as a signal rather than noise: the magnitude of inflation is a rough proxy for how much ongoing population-level exposure remains for a given compound, independent of any explicit exposure measurement. It also reinforces Finding 4 from a different angle — cross-sectional human biomonitoring data cannot cleanly separate "how the body handles this chemical" from "how exposed the population currently is," the same environmental-to-human disconnect that shows up in the cross-species prediction failure, arrived at here through kinetics rather than cross-species ML.
+
 ---
 ## Version History
-### v9.0 (current) — June–July 2026
+### v10.0 (current) — July 2026
+- **Apparent half-life estimation:** `compute_apparent_half_life()` fits a one-compartment first-order elimination
+  model per PFAS using the two available NHANES survey-wave medians (2015–2016, 2017–2018)
+  - Closed-form two-point solve (`k = ln(C1/C2)/Δt`, `t½ = ln(2)/k`) — no curve-fitting library
+    needed or appropriate, since only 2 time points exist per compound
+  - Compared against published longitudinal cohort half-lives (ATSDR Toxicological Profile
+    for Perfluoroalkyls, 2021) as a reference overlay, not as ground truth the estimate is scored against
+  - Result: apparent half-lives are dramatically inflated relative to literature (PFOS +683%,
+    PFOA +435%, PFHxS +87%, PFNA +37%) — documented as **Finding 12**, a genuine signature of
+    ongoing population exposure contaminating a cross-sectional estimate, not a code defect
+  - PFDA and PFUnDA show non-decreasing concentration between waves and are explicitly flagged
+    (`non_decreasing_between_waves`) rather than forced into a misleading negative half-life
+  - Compounds with only one NHANES wave, or absent from the literature reference table, degrade
+    gracefully (flagged `insufficient_temporal_data` / reported without a literature comparison)
+    rather than being silently dropped or crashing the pipeline
+  - New output: `nhanes_half_life.png` — NHANES apparent half-life vs. published literature
+    half-life, per PFAS
+  - **Explicit caveat carried in the code, the chart title, and this README:** this is a
+    cross-sectional *apparent population half-life*, not a clinical/regulatory elimination rate.
+    It conflates true biological elimination with declining population exposure and cohort
+    effects between waves. Treat it as a literature sanity-check and an exposure-trend signal,
+    not a substitute for longitudinal cohort studies.
+
+### v9.0 — June–July 2026
 - **Per-PFAS models:** evaluates predictability separately for every curated PFAS, not just globally
   - 6 compounds (PFOA, PFOS, PFNA, PFDA, PFHxS, PFUnDA) get their own dedicated RF model (n≥60 rows)
   - PFBS gets its own model but performs worse than the mean baseline (R²=-0.140) — flagged, not hidden
@@ -185,6 +212,7 @@ All headline performance metrics are measured on held-out test data from a strat
 | `plant_predictions.png` | Plant-only model predictions (R²=0.003) |
 | `chain_length_bcf_scatter.png` | Chain length vs BCF relationship by PFAS class |
 | `nhanes_time_trend.png` | NHANES PFAS blood concentration trends 2015–2018 |
+| `nhanes_half_life.png` | NHANES apparent population half-life vs. published literature half-life, per PFAS (v10.0) |
 
 ---
 ## Dataset Schema
@@ -247,7 +275,7 @@ brew install libomp
 
 ---
 ## Usage
-### Set paths in `pfas_pipeline_v9.0.py`
+### Set paths in `pfas_pipeline_v10.0.py`
 ```python
 ECOTOX_EXPORT_DIR = "/path/to/ecotox_exports/"
 COMPTOX_SNAPSHOT  = "/path/to/comptox_snapshot.csv"
@@ -256,7 +284,7 @@ OUTPUT_DIR        = "/path/to/outputs/"
 ```
 ### Run
 ```bash
-python3 pfas_pipeline_v9.0.py
+python3 pfas_pipeline_v10.0.py
 ```
 ### Required files
 | File | Where to get it |
@@ -337,7 +365,8 @@ Gap Heatmap   Per-Group Metrics    RF BCF / XGB BCF    Per-PFAS Models
 | v6.0 | 25,056 | 0.712* | Held-out validation |
 | v7.0 | 25,056 | 0.710* | Leakage fixed, XGBoost, stratified split |
 | v8.0 | 25,056 | 0.705 | Calibrated prediction intervals (honest 80.6%/94.8% coverage) |
-| v9.0 | 25,056 | **0.710** | Per-PFAS models — 6/13 compounds individually reliable |
+| v9.0 | 25,056 | 0.710 | Per-PFAS models — 6/13 compounds individually reliable |
+| v10.0 | 25,056 | **0.710** | Apparent half-life estimation — Finding 12, exposure-vs-elimination conflation quantified |
 
 *v2.0 R²=0.279 included Route_encoded data leakage.
 *v6.0 R²=0.712 included data-source proxy features (is_human, Duration_days null leakage).
@@ -464,9 +493,42 @@ Only 6 of 13 chemically-characterized PFAS (46%) have enough monitoring data to 
 - [x] BCF data recovery (BCF 1/2/3 Value coalescing)
 - [x] Prediction confidence intervals (residual-calibrated, per species group)
 - [x] Per-PFAS models (6 own models, 1 fails baseline, 1 insufficient, 5 zero-data)
+- [x] Apparent NHANES half-life estimation vs. published literature (Finding 12)
 
-### Phase 3 — Outputs (July–August 2026)
-- [ ] Interactive bioaccumulation simulator
+### Phase 3 — Mechanistic Modeling & Outputs (July–August 2026)
+**Mechanistic / chemical-engineering additions** — the current pipeline is purely statistical
+(ML on tabular features); Phase 3 adds physically-grounded models that explain *why* the
+statistical findings look the way they do, rather than only reporting that they do:
+- [ ] **Arnot-Gobas / fugacity bioaccumulation model for BCF** — Finding 5 shows BCF can't be
+      predicted from chemistry-only ML (RF/XGBoost match a per-compound-mean baseline exactly,
+      R²≈0.331). A mass-balance mechanistic model (gill/dietary uptake vs. respiratory/fecal
+      egestion and growth dilution, parameterized by Kow) is the standard chemE alternative —
+      but needs a PFAS-adapted formulation, since PFAS behave as protein-binding surfactants
+      rather than the neutral-organic lipid-partitioning chemicals the classic model assumes.
+      Goal: report mechanistic-model BCF alongside ML BCF as a direct comparison, and use the
+      gap between them to explain *why* chemistry-only ML underperforms.
+- [ ] **PFAS-appropriate physical chemistry features** — replace/augment LogKow (a weak
+      descriptor for PFAS, which don't partition like classic neutral organics) with features
+      that reflect actual PFAS environmental behavior: soil-water partition coefficient (Koc)
+      for the terrestrial/plant pathway, air-water partition coefficient (Henry's constant) for
+      volatilization, a serum-albumin protein-binding proxy, and critical micelle concentration
+      (PFAS are surfactants). Test whether this measurably improves the currently very weak
+      chemistry-only fish (R²=0.113) and plant (R²=0.003) models — a real, testable hypothesis
+      that should be attempted before investing further in the Arnot-Gobas model above, since a
+      better mechanistic BCF model is only as good as the chemistry features feeding it.
+- [ ] **Engineered treatment removal-efficiency module** — literature-correlation estimates of
+      PFAS removal by GAC adsorption, anion exchange resin, and reverse osmosis as a function of
+      chain length and PFAS class. Connects the pipeline's existing chain-length/class features
+      to a practical "what do we do about it" outcome, and explains *why* short-chain
+      replacements like GenX are an emerging problem (harder to remove by the treatment
+      technologies designed around longer-chain legacy PFAS). Lower research novelty than the
+      two items above, but highest value for a general/policy audience.
+- [ ] Longitudinal (individual-level, not cross-sectional) half-life validation, if a suitable
+      public cohort dataset can be identified — would resolve the exposure-vs-elimination
+      conflation flagged in Finding 12 rather than just quantifying it
+
+**Deliverables:**
+- [ ] Interactive bioaccumulation simulator (feeds from per-PFAS models + mechanistic BCF model)
 - [ ] Streamlit interactive dashboard
 - [ ] Research poster
 - [ ] Full methods + results report
@@ -480,10 +542,10 @@ Only 6 of 13 chemically-characterized PFAS (46%) have enough monitoring data to 
 # Filter: Effect → Accumulation if >10,000 results
 # Export as XLSX, then:
 mv ~/Downloads/ECOTOX-*.xlsx /path/to/ecotox_exports/
-python3 pfas_pipeline_v9.0.py
+python3 pfas_pipeline_v10.0.py
 ```
 ### New PFAS chemicals
-Add to `PFAS_FEATURES` in `pfas_pipeline_v9.0.py`:
+Add to `PFAS_FEATURES` in `pfas_pipeline_v10.0.py`:
 ```python
 ("PFDA", "335-76-2", "Carboxylate", 10, 514.1, 6.83),
 # (Name, CASRN, Class, Chain_Length, MW, LogKow)

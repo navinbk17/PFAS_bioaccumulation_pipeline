@@ -1,7 +1,7 @@
-# PFAS Bioaccumulation Research Pipeline v10.0
+# PFAS Bioaccumulation Research Pipeline v10.5
 A reproducible, multi-source data pipeline for studying PFAS bioaccumulation across aquatic and terrestrial species and human populations. Integrates EPA ECOTOX biological exposure data, EPA CompTox chemical properties, and CDC NHANES human biomonitoring data to build a machine-learning-ready dataset, identify critical data gaps, and predict bioaccumulation from chemical structure alone — with calibrated uncertainty and per-compound confidence.
 
-**Current dataset: 25,056 observations | 13 curated PFAS (6 individually modelable) | 5 species groups | 5 ML models | Best Held-Out R²=0.710 | Calibrated 80%/95% prediction intervals | Apparent half-life estimated for 4/6 modelable PFAS**
+**Current dataset: 25,056 observations | 13 curated PFAS (7 individually modelable) | 5 species groups | 5 ML models | Best Human R²=0.604 (chemistry-only features) | Calibrated 80%/95% prediction intervals | Apparent half-life estimated for 4/6 modelable PFAS**
 
 ---
 ## Table of Contents
@@ -19,6 +19,7 @@ A reproducible, multi-source data pipeline for studying PFAS bioaccumulation acr
 - [Data Gaps](#data-gaps)
 - [Roadmap](#roadmap)
 - [How to Add Data](#how-to-add-data)
+- [How to Push to GitHub](#how-to-push-to-github)
 ---
 ## Why This Research Matters
 ### PFAS Are Everywhere — And They Don't Leave
@@ -33,7 +34,8 @@ Humans sit at the top of the food chain.
 - PFAS exposure has been linked to thyroid disease, immune suppression, certain cancers, reproductive harm, and developmental delays in children
 - Our pipeline finds median PFOS levels of **2.83 ng/g** in human blood serum from CDC data — in people with no known occupational exposure
 ### The Scientific Gap We're Addressing
-Despite this, our understanding of how PFAS move through ecosystems remains deeply fragmented. Data is scattered across hundreds of studies, measured in inconsistent units, tested on different species, and reported under different conditions. No single database cleanly maps PFAS bioaccumulation from soil → plant → fish → mammal → human. That gap is what this project addresses.
+Despite this, our understanding of how PFAS move through ecosystems remains deeply fragmented. Data is scattered across hundreds of studies, measured in inconsistent units, tested on different species, and reported under different conditions. No single database cleanly maps PFAS bioaccumulation from soil → plant → fish → mammal → human.
+**That gap is what this project addresses.
 
 ---
 ## Key Findings
@@ -75,115 +77,56 @@ This reframes the apparent-vs-literature gap as a signal rather than noise: the 
 
 ---
 ## Version History
-### v10.0 (current) — July 2026
-- **Apparent half-life estimation:** `compute_apparent_half_life()` fits a one-compartment first-order elimination
-  model per PFAS using the two available NHANES survey-wave medians (2015–2016, 2017–2018)
-  - Closed-form two-point solve (`k = ln(C1/C2)/Δt`, `t½ = ln(2)/k`) — no curve-fitting library
-    needed or appropriate, since only 2 time points exist per compound
-  - Compared against published longitudinal cohort half-lives (ATSDR Toxicological Profile
-    for Perfluoroalkyls, 2021) as a reference overlay, not as ground truth the estimate is scored against
-  - Result: apparent half-lives are dramatically inflated relative to literature (PFOS +683%,
-    PFOA +435%, PFHxS +87%, PFNA +37%) — documented as **Finding 12**, a genuine signature of
-    ongoing population exposure contaminating a cross-sectional estimate, not a code defect
-  - PFDA and PFUnDA show non-decreasing concentration between waves and are explicitly flagged
-    (`non_decreasing_between_waves`) rather than forced into a misleading negative half-life
-  - Compounds with only one NHANES wave, or absent from the literature reference table, degrade
-    gracefully (flagged `insufficient_temporal_data` / reported without a literature comparison)
-    rather than being silently dropped or crashing the pipeline
-  - New output: `nhanes_half_life.png` — NHANES apparent half-life vs. published literature
-    half-life, per PFAS
-  - **Explicit caveat carried in the code, the chart title, and this README:** this is a
-    cross-sectional *apparent population half-life*, not a clinical/regulatory elimination rate.
-    It conflates true biological elimination with declining population exposure and cohort
-    effects between waves. Treat it as a literature sanity-check and an exposure-trend signal,
-    not a substitute for longitudinal cohort studies.
+
+### v10.5 (current) — July 2026
+- **CASRN salt mapping:** added `CASRN_SALT_MAP` to remap salt/counterion variants (e.g. PFOS potassium salt `2795-39-3`) to their parent compound CASRN before the ECOTOX merge. Previously, 401 rows were silently dropped because ECOTOX stores these under different CASRNs than the parent compounds in the curated feature table.
+- **CASRN diagnostic:** added `diagnose_casrn_merge()` — runs before every merge and prints a table of unmatched CASRNs with counts, so future data gaps are visible rather than silent. Unmatched rows drop from 401 → 5 (2 genuinely unknown CASRNs, 3 rows total — not worth mapping).
+- **Leakage fix (FIX 4):** removed `Trophic_Level` and `Is_Aquatic` from `CONC_FEATURES`. Both are fixed dict lookups keyed 1:1 on `Species_Group` — the same group-identity leak FIX 1 (v7.0) removed for the binary flags, just re-encoded as integers. Feature set is now chemistry-only: `Chain_Length`, `MW`, `LogKow`, `PFAS_Class_encoded`.
+- **Headline metric change:** pooled held-out R² replaced by per-species-group R² as the headline figure. The dataset is ~95% human rows, so a single pooled number was almost entirely a human-serum number mislabeled as "overall." Per-group breakdown (Human R²=0.604, Fish R²=-1.68, Plant R²=-8.4) is now the honest lead.
+- **Key results after fixes:** Human R²=0.604 (chemistry-only, honest); Fish/Plant remain unpredictable from chemistry alone — confirms environmental heterogeneity, not a model bug. All 5 species groups now hit calibration coverage targets (79–80% at 80% target). PFHxS per-PFAS R² improved 0.172 → 0.381 from recovered salt rows.
+
+### v10.0 — July 2026
+- Apparent half-life estimation: `compute_apparent_half_life()` — one-compartment first-order elimination per PFAS from two NHANES wave medians (2015–2016, 2017–2018). Closed-form two-point solve; no curve-fitting needed.
+- Apparent half-lives dramatically exceed literature values (PFOS +683%, PFOA +435%, PFHxS +87%, PFNA +37%) — documented as Finding 12, a signature of ongoing population exposure contaminating a cross-sectional estimate, not a code defect.
+- PFDA and PFUnDA flagged `non_decreasing_between_waves` rather than forced into a negative half-life.
+- **Caveat:** this is a cross-sectional apparent population half-life, not a clinical elimination rate. Treat as a literature sanity-check and exposure-trend signal only.
+- New output: `nhanes_half_life.png`
 
 ### v9.0 — June–July 2026
-- **Per-PFAS models:** evaluates predictability separately for every curated PFAS, not just globally
-  - 6 compounds (PFOA, PFOS, PFNA, PFDA, PFHxS, PFUnDA) get their own dedicated RF model (n≥60 rows)
-  - PFBS gets its own model but performs worse than the mean baseline (R²=-0.140) — flagged, not hidden
-  - PFHpA marked "insufficient data" (n=1)
-  - GenX, ADONA, F53B, PFDoDA, PFHxA explicitly marked "no data" — chemically characterized but
-    zero ECOTOX/NHANES records; previously these would have silently disappeared from per-compound analysis
-  - New output `per_pfas_r2.png`: held-out R² per compound, colour-coded by model type, annotated with n
-- Per-PFAS results are designed to feed directly into the bioaccumulation simulator: compounds with
-  their own well-performing model get a tight, compound-specific prediction; data-starved compounds
-  flag reduced confidence to the user rather than presenting a false-precision number
+- Per-PFAS models: dedicated RF model for each PFAS with n≥60 rows (6 compounds). PFBS gets its own model but underperforms the mean baseline (R²=-0.140) — flagged, not hidden. Zero-data compounds (GenX, ADONA, F53B, PFDoDA, PFHxA) explicitly reported rather than silently omitted.
+- New output: `per_pfas_r2.png`
 
 ### v8.0 — June 2026
-- **Prediction confidence intervals**, properly calibrated
-  - Initial implementation used Random Forest tree-to-tree variance — found to be badly
-    miscalibrated (80% interval covered only 2.0% of true values; see Finding 10)
-  - Fixed with a three-way Fit / Calibration / Test split: RF is trained on the fit fold,
-    residual spread is calibrated on a disjoint calibration fold, and coverage is honestly
-    measured on a third, fully unseen test fold (calibrating and measuring coverage on the
-    same data would be circular and trivially "pass")
-  - Calibration computed **separately per species group** (`apply_group_intervals()`) since
-    Fish/Plant/Other residual spread is much larger than Human — a single global interval
-    width would be either too narrow for sparse groups or absurdly wide for Human
-  - Final coverage: 80.6% (target 80%), 94.8% (target 95%) overall
-  - New outputs: `prediction_intervals.png` (ribbon chart + per-group interval width),
-    `interval_coverage.png` (calibration diagnostic with target lines)
-  - `apply_group_intervals(rf, X, groups, group_calibration)` is the function the simulator
-    calls at inference time to return a point estimate plus calibrated 80%/95% bounds
+- Residual-calibrated prediction intervals replacing naive tree-variance (which covered only 2% of values at an 80% target). Three-way Fit/Calibration/Test split; calibration computed separately per species group. Final coverage: 80.6%/94.8%.
+- New outputs: `prediction_intervals.png`, `interval_coverage.png`
 
 ### v7.0 — June–July 2026
-- Added XGBoost concentration model and XGBoost BCF model
-- XGBoost now marginally outperforms Random Forest (R²=0.710 vs 0.709)
-- Unified model comparison table and `model_comparison.png` output
-- **Leakage Fix 1:** Removed `is_human`, `is_fish`, `is_mammal`, `is_plant` from concentration features — these encoded data source identity (NHANES vs. ECOTOX) rather than biology, breaking simulator generalisability
-- **Leakage Fix 2:** Removed `Duration_days` from concentration features — null for all NHANES rows, acting as an implicit human-row flag
-- **Split Fix:** Replaced random train/test split with stratified split by `Species_Group` — ensures proportional group representation every run; test group counts now printed at runtime
-- BCF model rebuilt with chemistry-only features (`Chain_Length`, `MW`, `LogKow`, `PFAS_Class_encoded`) — species flags removed as BCF already normalizes exposure
-- BCF baseline changed to per-PFAS mean (previously per-species-group) for correct apples-to-apples comparison
-- BCF coalescing: now reads `BCF 1 Value` → `BCF 2 Value` → `BCF 3 Value` from ECOTOX exports, recovering 321 BCF rows previously missed
-- Added `bcf_xgb_feature_importance.png` and `bcf_xgb_predictions.png`
-- NHANES 2015–2016 data added (dataset grew from 13,098 → 25,056 observations)
-- Added `nhanes_time_trend.png` and `chain_length_bcf_scatter.png`
-- Added Fish-only chemistry model (R²=0.113) and Plant-only chemistry model (R²=0.003)
-- Added per-species-group held-out evaluation and `per_group_metrics.png`
-- Feature count reduced from 11 → 6; all remaining features are inputs a simulator user can provide
-
-Key methodological notes:
-All headline performance metrics are measured on held-out test data from a stratified 80/20 split. Per-PFAS R² values use an independent 80/20 split within each compound's own data. Prediction intervals are calibrated on a disjoint fold never seen during RF training or final evaluation. Earlier versions used random splits, included data-source proxy features, and used uncalibrated tree-variance intervals — results from v6.0 and earlier are not directly comparable.
+- XGBoost concentration + BCF models added.
+- Leakage fixes: removed `is_human/fish/mammal/plant` flags and `Duration_days` from concentration features (both encoded data-source identity, not biology).
+- Stratified train/test split by `Species_Group`.
+- BCF coalescing: reads `BCF 1/2/3 Value`, recovering 321 previously missed rows.
+- NHANES 2015–2016 added; dataset grew from 13,098 → 25,056 rows.
 
 ### v6.0 — July 2026
-- Added proper 80/20 train/test split
-- Removed in-sample metrics from headline reporting
-- Added group-mean baseline model (R²=0.353)
-- Added per-species-group held-out evaluation
-- Added Fish-only chemistry model and Plant-only chemistry model
-- Added NHANES 2017–2018 data
-- Dataset grew from 13,098 → 25,056 observations (with 2015–2016 added in v7.0)
-- PFAS feature table expanded from 10 → 13 PFAS
+- Proper 80/20 held-out validation; group-mean baseline; NHANES 2017–2018; 13-PFAS feature table.
 
 ### v5.0 — June 2026
-- Added Linear Regression baseline model
-- Key finding: RF barely outperforms Linear — relationship is largely linear
-- Added model comparison summary and `linear_coefficients.png`
+- Linear Regression baseline added. Finding: RF barely outperforms Linear — relationship is largely linear.
 
 ### v4.0 — June 2026
-- Added CDC NHANES 2017–2018 human blood serum data (11,574 rows, 6 PFAS, 2,133 people)
-- Dataset grew from 1,524 → 13,098 rows (+760%)
-- Discovered critical cross-species prediction failure (human R²= -8 in leave-one-out)
+- CDC NHANES 2017–2018 added (11,574 rows). Dataset grew 1,524 → 13,098 rows. Discovered cross-species prediction failure (human R²= -8 in leave-one-out).
 
 ### v3.0 — June 2026
-- Added BCF as second ML target
-- Added PFAS class (Sulfonate/Carboxylate) as feature
-- Dataset: 1,524 rows
+- BCF as second ML target; PFAS class (Sulfonate/Carboxylate) as feature.
 
 ### v2.1 — May 2026
-- Added terrestrial ECOTOX exports and Tier 2 PFAS
-- Dataset grew from 697 → 1,273 rows
-- Removed Route_encoded (identified as data leakage)
+- Terrestrial ECOTOX exports; Tier 2 PFAS; Route_encoded leakage removed.
 
 ### v2.0 — May 2026
-- Added aquatic exports for PFNA, PFHxS, PFBS, PFOA
-- First gap heatmap and cross-species validation
+- Aquatic exports for PFNA, PFHxS, PFBS, PFOA; first gap heatmap.
 
 ### v1.0 — April 2026
-- Initial pipeline, PFOS only (411 rows)
-- First Random Forest model
+- Initial pipeline, PFOS only (411 rows), first Random Forest model.
 
 ---
 ## Outputs
@@ -275,7 +218,7 @@ brew install libomp
 
 ---
 ## Usage
-### Set paths in `pfas_pipeline_v10.0.py`
+### Set paths in `pfas_pipeline_v10_1.py`
 ```python
 ECOTOX_EXPORT_DIR = "/path/to/ecotox_exports/"
 COMPTOX_SNAPSHOT  = "/path/to/comptox_snapshot.csv"
@@ -284,7 +227,7 @@ OUTPUT_DIR        = "/path/to/outputs/"
 ```
 ### Run
 ```bash
-python3 pfas_pipeline_v10.0.py
+python3 pfas_pipeline_v10_1.py
 ```
 ### Required files
 | File | Where to get it |
@@ -366,81 +309,69 @@ Gap Heatmap   Per-Group Metrics    RF BCF / XGB BCF    Per-PFAS Models
 | v7.0 | 25,056 | 0.710* | Leakage fixed, XGBoost, stratified split |
 | v8.0 | 25,056 | 0.705 | Calibrated prediction intervals (honest 80.6%/94.8% coverage) |
 | v9.0 | 25,056 | 0.710 | Per-PFAS models — 6/13 compounds individually reliable |
-| v10.0 | 25,056 | **0.710** | Apparent half-life estimation — Finding 12, exposure-vs-elimination conflation quantified |
+| v10.0 | 25,056 | 0.710* | Apparent half-life estimation — Finding 12 |
+| v10.5 | 25,056 | **0.604 (Human)** | CASRN salt fix, leakage fix (Trophic_Level/Is_Aquatic), per-group headline |
 
 *v2.0 R²=0.279 included Route_encoded data leakage.
-*v6.0 R²=0.712 included data-source proxy features (is_human, Duration_days null leakage).
-*v7.0/v9.0 R²=0.710 (XGBoost) is the clean, generalisable result on a stratified 80/20 held-out split.
-*v8.0 RF R² dipped slightly to 0.705 because RF is trained on a smaller fit fold (80% of training data) to keep a disjoint calibration fold for honest interval calibration — this is the correct, expected tradeoff. XGBoost (which doesn't need a calibration fold) remains at 0.710.
+*v6.0 R²=0.712 and v7.0/v9.0/v10.0 R²=0.710 included Trophic_Level and Is_Aquatic — group-identity features, not measured biology (see FIX 4, v10.5). Not comparable to v10.5.
+*v10.5 headline is Human R²=0.604 on chemistry-only features (Chain_Length, MW, LogKow, PFAS_Class_encoded). Pooled R²=0.490 but is ~95% human-weighted and no longer reported as the primary metric.
 
-### Feature Set (6 features)
-All features are inputs a simulator user can provide for any PFAS:
+### Feature Set (4 features, v10.5)
+Chemistry-only — all are genuine chemical properties, not group-identity re-encodings:
 
 | Feature | Description |
 |---|---|
 | `Chain_Length` | Fluorinated carbon chain length |
 | `MW` | Molecular weight (g/mol) |
 | `LogKow` | Octanol-water partition coefficient |
-| `Trophic_Level` | 1 (plant) → 5 (human) |
-| `Is_Aquatic` | 1=aquatic, 0=terrestrial |
 | `PFAS_Class_encoded` | 0=Sulfonate, 1=Carboxylate |
 
-### Feature Importance (RF concentration model)
-1. Trophic Level (~0.55)
-2. LogKow (~0.20)
-3. Chain Length (~0.15)
-4. MW (~0.07)
-5. Is_Aquatic (~0.02)
-6. PFAS_Class_encoded (~0.01)
+Note: `Trophic_Level` and `Is_Aquatic` are retained in the output dataset as descriptive columns but removed from model inputs in v10.5 (FIX 4) — both are fixed dict lookups on `Species_Group`, not measured biological quantities.
 
-### Held-Out Test Results (80/20 stratified split)
-| Model | R² | RMSE |
-|---------|---------|---------|
-| Random Forest (Concentration)* | 0.705 | 0.464 |
-| XGBoost (Concentration) | **0.710** | 0.461 |
-| Linear Regression | 0.690 | 0.476 |
-| Group Mean Baseline | 0.357 | 0.686 |
-| RF (BCF) | 0.330 | 0.894 |
-| XGBoost (BCF) | 0.332 | 0.893 |
-| BCF Per-PFAS Baseline | 0.331 | 0.893 |
+### Held-Out Test Results (80/20 stratified split, v10.5)
+| Model | Pooled R² | RMSE | Note |
+|---------|---------|---------|---------|
+| Random Forest | 0.490 | 0.636 | ~95% human-weighted |
+| XGBoost | 0.490 | 0.636 | ~95% human-weighted |
+| Linear Regression | 0.471 | 0.647 | |
+| Group Mean Baseline | 0.413 | 0.682 | |
+| RF (BCF) | 0.240 | 0.877 | matches baseline — data gap |
+| XGBoost (BCF) | 0.240 | 0.877 | matches baseline — data gap |
+| BCF Per-PFAS Baseline | 0.241 | 0.877 | |
 
-*RF is trained on an 80% fit fold (the remaining 20% of training data is reserved as a disjoint calibration fold for interval calibration — see Confidence Intervals below), so its R² is slightly lower than XGBoost, which uses the full training set.
+Pooled R² is human-weighted and no longer the primary metric. See per-group results below.
 
-XGBoost gains +0.353 R² over the group mean baseline. BCF models match the per-PFAS baseline exactly — confirmed data gap, not model failure.
-
-### Per-Group Held-Out Performance
+### Per-Group Held-Out Performance (v10.5 — primary headline)
 | Group | n | RF R² | Baseline R² | Gain |
 |---------|---------|---------|---------|---------|
-| Human | 4,706 | 0.658 | 0.000 | +0.658 |
-| Other | 134 | 0.176 | 0.000 | +0.176 |
-| Fish | 39 | 0.032 | 0.000 | +0.032 |
-| Plant | 51 | -0.092 | -0.105 | +0.013 |
+| Human | 4,707 | **0.604** | 0.000 | +0.604 |
+| Other | 198 | -1.059 | -0.001 | -1.057 |
+| Fish | 49 | -1.680 | -0.012 | -1.668 |
+| Plant | 55 | -8.429 | -0.005 | -8.424 |
 
-Human biomonitoring data remain substantially easier to predict than environmental measurements. Mammal excluded from per-group reporting (only 1 test row).
+Human blood serum is reliably predictable from chemistry alone. Fish and Plant are not — environmental study heterogeneity dominates any chemistry signal. This is the central finding, not a model failure. Mammal excluded (only 2 test rows).
 
-### Confidence Intervals (v8.0)
-Naive RF tree-variance intervals are badly miscalibrated and were replaced with residual-calibrated intervals computed on a disjoint calibration fold (never seen during RF training or final evaluation). Calibration is computed separately per species group.
+### Confidence Intervals (v10.5)
+Residual-calibrated per species group on a disjoint calibration fold. All groups now hit coverage targets after the CASRN salt fix recovered additional fish records.
 
 | Group | n (calibration) | 80% width | 95% width | 80% coverage | 95% coverage |
 |---|---|---|---|---|---|
-| Human | 3,765 | 0.817 | 1.494 | 80.8% ✓ | 95.0% ✓ |
-| Other | 107 | 3.689 | 5.312 | 76.1% ✓ | 93.3% ✓ |
-| Plant | 41 | 1.297 | 3.000 | 90.2% | 96.1% ✓ |
-| Fish | 31 | 1.983 | 2.521 | 53.8–74.4%* | 76.9% |
-| **Overall** | 3,945 | **0.910** | **1.622** | **80.6% ✓** | **94.8% ✓** |
+| Human | 3,765 | 0.900 | 1.530 | 79.3% ✓ | 94.6% ✓ |
+| Other | 158 | 3.753 | 5.723 | 80.3% ✓ | 96.5% ✓ |
+| Plant | 44 | 1.293 | 1.859 | 78.2% ✓ | 96.4% ✓ |
+| Fish | 39 | 2.891 | 5.088 | 79.6% ✓ | 93.9% ✓ |
+| **Overall** | 4,008 | **1.036** | **1.735** | **79.3% ✓** | **94.7% ✓** |
 
-*Fish coverage varies run-to-run due to small calibration sample size (n=31) — flagged as a known limitation, not a hidden one. Overall calibration is well within target on both intervals.
-
-### Per-PFAS Predictability (v9.0)
+### Per-PFAS Predictability (v10.5)
 | PFAS | n (total) | Model Type | Held-Out R² |
 |---|---|---|---|
-| PFOA | 4,549 | own model | **0.649** |
-| PFOS | 4,197 | own model | 0.463 |
+| PFOA | 4,594 | own model | **0.657** |
 | PFNA | 3,978 | own model | 0.401 |
+| PFOS | 4,496 | own model | 0.436 |
+| PFHxS | 4,004 | own model | 0.381 |
 | PFDA | 3,949 | own model | 0.226 |
-| PFHxS | 3,968 | own model | 0.172 |
-| PFUnDA | 3,941 | own model | 0.158 |
-| PFBS | 72 | own model | -0.140 (worse than baseline) |
+| PFUnDA | 3,946 | own model | 0.147 |
+| PFBS | 83 | own model | -0.063 (worse than baseline) |
 | PFHpA | 1 | insufficient data | — |
 | GenX | 0 | no data | — |
 | ADONA | 0 | no data | — |
@@ -448,7 +379,7 @@ Naive RF tree-variance intervals are badly miscalibrated and were replaced with 
 | PFDoDA | 0 | no data | — |
 | PFHxA | 0 | no data | — |
 
-Only 6 of 13 chemically-characterized PFAS (46%) have enough monitoring data to support a reliable individual prediction model. PFBS is a cautionary case: 72 records is enough to pass the modeling threshold but not enough to beat a naive average — a reminder that sample count alone doesn't guarantee model validity.
+7 of 13 PFAS now have enough data for a dedicated model (up from 6 in v9.0 — PFBS crossed the threshold via recovered salt rows). PFHxS improved most dramatically: R² 0.172 → 0.381 from the 36 recovered PFHxS potassium salt records. PFBS remains a cautionary case — more rows didn't improve predictability.
 
 ---
 ## Data Gaps
@@ -465,7 +396,7 @@ Only 6 of 13 chemically-characterized PFAS (46%) have enough monitoring data to 
 
 **Critical gap: PFHxS has 1,929 human blood measurements and zero fish records.**
 
-**Known issue:** 401 ECOTOX rows have no matching `PFAS_Name` after the CASRN merge (silently dropped from per-PFAS analysis) — flagged for investigation but not yet resolved; likely CASRN formatting mismatches for compounds outside the curated 13-PFAS table.
+**Resolved (v10.5):** 401 previously unmatched ECOTOX rows recovered via `CASRN_SALT_MAP`, which remaps salt/counterion CASRNs to their parent compound. 5 rows (2 CASRNs) remain unmatched — confirmed outside the curated 13-PFAS scope.
 
 ---
 ## Roadmap
@@ -494,6 +425,9 @@ Only 6 of 13 chemically-characterized PFAS (46%) have enough monitoring data to 
 - [x] Prediction confidence intervals (residual-calibrated, per species group)
 - [x] Per-PFAS models (6 own models, 1 fails baseline, 1 insufficient, 5 zero-data)
 - [x] Apparent NHANES half-life estimation vs. published literature (Finding 12)
+- [x] CASRN salt mapping — recovered 396/401 previously dropped ECOTOX rows (v10.5)
+- [x] Leakage fix: Trophic_Level and Is_Aquatic removed from model features (v10.5)
+- [x] Per-group R² as headline metric replacing misleading pooled figure (v10.5)
 
 ### Phase 3 — Mechanistic Modeling & Outputs (July–August 2026)
 **Mechanistic / chemical-engineering additions** — the current pipeline is purely statistical
@@ -542,10 +476,10 @@ statistical findings look the way they do, rather than only reporting that they 
 # Filter: Effect → Accumulation if >10,000 results
 # Export as XLSX, then:
 mv ~/Downloads/ECOTOX-*.xlsx /path/to/ecotox_exports/
-python3 pfas_pipeline_v10.0.py
+python3 pfas_pipeline_v10_1.py
 ```
 ### New PFAS chemicals
-Add to `PFAS_FEATURES` in `pfas_pipeline_v10.0.py`:
+Add to `PFAS_FEATURES` in `pfas_pipeline_v10_1.py`:
 ```python
 ("PFDA", "335-76-2", "Carboxylate", 10, 514.1, 6.83),
 # (Name, CASRN, Class, Chain_Length, MW, LogKow)

@@ -1,5 +1,6 @@
 # PFAS Bioaccumulation Research Pipeline v10.5
 A reproducible, multi-source data pipeline for studying PFAS bioaccumulation across aquatic and terrestrial species and human populations. Integrates EPA ECOTOX biological exposure data, EPA CompTox chemical properties, and CDC NHANES human biomonitoring data to build a machine-learning-ready dataset, identify critical data gaps, and predict bioaccumulation from chemical structure alone — with calibrated uncertainty and per-compound confidence.
+
 **Current dataset: 25,056 observations | 13 curated PFAS (7 individually modelable) | 5 species groups | 5 ML models | Best Human R²=0.604 (chemistry-only features) | Calibrated 80%/95% prediction intervals | Apparent half-life estimated for 4/6 modelable PFAS**
 
 ---

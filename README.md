@@ -1,9 +1,8 @@
 # PFAS Bioaccumulation Research Pipeline v13.0
 
-A reproducible, multi-source data pipeline for studying PFAS bioaccumulation in human populations and aquatic/terrestrial species. Integrates EPA ECOTOX biological exposure data, EPA CompTox chemical properties, and CDC NHANES human biomonitoring data to build a machine-learning-ready dataset, identify critical data gaps, predict bioaccumulation from chemical structure alone, and model BCF from first-principles mass balance — with calibrated uncertainty and per-compound confidence.
+A reproducible, multi-source data pipeline for studying PFAS bioaccumulation in human populations and aquatic/terrestrial species. Integrates EPA ECOTOX biological exposure data, EPA CompTox chemical properties, and CDC NHANES human biomonitoring data to build a machine-learning-ready dataset, identify critical data gaps, predict bioaccumulation from chemical structure alone, and model BCF from first-principles mass balance with calibrated uncertainty and per-compound confidence.
 
 **Current dataset: 25,056 observations | 13 curated PFAS (7 individually modelable) | 5 species groups | 5 ML models + Arnot-Gobas mechanistic BCF | Best Human R²=0.658 (human-only model) | Calibrated 80%/95% prediction intervals | Apparent half-life estimated for 4/6 modelable PFAS | Direct albumin-Ka Kfish implemented | Sulfonate underprediction persists because the limitation is structural in k1 (protein-facilitated uptake)**
-
 
 ---
 
@@ -28,14 +27,10 @@ A reproducible, multi-source data pipeline for studying PFAS bioaccumulation in 
 ## Why This Research Matters
 
 ### PFAS Are Everywhere — And They Don't Leave
-Per- and polyfluoroalkyl substances (PFAS) are a class of over 12,000 synthetic chemicals used in non-stick cookware, food packaging, firefighting foam, waterproof clothing, and hundreds of industrial applications. They are called "forever chemicals" for a reason: the carbon-fluorine bond is one of the strongest in chemistry. PFAS do not break down in the environment. They do not break down in the human body.
-
-They accumulate.
+Per- and polyfluoroalkyl substances (PFAS) are a class of over 12,000 synthetic chemicals used in non-stick cookware, food packaging, firefighting foam, waterproof clothing, and hundreds of industrial applications. They are called "forever chemicals" because it contains carbon-fluorine bonds, one of the strongest in chemistry. PFAS do not break down in the environment or in the human body, but they accumulate.
 
 ### The Food Chain Problem
-When PFAS enter an ecosystem — through industrial discharge, agricultural runoff, or contaminated groundwater — they are absorbed by plants and small organisms at the base of the food chain. As larger animals eat smaller ones, PFAS concentrations multiply at each trophic level. This process, called biomagnification, means a fish at the top of an aquatic food chain can carry concentrations thousands of times higher than the water it swims in.
-
-Humans sit at the top of the food chain.
+When PFAS enter an ecosystem, through industrial discharge, agricultural runoff, or contaminated groundwater, they are absorbed by plants and small organisms at the base of the food chain. As larger animals eat smaller ones, PFAS concentrations multiply at each trophic level. This process, called biomagnification, means a fish at the top of an aquatic food chain can carry concentrations thousands of times higher than the water it swims in. Humans sit at the top of the food chain.
 
 ### What the Numbers Say
 - PFAS have been detected in the blood of **97% of Americans**
@@ -44,16 +39,15 @@ Humans sit at the top of the food chain.
 - Our pipeline finds median PFOS levels of **2.83 ng/g** in human blood serum from CDC data — in people with no known occupational exposure
 
 ### The Scientific Gap We're Addressing
-Despite this, our understanding of how PFAS move through ecosystems remains deeply fragmented. Data is scattered across hundreds of studies, measured in inconsistent units, tested on different species, and reported under different conditions. No single database cleanly maps PFAS bioaccumulation from soil → plant → fish → mammal → human.
-
-**That gap is what this project addresses.**
+Despite this, our understanding of how PFAS move through ecosystems remains deeply fragmented. Data is scattered across hundreds of studies, measured in inconsistent units, tested on different species, and reported under different conditions. No single database cleanly maps PFAS bioaccumulation from soil → plant → fish → mammal → human. **That gap is what this project addresses.**
 
 ---
 
 ## Key Findings
 
 ### Finding 1 — Trophic level is the strongest predictor of PFAS accumulation
-Across 25,056 observations, trophic level explains more variance in PFAS tissue concentration than any chemical property. This directly confirms biomagnification: the higher you are in the food chain, the more PFAS you accumulate. Humans at trophic level 5 show the highest and most consistent concentrations. Note: trophic level was removed as a model feature in v10.5 because it encodes species group identity rather than a measured biological quantity — but it remains a valid descriptive finding.
+Across 25,056 observations, trophic level explains more variance in PFAS tissue concentration than any chemical property. This directly confirms biomagnification: the higher you are in the food chain, the more PFAS you accumulate. Humans at trophic level 5 show the highest and most consistent concentrations. 
+Note: trophic level was removed as a model feature in v10.5 because it encodes species group identity rather than a measured biological quantity, but it remains a valid descriptive finding.
 
 ### Finding 2 — Within human blood serum, PFAS accumulation is largely linear with chemistry
 After removing all group-identity leakage, Linear Regression (R²=0.649) and RF/XGBoost (R²=0.658) perform nearly identically on the human-only model — confirming the relationship between chain length, LogKow, and blood concentration is genuinely near-linear. Longer-chain and more hydrophobic PFAS accumulate more in human blood, and a linear model captures most of that signal.

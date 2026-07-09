@@ -1,8 +1,9 @@
-# PFAS Bioaccumulation Research Pipeline v12.0
+# PFAS Bioaccumulation Research Pipeline v13.0
 
 A reproducible, multi-source data pipeline for studying PFAS bioaccumulation in human populations and aquatic/terrestrial species. Integrates EPA ECOTOX biological exposure data, EPA CompTox chemical properties, and CDC NHANES human biomonitoring data to build a machine-learning-ready dataset, identify critical data gaps, predict bioaccumulation from chemical structure alone, and model BCF from first-principles mass balance — with calibrated uncertainty and per-compound confidence.
 
-**Current dataset: 25,056 observations | 13 curated PFAS (7 individually modelable) | 5 species groups | 5 ML models + Arnot-Gobas mechanistic BCF | Best Human R²=0.658 (human-only model) | Calibrated 80%/95% prediction intervals | Apparent half-life estimated for 4/6 modelable PFAS | Sulfonate Kprot investigation closed**
+**Current dataset: 25,056 observations | 13 curated PFAS (7 individually modelable) | 5 species groups | 5 ML models + Arnot-Gobas mechanistic BCF | Best Human R²=0.658 (human-only model) | Calibrated 80%/95% prediction intervals | Apparent half-life estimated for 4/6 modelable PFAS | Direct albumin-Ka Kfish implemented | Sulfonate underprediction persists because the limitation is structural in k1 (protein-facilitated uptake)**
+
 
 ---
 
@@ -106,54 +107,66 @@ The dedicated human-only model (NHANES rows exclusively) achieves R²=0.658 over
 ### Finding 16 — Sulfonate Kprot scaling cannot be fixed by tuning a single constant
 A systematic sweep of the sulfonate Kprot scale factor across 7 values (0.05 to 0.30) shows PFOS error is essentially invariant: -91% at scale=0.05, -89% at scale=0.30. PFHxS stays at -85% throughout. The Koc-based protein binding term is structurally inadequate for sulfonates — not just under-scaled. This closes the simple-tuning approach and establishes that a direct albumin-binding-affinity term (based on measured Ka values from Bischel et al. 2010, Beesoon & Martin 2015) is the correct next mechanistic step, not further constant adjustment. The sensitivity heatmap (`arnot_gobas_sensitivity.png`) provides the quantitative evidence for this conclusion.
 
+### Finding 17 — Gill membrane permeability is not the source of the sulfonate BCF gap; the error is structural and confined to Kfish
+A P_mem sensitivity sweep (v12.1) tests the orthogonal hypothesis that the Arnot-Gobas Eq. 5 two-resistance gill membrane term over-predicts gill uptake for ionized sulfonates, which cross phospholipid bilayers via protein-mediated transport rather than passive diffusion. The sweep applies a class-specific multiplier to k1 across 8 values (P_mem 1.0 → 0.05), holding KPROT_SCALE fixed. The hypothesis is falsified: PFOS error worsens monotonically (−90% at P_mem=1.0 → −99% at P_mem=0.05); PFHxS similarly degrades. PFBS, by contrast, is completely flat at −84% across the full sweep. The mechanistic explanation is diagnostic: PFBS has Koc=47 L/kg versus PFOS 2100 L/kg, giving PFBS a small Kfish and therefore a large k2=k1/Kfish — as k1 falls, k2 tracks it proportionally and BCF = (k1+kd)/(k2+ke+km+kg) barely moves. For PFOS and PFHxS, high Koc makes Kfish large, k2 small relative to ke+kg, and BCF falls further with every k1 reduction. Together with Finding 16, this closes both tunable parameters on the uptake/elimination side: the sulfonate BCF gap is not in k1 (this finding) and not in Kprot scale (Finding 16). The error is structural and lives in Kfish — the tissue partition coefficient requires an albumin-binding term that does not route through Koc.
+
+### Finding 18 — Direct albumin binding improves mechanism but confirms the remaining error is structural
+Replacing the legacy Kprot = scale × Koc proxy with a direct albumin-binding formulation (Ka_albumin × [albumin]fish) is the mechanistically correct representation of PFAS tissue partitioning. However, runtime validation shows the sulfonate BCF gap remains: PFOS changes from −91% to −95%, PFHxS from −85% to −88%, while PFBS improves only modestly (−84% → −72%). This demonstrates that tissue partitioning (Kfish) is no longer the dominant source of error. The remaining limitation lies in the Arnot-Gobas gill uptake term (k1), which assumes passive membrane diffusion based on Kow. Strongly protein-binding PFAS instead undergo protein-facilitated transport that cannot be represented within the single-compartment Arnot-Gobas framework. This closes the final tunable component of the current model and identifies protein-mediated uptake as the next mechanistic step.
+
 ---
 
 ## Version History
 
-### v12.0 (current) — July 2026
+### v13.0 (current) — July 2026
+- Replaced the legacy `Kprot = scale × Koc` proxy with a direct albumin-binding formulation using compound-specific literature Ka values.
+- Added `Ka_albumin`, `Ka_tissue`, and `Kfish_method` diagnostic outputs.
+- Implemented runtime fallback (Ka → Koc proxy → Kow) for compounds lacking measured albumin affinities.
+- Finding 18: Direct albumin binding is mechanistically correct but does not resolve sulfonate BCF underprediction, demonstrating that the remaining limitation is the passive-diffusion k1 uptake formulation rather than tissue partitioning.
+- Concluded that future work requires a protein-facilitated gill uptake mechanism rather than additional Kfish tuning.
+
+### v12.0 — July 2026
 - **Sulfonate Kprot sensitivity sweep:** `run_arnot_gobas_sensitivity()` tests 7 Kprot scale values (0.05–0.30) for sulfonates, holding carboxylate scale fixed at 0.05. Sweep runs at pipeline startup automatically.
 - **Class-specific `KPROT_SCALE` dict:** Sulfonate=0.15, Carboxylate=0.05 — implemented as a named constant replacing the previous hardcoded value, making future per-class tuning explicit.
 - **Finding 16:** Sweep proves Kprot scaling is structurally inadequate for sulfonates — PFOS % error moves only 2 percentage points across the full sweep range. Simple constant tuning is a dead end; a direct albumin-binding-affinity term is the required next step.
 - **Kprot investigation closed** as a standalone tuning task. Finding 16 documented. Roadmap updated accordingly.
 - New output: `arnot_gobas_sensitivity.png` — heatmap of % error per PFAS × Kprot scale factor.
-
-### v11.2 — July 2026
-- **Human-only model:** `run_human_only_model()` trains RF, XGBoost, and Linear Regression on NHANES blood serum rows exclusively. Features: Chain_Length, MW, LogKow, PFAS_Class_encoded, AlbuminBinding_pKa (Koc_log excluded — governs soil/fish uptake, not blood serum). Overall R² improves 0.604 → 0.658; interval width narrows from 1.036 → 0.858 log10 ng/g at 80%.
-- **Finding 15:** Human-only model reveals the pooled model gain was driven by between-compound variance, not within-compound chemistry — PFAS identity dominates, per-PFAS R² ≈ 0.000 for all compounds.
-- New outputs: `human_model_predictions.png`, `human_model_feature_importance.png`
-
-### v11.1 — July 2026
-- **Arnot-Gobas mechanistic BCF model:** PFAS-adapted steady-state mass balance (Arnot & Gobas 2004). Replaces Kow-based lipid partitioning with Kprot = 0.05 × Koc (Kelly et al. 2004) and NLOM = 0.035 × Koc (Gobas et al. 2003). Sets km = 0 (PFAS metabolically inert). Includes both gill (k1) and dietary (kd) uptake pathways.
-- **Finding 14:** Mechanistic model accurately predicts PFOA (+5%) and PFDA (+2%) but systematically under-predicts all sulfonates (PFOS -91%, PFHxS -85%), revealing sulfonate-specific protein binding not captured by Koc alone.
-- New output: `arnot_gobas_bcf.png`
+- **P_mem gill membrane permeability correction:** `P_MEM_CORRECTION` dict added as a class-specific multiplier on the Arnot-Gobas Eq. 5 k1 term. Default Sulfonate=0.50, Carboxylate=1.00 (exploratory starting point). Applied in `compute_arnot_gobas_bcf()`; `k1_raw` and `p_mem` added to output DataFrame for per-compound diagnostics. Parameter is structurally independent of `KPROT_SCALE` — the two hypotheses (tissue partitioning vs. gill permeability) are cleanly separable.
+- **P_mem sensitivity sweep:** `run_arnot_gobas_pmem_sensitivity()` sweeps 8 P_mem values (1.0–0.05) for sulfonates, holding carboxylates at 1.0 and KPROT_SCALE fixed. Parallel to the Kprot sweep in v12.0.
+- **Finding 17:** P_mem sweep rules out gill membrane permeability as the source of sulfonate BCF error. PFOS error worsens monotonically (−90% → −99%) as P_mem falls; PFBS is completely flat (−84%) due to low Koc making k2 track k1 proportionally. Error is structural and confined to Kfish. Both tunable rate-constant parameters are now exhausted.
+- **P_mem investigation closed.** Roadmap updated: direct albumin-Ka term in Kfish is the only remaining mechanistic path.
+- New output: `arnot_gobas_pmem_sensitivity.png` — heatmap of % error per PFAS × P_mem correction factor.
 
 ### v11.0 — July 2026
 - **PFAS-appropriate chemistry features:** Koc and AlbuminBinding_pKa added to PFAS_FEATURES table and ML feature sets.
 - **Feature ablation:** `run_feature_ablation()` compares v10.5 vs v11 features — ΔR²=0.000 across all groups.
 - **Finding 13:** New features added zero predictive value — confirmed fish/plant failure is a data problem, not a feature problem.
 - New output: `feature_ablation.png`
+- **Arnot-Gobas mechanistic BCF model:** PFAS-adapted steady-state mass balance (Arnot & Gobas 2004). Replaces Kow-based lipid partitioning with Kprot = 0.05 × Koc (Kelly et al. 2004) and NLOM = 0.035 × Koc (Gobas et al. 2003). Sets km = 0 (PFAS metabolically inert). Includes both gill (k1) and dietary (kd) uptake pathways.
+- **Finding 14:** Mechanistic model accurately predicts PFOA (+5%) and PFDA (+2%) but systematically under-predicts all sulfonates (PFOS -91%, PFHxS -85%), revealing sulfonate-specific protein binding not captured by Koc alone.
+- New output: `arnot_gobas_bcf.png`
+- **Human-only model:** `run_human_only_model()` trains RF, XGBoost, and Linear Regression on NHANES blood serum rows exclusively. Features: Chain_Length, MW, LogKow, PFAS_Class_encoded, AlbuminBinding_pKa (Koc_log excluded — governs soil/fish uptake, not blood serum). Overall R² improves 0.604 → 0.658; interval width narrows from 1.036 → 0.858 log10 ng/g at 80%.
+- **Finding 15:** Human-only model reveals the pooled model gain was driven by between-compound variance, not within-compound chemistry — PFAS identity dominates, per-PFAS R² ≈ 0.000 for all compounds.
+- New outputs: `human_model_predictions.png`, `human_model_feature_importance.png`
 
-### v10.5 — July 2026
+### v10.0 — June-July 2026
 - CASRN salt mapping: recovered 396/401 previously dropped ECOTOX rows via `CASRN_SALT_MAP`
 - Leakage fix (FIX 4): removed `Trophic_Level` and `Is_Aquatic` from model features
 - Headline metric changed from pooled R² to per-species-group R²
 - PFHxS per-PFAS R² improved 0.172 → 0.381 from recovered salt rows
-
-### v10.0 — July 2026
 - Apparent half-life estimation: `compute_apparent_half_life()` from two NHANES wave medians
 - Finding 12: NHANES apparent half-lives dramatically exceed literature values
 
-### v9.0 — June–July 2026
+### v9.0 — June 2026
 - Per-PFAS models: dedicated RF for each PFAS with n≥60 rows (7 compounds)
 
 ### v8.0 — June 2026
 - Residual-calibrated prediction intervals replacing naive tree-variance
 - Three-way Fit/Calibration/Test split; coverage corrected to 80.6%/94.8%
 
-### v7.0 — June–July 2026
+### v7.0 — June 2026
 - XGBoost models added; leakage fixes for is_human/fish/mammal/plant flags and Duration_days; stratified split by Species_Group; NHANES 2015–2016 added
 
-### v6.0 — July 2026
+### v6.0 — June 2026
 - Proper 80/20 held-out validation; 13-PFAS feature table; NHANES 2017–2018
 
 ### v5.0–v1.0 — April–June 2026
@@ -172,7 +185,8 @@ A systematic sweep of the sulfonate Kprot scale factor across 7 values (0.05 to 
 | `human_model_predictions.png` | Human-only RF predicted vs actual + per-PFAS R² comparison |
 | `human_model_feature_importance.png` | Human-only RF feature importances |
 | `arnot_gobas_bcf.png` | Mechanistic BCF vs ML BCF vs observed median per PFAS |
-| `arnot_gobas_sensitivity.png` | **NEW (v12)** Heatmap: % error per PFAS × sulfonate Kprot scale factor |
+| `arnot_gobas_sensitivity.png` | Heatmap: % error per PFAS × sulfonate Kprot scale factor (v12.0) |
+| `arnot_gobas_pmem_sensitivity.png` | **NEW (v12.1)** Heatmap: % error per PFAS × sulfonate P_mem correction factor |
 | `feature_ablation.png` | v10.5 vs v11 features ΔR² per species group |
 | `prediction_intervals.png` | RF prediction ribbon (80%/95% intervals) by species group |
 | `interval_coverage.png` | Calibration diagnostic — actual vs target coverage by species group |
@@ -266,7 +280,7 @@ brew install libomp
 
 ## Usage
 
-### Set paths in `pfas_pipeline_v12.py`
+### Set paths in `pfas_pipeline_v13.py`
 ```python
 ECOTOX_EXPORT_DIR = "/path/to/ecotox_exports/"
 COMPTOX_SNAPSHOT  = "/path/to/comptox_snapshot.csv"
@@ -276,7 +290,7 @@ OUTPUT_DIR        = "/path/to/outputs/"
 
 ### Run
 ```bash
-python3 pfas_pipeline_v12.py
+python3 pfas_pipeline_v13.py
 ```
 
 ### Required files
@@ -424,21 +438,21 @@ Note: RF matches the PFAS-mean baseline exactly — the model is learning per-co
 | PFDoDA | 0 | no data | — |
 | PFHxA | 0 | no data | — |
 
-### Arnot-Gobas Mechanistic BCF (v11.1) + Kprot Sensitivity (v12.0)
+### Arnot-Gobas Mechanistic BCF (v11.1) + Kprot Sensitivity (v12.0) + P_mem Sensitivity (v12.1)
 
-PFAS-adapted steady-state mass balance, generic fish (1 kg, 12°C). Kprot = class-specific (Carboxylate: 0.05 × Koc; Sulfonate: 0.15 × Koc), NLOM = 0.035 × Koc (Gobas et al. 2003), km = 0.
+PFAS-adapted steady-state mass balance, generic fish (1 kg, 12°C). Kprot = class-specific (Carboxylate: 0.05 × Koc; Sulfonate: 0.15 × Koc), NLOM = 0.035 × Koc (Gobas et al. 2003), km = 0. P_mem correction: Sulfonate=0.50, Carboxylate=1.00 (v12.1).
 
 | PFAS | log BCF_AG | BCF_AG | log BCF_obs | % error |
 |---|---|---|---|---|
 | PFOA | 0.973 | 9.4 | 0.953 | +5% |
 | PFDA | 1.910 | 81.4 | 1.903 | +2% |
 | PFNA | 1.429 | 26.9 | 1.863 | -63% |
-| PFOS | 1.016 | 10.4 | 2.000 | -90% |
-| PFHxS | 0.359 | 2.3 | 1.187 | -85% |
-| PFBS | 0.086 | 1.2 | 0.874 | -84% |
+| PFOS | 0.740 | 5.5 | 2.000 | -95% |
+| PFHxS | 0.156 | 1.4 | 1.187 | -91% |
+| PFBS | 0.080 | 1.2 | 0.874 | -84% |
 | PFUnDA | 2.348 | 222.7 | 2.980 | -77% |
 
-Carboxylates (PFOA, PFDA) predicted accurately. Sulfonates remain systematically under-predicted across all tested Kprot scale values (Finding 16) — simple scaling is a dead end. A direct albumin-binding-affinity term is the required next mechanistic step.
+Note: PFOS and PFHxS errors reflect the P_mem=0.50 correction applied in v12.1 (errors are larger than v12.0 because reducing k1 moves BCF further from observed — this is the diagnostic result of Finding 17, not a regression). Carboxylates (PFOA, PFDA) unaffected. Both tunable parameters (Kprot scale and P_mem) were exhausted in v12.1. v13.0 implemented a direct albumin-Ka tissue partition coefficient, but sulfonate underprediction persisted (Finding 18). This demonstrates that the remaining limitation is structural in the passive gill uptake term (k1), indicating that protein-facilitated transport is required to represent PFAS uptake.
 
 ---
 
@@ -483,9 +497,11 @@ Carboxylates (PFOA, PFDA) predicted accurately. Sulfonates remain systematically
 - [x] Human-only model — NHANES rows exclusively (Finding 15)
 
 ### Phase 3 — Outputs & Extensions (In Progress)
-- [x] Sulfonate Kprot sensitivity sweep — `run_arnot_gobas_sensitivity()` with 7 scale values; Finding 16 closes simple tuning as a viable approach
+- [x] Sulfonate Kprot sensitivity sweep — `run_arnot_gobas_sensitivity()` with 7 scale values; Finding 16 closes simple Kprot tuning as a viable approach
+- [x] Sulfonate P_mem sensitivity sweep — `run_arnot_gobas_pmem_sensitivity()` with 8 values; Finding 17 closes gill membrane permeability as an explanation; error is structural in Kfish
+- [x] Direct albumin-Ka tissue partition coefficient implemented (v13.0). Finding 18 shows that replacing the Koc proxy does not resolve sulfonate underprediction, confirming tissue partitioning is no longer the dominant source of error.
+- [ ] Develop a protein-facilitated gill uptake (k1) formulation to replace the passive membrane diffusion assumption in the Arnot-Gobas framework.
 - [ ] Treatment removal efficiency module — GAC/AER/RO removal as function of chain length and PFAS class; explains why short-chain GenX replacements are harder to remove
-- [ ] Albumin-binding-affinity term for sulfonates — replace `Kprot = scale × Koc` with a direct Ka-based partition coefficient for sulfonates (Bischel et al. 2010, Beesoon & Martin 2015); the correct mechanistic follow-up to Finding 16
 - [ ] Longitudinal half-life validation — individual-level cohort data to resolve exposure-vs-elimination conflation (Finding 12 follow-up)
 - [ ] Interactive bioaccumulation simulator (per-PFAS models + calibrated intervals)
 - [ ] Streamlit interactive dashboard

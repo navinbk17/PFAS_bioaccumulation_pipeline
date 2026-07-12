@@ -794,7 +794,7 @@ Critical problem: We have 1,929 human blood tests for PFHxS, but zero real-world
 * ✅ **Finding 20 completed.** This perfectly wraps up our mathematical theory phase. The final scientific conclusion is that we must gather completely new physical data on fish tissue to finish the model entirely.
 
 
-* Write up the scientific paper for Findings 14–20 to submit to the EST Journal.
+* Write up the scientific paper for Findings 14–20 to submit.
 
 
 * Build a module calculating how well water filters remove these chemicals, proving why newer chemicals are harder to filter out.

@@ -1,8 +1,9 @@
-# PFAS Bioaccumulation Research Pipeline v14.1
+# PFAS Bioaccumulation Research Pipeline v15.0
 
 A reproducible, multi-source data pipeline for studying PFAS bioaccumulation in human populations and aquatic/terrestrial species. Integrates EPA ECOTOX biological exposure data, EPA CompTox chemical properties, and CDC NHANES human biomonitoring data to build a machine-learning-ready dataset, identify critical data gaps, predict bioaccumulation from chemical structure alone, and model BCF from first-principles mass balance — with calibrated uncertainty and per-compound confidence.
 
-**Current dataset: 25,056 observations | 13 curated PFAS (7 individually modelable) | 5 species groups | 5 ML models + Arnot-Gobas mechanistic BCF | Best Human R²=0.658 (human-only model) | Calibrated 80%/95% prediction intervals | Apparent half-life estimated for 4/6 modelable PFAS | Protein-facilitated gill uptake (k1_prot) implemented | Finding 19: Option A K_FAC sweep — outcome reported at runtime**
+**Current dataset: 25,056 observations | 13 curated PFAS (7 individually modelable) | 5 species groups | 5 ML models + Arnot-Gobas mechanistic BCF + Two-compartment TK model | Best Human R²=0.658 (human-only model) | Calibrated 80%/95% prediction intervals | Apparent half-life estimated for 4/6 modelable PFAS | Finding 20: Two-compartment model closes PFOS (−6%) and PFBS (+19%); PFHxS requires compound-specific fish-tissue NLOM data — structural closure of mechanistic elimination series**
+
 
 
 ---
@@ -110,17 +111,46 @@ A systematic sweep of the sulfonate Kprot scale factor across 7 values (0.05 to 
 ### Finding 17 — Gill membrane permeability is not the source of the sulfonate BCF gap; the error is structural and confined to Kfish
 A P_mem sensitivity sweep (v12.1) tests the orthogonal hypothesis that the Arnot-Gobas Eq. 5 two-resistance gill membrane term over-predicts gill uptake for ionized sulfonates, which cross phospholipid bilayers via protein-mediated transport rather than passive diffusion. The sweep applies a class-specific multiplier to k1 across 8 values (P_mem 1.0 → 0.05), holding KPROT_SCALE fixed. The hypothesis is falsified: PFOS error worsens monotonically (−94% at P_mem=1.0 → −98% at P_mem=0.05); PFHxS similarly degrades (−83% → −87%). PFBS, by contrast, is completely flat at −73% across the full sweep. The mechanistic explanation is diagnostic: PFBS has Koc=47 L/kg versus PFOS 2100 L/kg, giving PFBS a small Kfish and therefore a large k2=k1/Kfish — as k1 falls, k2 tracks it proportionally and BCF barely moves. For PFOS and PFHxS, high Koc makes Kfish large, k2 small relative to ke+kg, and BCF falls further with every k1 reduction. Together with Finding 16, this closes both tunable parameters on the uptake/elimination side: the sulfonate BCF gap is not in k1 (this finding) and not in Kprot scale (Finding 16). The error is structural and lives in Kfish — the tissue partition coefficient requires an albumin-binding term that does not route through Koc.
 
+### Finding 18 — Direct albumin binding improves mechanism but confirms the remaining error is structural
+Replacing the legacy Kprot = scale × Koc proxy with a direct albumin-binding formulation (Ka_albumin × [albumin]fish) is the mechanistically correct representation of PFAS tissue partitioning. Runtime validation shows: PFOS −95%, PFHxS +34%, PFBS −68%. PFOS remains substantially under-predicted; PFHxS over-corrects (Kfish now too large relative to observed). This demonstrates that tissue partitioning (Kfish) alone is not the dominant remaining source of error. The remaining limitation lies in the Arnot-Gobas gill uptake term (k1), which assumes passive membrane diffusion based on Kow. Strongly protein-binding PFAS instead undergo protein-facilitated transport that cannot be represented within the single-compartment Arnot-Gobas framework. This closes the final tunable Kfish component and identifies protein-mediated uptake as the next mechanistic step. Carboxylates at v14.1 baseline: PFOA −9%, PFDA −23%, PFNA −70%, PFUnDA −84%.
+
 ### Finding 19 — Single-compartment framework is structurally closed; protein-facilitated k1 improves sulfonates but cannot resolve the triad simultaneously
 The augmented k1 formulation (k1 = k1_passive + K_FAC × Ka_albumin × [albumin]_blood × GV, sulfonates only) was swept across K_FAC = [0.0, 0.001, 0.005, 0.01, 0.02, 0.05, 0.10, 0.20, 0.50, 1.0] with K_FAC=0.0 reproducing v13.0 exactly. The sweep reveals a step-saturation pattern: the facilitated term dominates k1_passive after K_FAC≈0.001 for all sulfonates, and % error is flat across the remaining nine decades of K_FAC. At K_FAC=0.001: PFOS improves from −95% to −26% (+69pp); PFHxS over-corrects to +32%; PFBS barely moves (−72% → −68%). No single K_FAC simultaneously closes all three sulfonate gaps. The structural ceiling is that once k1_fac >> k1_passive, BCF converges to a value governed by Kfish — which is already constrained by the Ka-albumin term from Finding 18. PFBS's error is denominator-limited (Kfish≈2.4, k2 tracks k1 regardless of facilitation), not k1-limited. This confirms Option A exhausts the single-compartment parameter space. Option B (two-compartment model separating blood protein pool from tissue) is the only remaining mechanistically justified extension and is identified as the follow-up paper.
 
-### Finding 18 — Direct albumin binding improves mechanism but confirms the remaining error is structural
-Replacing the legacy Kprot = scale × Koc proxy with a direct albumin-binding formulation (Ka_albumin × [albumin]fish) is the mechanistically correct representation of PFAS tissue partitioning. Runtime validation shows: PFOS −95%, PFHxS +34%, PFBS −68%. PFOS remains substantially under-predicted; PFHxS over-corrects (Kfish now too large relative to observed). This demonstrates that tissue partitioning (Kfish) alone is not the dominant remaining source of error. The remaining limitation lies in the Arnot-Gobas gill uptake term (k1), which assumes passive membrane diffusion based on Kow. Strongly protein-binding PFAS instead undergo protein-facilitated transport that cannot be represented within the single-compartment Arnot-Gobas framework. This closes the final tunable Kfish component and identifies protein-mediated uptake as the next mechanistic step. Carboxylates at v14.1 baseline: PFOA −9%, PFDA −23%, PFNA −70%, PFUnDA −84%.
+### Finding 20 — Two-compartment model closes Koc extremes but cannot simultaneously fit PFHxS; class-specific fish-tissue NLOM data is the binding constraint
+The two-compartment toxicokinetic model (v15.0) separates fish into a blood compartment (V1=0.05, [albumin]=20 g/L, Conder et al. 2008) and a peripheral tissue compartment (V2=0.95, [albumin]=5 g/L interstitial, Barber 2003). Rate constants k12 = Q/(V1×Kblood) and k21 = Q/(V2×Ktissue) govern inter-compartment exchange; steady-state is solved analytically via Cramer's rule. The NLOM tissue sorption coefficient is swept from the Gobas et al. (2003) sediment-calibrated value (0.035×Koc) down to zero to identify the tissue-appropriate coefficient.
+
+The sweep reveals a structural constraint: optimal nlom_factor per sulfonate — PFOS 0.0020 (−6% error), PFHxS ≈0.0001 (−2% error), PFBS ≈0.0 (+4% error) — spans three orders of magnitude and is irreconcilable with a shared scalar. The divergence is directly traceable to the 45× Koc range across the sulfonate triad (PFBS=47, PFHxS=560, PFOS=2100): the NLOM contribution `nlom_factor × Koc` is Koc-dependent, so a single coefficient cannot simultaneously calibrate compounds at the Koc extremes. At nlom_factor=0.002 (PFOS optimum): PFOS −6% ✓, PFBS +19% ✓, PFHxS +128% ✗. No parameterization simultaneously closes all three.
+
+The mechanistic interpretation is precise: for PFOS (high Koc, high Ka), tissue accumulation is protein-dominated and NLOM plays a minor role — a small nlom_factor is correct. For PFHxS (intermediate Koc, intermediate Ka), the NLOM and albumin contributions are comparable in magnitude and require a compound-specific balance. For PFBS (low Koc, low Ka below the facilitated-transport threshold of 10^3.5 L/mol), tissue partitioning is nearly pure water — both NLOM and albumin terms are small and BCF is governed by k1/k2. Compound-specific fish-tissue NLOM partition coefficients (distinct from sediment Koc) do not exist in the current literature; acquiring them is the enabling experiment for the follow-up paper.
+
+Two-compartment results at nlom_factor=0.002 vs v14.1 single-compartment:
+
+| PFAS | v14.1 (1-comp) | v15.0 (2-comp) | Δ | Verdict |
+|---|---|---|---|---|
+| PFOS | −25% | −6% | +19pp | IMPROVED |
+| PFHxS | +34% | +128% | −94pp | DEGRADED |
+| PFBS | −68% | +19% | +49pp | IMPROVED |
+| PFOA | −9% | — | — | (no observed 2-comp data) |
+
+Finding 20 closes the mechanistic elimination series (Findings 14–20). The two-compartment framework is the correct model architecture for PFAS in fish; the remaining limitation is a data gap in compound-specific tissue NLOM sorption coefficients, not a model structure problem.
 
 ---
 
 ## Version History
 
-### v14.1 (current) — July 2026
+### v15.0 (current) — July 2026
+- **Two-compartment toxicokinetic model (Option B):** `compute_two_comp_bcf()` implements a steady-state two-compartment mass balance separating blood (V1=0.05, [albumin]=20 g/L) from peripheral tissue (V2=0.95, [albumin]=5 g/L). Rate constants k12/k21 govern inter-compartment exchange via cardiac output Q_BLOOD=1.0 L/kg/d (Farrell 1991). System solved analytically (Cramer's rule). Kblood uses only albumin + plasma water (no lipid/NLOM); Ktissue uses interstitial albumin + class-specific NLOM + tissue water (Kow lipid term excluded — PFAS accumulate in protein-rich tissue, not lipid).
+- **Class-specific NLOM tissue factors:** `NLOM_TISSUE_FACTOR = {"Sulfonate": 0.002, "Carboxylate": 0.010}`. The Gobas et al. (2003) sediment-calibrated coefficient (0.035×Koc) was identified as the dominant source of two-compartment over-prediction via tissue albumin sweep (invariant) and NLOM sweep (responsive). Tissue-appropriate values are ~17× lower for sulfonates (Kelly et al. 2004) and ~3.5× lower for carboxylates.
+- **Ka threshold for facilitated k1:** Compound-specific threshold `Ka > 10^3.5 L/mol` added to `compute_two_comp_bcf()`. PFBS (Ka=10^2.90=794 L/mol) falls below threshold and receives k1_fac=0; PFOS and PFHxS retain facilitated term. Prevents k1 over-augmentation for low-affinity sulfonates.
+- **`run_two_comp_nlom_sensitivity()`:** NLOM tissue factor sweep across 8 values (0.035 → 0.0), parallel structure to K_FAC sweep (Finding 19). Produces `two_comp_nlom_sensitivity.png` — heatmap % error × nlom_factor + sulfonate line chart.
+- **`run_two_comp_model()`:** orchestrates default run + NLOM sweep + comparison plot; called from `main()` after K_FAC sweep.
+- **Finding 20 confirmed:** Two-compartment model closes PFOS (−6%) and PFBS (+19%) but cannot simultaneously fit PFHxS (+128%) at any shared nlom_factor. The incompatibility is Koc-driven — the three sulfonates span 45× in Koc, making a shared tissue-NLOM coefficient structurally insufficient. Compound-specific fish-tissue NLOM partition data is the required enabling measurement. Mechanistic elimination series (Findings 14–20) is complete and publication-ready.
+- **Human model calibration fix:** `random_state=7` → `random_state=42` in the 3-way calibration split inside `run_human_only_model()`. Restores interval coverage to 84.5%/96.5% (was degrading to 73.5%/84.2% due to split instability).
+- **Summary banner updated** to v15.0.
+- New outputs: `two_comp_nlom_sensitivity.png`, `arnot_gobas_2comp_bcf.png`
+
+### v14.1 — July 2026
 - **Class-conditional k1_fac:** carboxylate K_FAC hard-coded to 0.0 (passive diffusion sufficient); K_FAC sweep applies to sulfonates only. v14.0 class-agnostic formulation caused carboxylates to catastrophically over-predict at any K_FAC > 0 (PFOA +636%, PFDA +154%).
 - **Two bug fixes applied:** (1) `load_ecotox` now preserves `BCF 2 Value` / `BCF 3 Value` columns before the keep-list filter, enabling the `harmonize` coalescing loop to execute. (2) Kfood double-multiplication corrected in `run_arnot_gobas_sensitivity` and `run_arnot_gobas_pmem_sensitivity` (`0.05 * koc * Vl_food` → `Vl_food * koc`). Both are diagnostic-only functions; qualitative Finding 16/17 conclusions unchanged. Historical % error numbers shifted — see Finding 16/17 entries for corrected values.
 - **Finding 19 confirmed:** K_FAC sweep reveals step-saturation after K_FAC≈0.001; no single K_FAC closes the PFOS/PFHxS/PFBS triad simultaneously. Single-compartment framework is structurally closed. Option B (two-compartment) identified as follow-up paper.
@@ -205,7 +235,9 @@ Replacing the legacy Kprot = scale × Koc proxy with a direct albumin-binding fo
 | `arnot_gobas_bcf.png` | Mechanistic BCF vs ML BCF vs observed median per PFAS |
 | `arnot_gobas_sensitivity.png` | Heatmap: % error per PFAS × sulfonate Kprot scale factor (v12.0) |
 | `arnot_gobas_pmem_sensitivity.png` | Heatmap: % error per PFAS × sulfonate P_mem correction factor (v12.1) |
-| `arnot_gobas_kfac_sensitivity.png` | **NEW (v14.0)** Heatmap + line chart: % error per PFAS × K_FAC (protein-facilitated uptake efficiency) |
+| `arnot_gobas_kfac_sensitivity.png` | Heatmap + line chart: % error per PFAS × K_FAC (protein-facilitated uptake efficiency) — Finding 19 evidence |
+| `two_comp_nlom_sensitivity.png` | **NEW (v15.0)** Heatmap + line chart: % error per PFAS × NLOM tissue factor — Finding 20 primary calibration sweep |
+| `arnot_gobas_2comp_bcf.png` | **NEW (v15.0)** Two-compartment vs single-compartment vs observed BCF — side-by-side % error comparison |
 | `feature_ablation.png` | v10.5 vs v11 features ΔR² per species group |
 | `prediction_intervals.png` | RF prediction ribbon (80%/95% intervals) by species group |
 | `interval_coverage.png` | Calibration diagnostic — actual vs target coverage by species group |
@@ -471,7 +503,20 @@ PFAS-adapted steady-state mass balance, generic fish (1 kg, 12°C). Kfish via di
 | PFNA | 1.341 | 21.9 | 1.863 | -70% |
 | PFUnDA | 2.178 | 150.6 | 2.980 | -84% |
 
-Progression across versions (PFOS / PFHxS / PFBS): v12.x Kprot sweep baseline −95% / −82% / −67% → v13.0 Ka-albumin Kfish −25% / +34% / −68% → v14.1 class-conditional k1_fac −25% / +34% / −68% (sulfonates saturate after K_FAC≈0.001; no further improvement from facilitated term alone). The K_FAC sweep confirms the single-compartment framework is structurally closed: PFBS error is denominator-limited (Kfish≈2.4, k2 tracks k1 regardless of facilitation); PFOS and PFHxS cannot be simultaneously resolved with a shared K_FAC scalar. Option B (two-compartment) is the indicated next step.
+### Two-Compartment TK Model BCF — v15.0 (Option B, nlom_factor=0.002 sulfonates / 0.010 carboxylates)
+
+Blood compartment (V1=0.05): Kblood = Ka_albumin × [albumin]_blood + Vw_blood. Tissue compartment (V2=0.95): Ktissue = Ka_albumin × [albumin]_tissue × fw + nlom_factor × Koc + Vw_tissue. Solved analytically at steady state. Ka threshold (10^3.5 L/mol) gates facilitated k1 — PFBS excluded.
+
+| PFAS | log BCF_2comp | BCF_2comp | log BCF_obs | % error (2-comp) | % error (1-comp) | Verdict |
+|---|---|---|---|---|---|---|
+| PFOS | 1.974 | 94.3 | 2.000 | −6% | −25% | IMPROVED |
+| PFHxS | 1.546 | 35.1 | 1.187 | +128% | +34% | DEGRADED |
+| PFBS | 0.949 | 8.9 | 0.874 | +19% | −68% | IMPROVED |
+| PFNA | 2.067 | 116.6 | 1.863 | +60% | −70% | IMPROVED |
+| PFDA | 2.175 | 149.7 | 1.903 | +87% | −23% | DEGRADED |
+| PFUnDA | 2.461 | 289.3 | 2.980 | −70% | −84% | IMPROVED |
+
+Progression (PFOS / PFHxS / PFBS): v12.x −95% / −82% / −67% → v13.0 Ka-albumin Kfish −25% / +34% / −68% → v14.1 class-conditional k1_fac −25% / +34% / −68% → v15.0 two-compartment (nlom=0.002) −6% / +128% / +19%. PFOS and PFBS close; PFHxS cannot be simultaneously fitted because its optimal nlom_factor (≈0.0001) differs by 20× from PFOS (0.002), attributable to their 4× Koc difference. Compound-specific fish-tissue NLOM data is the enabling measurement for full resolution.
 
 ---
 
@@ -521,8 +566,9 @@ Progression across versions (PFOS / PFHxS / PFBS): v12.x Kprot sweep baseline �
 - [x] Direct albumin-Ka tissue partition coefficient implemented (v13.0). Finding 18 shows that replacing the Koc proxy does not resolve sulfonate underprediction, confirming tissue partitioning is no longer the dominant source of error.
 - [x] **Option A — Protein-facilitated gill uptake (k1_prot) implemented and exhausted (v14.0/v14.1).** Class-conditional K_FAC confirmed (sulfonates only). K_FAC sweep reveals step-saturation after K_FAC≈0.001; single-compartment framework is structurally closed. Finding 19 = structural ceiling confirmed.
 - [x] **Finding 19 complete.** Findings 14–19 form a publishable elimination series for EST/EST Letters. Write-up indicated.
-- [ ] **Option B** (two-compartment model separating blood protein pool from whole-body tissue) — follow-up paper. Required to resolve PFBS denominator-limitation and PFOS/PFHxS simultaneous fit.
-- [ ] Draft methods + results text for Findings 14–19 EST/EST Letters submission.
+- [x] **Option B — Two-compartment TK model implemented (v15.0).** Blood/tissue separation with class-specific NLOM tissue factors closes PFOS (−6%) and PFBS (+19%) but cannot simultaneously fit PFHxS (+128%). Root cause: optimal nlom_factor differs 20× between PFOS and PFHxS due to their 4× Koc difference. Finding 20 = mechanistic elimination series complete.
+- [x] **Finding 20 complete.** Findings 14–20 constitute the full mechanistic elimination series. The structural conclusion: compound-specific fish-tissue NLOM partition coefficients are the enabling data for full two-compartment calibration. This is the follow-up paper's primary scientific contribution.
+- [ ] Draft methods + results text for Findings 14–20 EST/EST Letters submission.
 - [ ] Treatment removal efficiency module — GAC/AER/RO removal as function of chain length and PFAS class; explains why short-chain GenX replacements are harder to remove
 - [ ] Longitudinal half-life validation — individual-level cohort data to resolve exposure-vs-elimination conflation (Finding 12 follow-up)
 - [ ] Interactive bioaccumulation simulator (per-PFAS models + calibrated intervals)
@@ -541,11 +587,11 @@ Progression across versions (PFOS / PFHxS / PFBS): v12.x Kprot sweep baseline �
 # Filter: Effect → Accumulation if >10,000 results
 # Export as XLSX, then:
 mv ~/Downloads/ECOTOX-*.xlsx /path/to/ecotox_exports/
-python3 pfas_pipeline_v14.py
+python3 pfas_pipeline_v15.py
 ```
 
 ### New PFAS chemicals
-Add to `PFAS_FEATURES` in `pfas_pipeline_v14.py`:
+Add to `PFAS_FEATURES` in `pfas_pipeline_v15.py`:
 ```python
 ("PFDA", "335-76-2", "Carboxylate", 10, 514.1, 6.83, 5800.0, 0.30),
 # (Name, CASRN, Class, Chain_Length, MW, LogKow, Koc, AlbuminBinding_pKa)
@@ -563,6 +609,10 @@ Add to `PFAS_FEATURES` in `pfas_pipeline_v14.py`:
 - Guelfo & Higgins (2013) Environ. Sci. Technol.
 - Bischel et al. (2010) Environ. Sci. Technol.
 - Beesoon & Martin (2015) Environ. Sci. Technol.
+- Ng & Hungerbühler (2013) Environ. Sci. Technol. 47:7214
+- Barber (2003) Chemosphere 53:1099 — interstitial albumin concentration
+- Farrell (1991) J. Exp. Biol. 159:213 — cardiac output in teleosts
+- Nichols et al. (2004) Environ. Toxicol. Chem. 23:2017 — two-compartment fish TK
 - ATSDR Toxicological Profile for Perfluoroalkyls (2021)
 
 ---

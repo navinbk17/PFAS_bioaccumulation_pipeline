@@ -3,4 +3,5 @@ pandas>=1.3.0
 matplotlib>=3.4.0
 seaborn>=0.11.0
 scikit-learn>=1.0.0
+xgboost>=1.5.0
 openpyxl>=3.0.0  # Needed for pandas to read the .xlsx files in your inputs folder!

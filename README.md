@@ -604,23 +604,11 @@ Note: The AI completely tied with a blind average guess. The AI is just learning
 | Clue | Description |
 | --- | --- |
 | `Chain_Length` | How physically long the chemical chain is.
-
- |
 | `MW` | How heavy the molecule is.
-
- |
 | `LogKow` | The water-fear score.
-
- |
 | `PFAS_Class_encoded` | Which chemical family it belongs to (0 or 1).
-
- |
 | `Koc_log` | The soil-stickiness score.
-
- |
 | `AlbuminBinding_pKa` | The blood protein-binding score.
-
- |
 
 **Human-only model (5 clues):** It uses the exact same clues, except we deleted the soil-stickiness score because it doesn't matter for human blood.
 

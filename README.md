@@ -8,20 +8,20 @@ Current dataset: 25,056 records | 13 specific PFAS chemicals (7 have enough data
 
 ## Table of Contents
 
-* [Why This Research Matters](https://www.google.com/search?q=%23why-this-research-matters)
-* [Key Findings](https://www.google.com/search?q=%23key-findings)
-* [Version History](https://www.google.com/search?q=%23version-history)
-* [Outputs](https://www.google.com/search?q=%23outputs)
-* [Dataset Schema](https://www.google.com/search?q=%23dataset-schema)
-* [PFAS Chemicals](https://www.google.com/search?q=%23pfas-chemicals)
-* [Setup](https://www.google.com/search?q=%23setup)
-* [Usage](https://www.google.com/search?q=%23usage)
-* [Data Sources](https://www.google.com/search?q=%23data-sources)
-* [Pipeline Architecture](https://www.google.com/search?q=%23pipeline-architecture)
-* [Model Results](https://www.google.com/search?q=%23model-results)
-* [Data Gaps](https://www.google.com/search?q=%23data-gaps)
-* [Roadmap](https://www.google.com/search?q=%23roadmap)
-* [How to Add Data](https://www.google.com/search?q=%23how-to-add-data)
+* [Why This Research Matters](#why-this-research-matters)
+* [Key Findings](#key-findings)
+* [Version History](#version-history)
+* [Outputs](#outputs)
+* [Dataset Schema](#dataset-schema)
+* [PFAS Chemicals](#pfas-chemicals)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Data Sources](#data-sources)
+* [Pipeline Architecture](#pipeline-architecture)
+* [Model Results](#model-results)
+* [Data Gaps](#data-gaps)
+* [Roadmap](#roadmap)
+* [How to Add Data](#how-to-add-data)
 
 ---
 

@@ -143,7 +143,6 @@ Separating fish biology into two distinct zones — a blood compartment and a ti
 
 * **Unseen Chemical Testing (LOCO CV) as Headline Metric:** Evaluates models by holding out entire chemical compounds during training to test real-world generalization on new chemicals. Pooled LOCO R²=−0.160, confirming that 8 distinct chemistry profiles are insufficient for structure-to-accumulation generalization — an honest negative result.
 * **Relative File Paths:** Removed hardcoded system paths in favor of an automatic local project directory structure. All paths are derived from the script's own location.
-* **README Clean-up:** Updated structure to lead with LOCO results and streamlined documentation.
 
 ### v15.0 — July 2026
 

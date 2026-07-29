@@ -28,7 +28,7 @@ Two conclusions, one per thread:
 
 **Fish BCF mechanistic:** The Arnot-Gobas passive-diffusion framework was exhaustively evaluated across 7 parameter dimensions (Findings 14–20). The single-compartment model accurately predicts carboxylate BCF but fails structurally for sulfonates. Every tunable parameter was exhausted — none closes the sulfonate triad simultaneously. The failure is a structural consequence of the 45× Koc range across PFBS/PFHxS/PFOS: no shared scalar parameter can simultaneously satisfy compounds at the Koc extremes. The blocking data gap is compound-specific fish-tissue NLOM partition coefficients.
 
-**One-line thesis (paper):** Passive-diffusion bioaccumulation frameworks fail structurally for sulfonate PFAS, and the failure is mechanistically traceable to Koc heterogeneity across the sulfonate class rather than any tunable parameter.
+**One-line thesis (paper):** Still deciding: Standard fish bioaccumulation models don't work for sulfonate PFAS, and it's not a tuning problem; it's a fundamental mismatch between the model's assumptions and the chemistry of this specific class of compounds.
 
 ---
 

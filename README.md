@@ -22,8 +22,6 @@ Reproducible pipeline integrating EPA ECOTOX tissue residue data, EPA CompTox ch
 
 ## What This Project Shows
 
-Two conclusions, one per thread:
-
 **Human serum:** PFAS blood serum concentration is predictable by compound identity (R²=0.658) but not by chemical structure. The model is a lookup table of per-compound means — LOCO R²=−1.419 confirms chemistry cannot predict an unseen compound's accumulation. Between-compound variance is large and structured; within-compound chemistry signal is zero at current sample sizes.
 
 **Fish BCF mechanistic:** The Arnot-Gobas passive-diffusion framework was exhaustively evaluated across 7 parameter dimensions (Findings 14–20). The single-compartment model accurately predicts carboxylate BCF but fails structurally for sulfonates. Every tunable parameter was exhausted — none closes the sulfonate triad simultaneously. The failure is a structural consequence of the 45× Koc range across PFBS/PFHxS/PFOS: no shared scalar parameter can simultaneously satisfy compounds at the Koc extremes. The blocking data gap is compound-specific fish-tissue NLOM partition coefficients.
